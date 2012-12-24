@@ -23,6 +23,8 @@
 		0437FDBC16842E3F00A407F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0437FD9716842E3E00A407F5 /* Foundation.framework */; };
 		0437FDC416842E3F00A407F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0437FDC216842E3F00A407F5 /* InfoPlist.strings */; };
 		0437FDC716842E3F00A407F5 /* SubPlayerTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0437FDC616842E3F00A407F5 /* SubPlayerTestTests.m */; };
+		046AAF0616882E02002998D3 /* SFSubtitleFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AAF0516882E02002998D3 /* SFSubtitleFrame.m */; };
+		046AAF0D16883DD9002998D3 /* SFSubtitleTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AAF0C16883DD9002998D3 /* SFSubtitleTrack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		0437FDC316842E3F00A407F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0437FDC516842E3F00A407F5 /* SubPlayerTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubPlayerTestTests.h; sourceTree = "<group>"; };
 		0437FDC616842E3F00A407F5 /* SubPlayerTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubPlayerTestTests.m; sourceTree = "<group>"; };
+		046AAF0416882E02002998D3 /* SFSubtitleFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFSubtitleFrame.h; path = SubtitleFoundation/SFSubtitleFrame.h; sourceTree = "<group>"; };
+		046AAF0516882E02002998D3 /* SFSubtitleFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFSubtitleFrame.m; path = SubtitleFoundation/SFSubtitleFrame.m; sourceTree = "<group>"; };
+		046AAF0B16883DD9002998D3 /* SFSubtitleTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFSubtitleTrack.h; path = SubtitleFoundation/SFSubtitleTrack.h; sourceTree = "<group>"; };
+		046AAF0C16883DD9002998D3 /* SFSubtitleTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFSubtitleTrack.m; path = SubtitleFoundation/SFSubtitleTrack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 		0437FD8616842E3E00A407F5 = {
 			isa = PBXGroup;
 			children = (
+				046AAEFA1687D9E4002998D3 /* SubtitleFoundationClasses */,
 				0437FD9B16842E3E00A407F5 /* SubPlayerTest */,
 				0437FDBF16842E3F00A407F5 /* SubPlayerTestTests */,
 				0437FD9416842E3E00A407F5 /* Frameworks */,
@@ -158,6 +165,17 @@
 				0437FDC216842E3F00A407F5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		046AAEFA1687D9E4002998D3 /* SubtitleFoundationClasses */ = {
+			isa = PBXGroup;
+			children = (
+				046AAF0416882E02002998D3 /* SFSubtitleFrame.h */,
+				046AAF0516882E02002998D3 /* SFSubtitleFrame.m */,
+				046AAF0B16883DD9002998D3 /* SFSubtitleTrack.h */,
+				046AAF0C16883DD9002998D3 /* SFSubtitleTrack.m */,
+			);
+			name = SubtitleFoundationClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +292,8 @@
 				0437FDA216842E3E00A407F5 /* main.m in Sources */,
 				0437FDA616842E3E00A407F5 /* MPAppDelegate.m in Sources */,
 				0437FDAF16842E3E00A407F5 /* MPViewController.m in Sources */,
+				046AAF0616882E02002998D3 /* SFSubtitleFrame.m in Sources */,
+				046AAF0D16883DD9002998D3 /* SFSubtitleTrack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,10 +396,14 @@
 		0437FDCB16842E3F00A407F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jack Pham (47MZ7622XD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jack Pham (47MZ7622XD)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SubPlayerTest/SubPlayerTest-Prefix.pch";
 				INFOPLIST_FILE = "SubPlayerTest/SubPlayerTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "59B04983-4E3C-4C0A-8B0F-76382E00654A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "75DA8711-1990-4BFF-99C4-6977FE5DA8D6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -387,10 +411,14 @@
 		0437FDCC16842E3F00A407F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jack Pham (47MZ7622XD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jack Pham (47MZ7622XD)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SubPlayerTest/SubPlayerTest-Prefix.pch";
 				INFOPLIST_FILE = "SubPlayerTest/SubPlayerTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "59B04983-4E3C-4C0A-8B0F-76382E00654A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "75DA8711-1990-4BFF-99C4-6977FE5DA8D6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -448,6 +476,7 @@
 				0437FDCC16842E3F00A407F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0437FDCD16842E3F00A407F5 /* Build configuration list for PBXNativeTarget "SubPlayerTestTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +485,7 @@
 				0437FDCF16842E3F00A407F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
