@@ -11,13 +11,14 @@
 @interface SFSubtitleTrack ()
 {
     NSMutableArray* _subtitleFrames;
+    NSMutableDictionary* _trackInfo;
 }
 @end
 
 @implementation SFSubtitleTrack
-@synthesize languageCode=_languageCode;
 @synthesize subtitleFrames=_subtitleFrames;
 @synthesize startOffset=_startOffset;
+@synthesize trackInfo=_trackInfo;
 
 //------------------------------------------------------------------------------
 - (id) initWithFrames: (NSArray*) subtitleFrames
@@ -27,7 +28,8 @@
     self = [super init];
     if (self) {
         _subtitleFrames = [NSMutableArray arrayWithArray:subtitleFrames];
-        _languageCode = language;
+        _trackInfo = [[NSMutableDictionary alloc] init];
+        [self setLanguageCode:language];
         _startOffset = offset;
     }
     return self;
@@ -48,5 +50,22 @@
     return [self initWithFrames:subtitleFrames
                        language:nil
                       startTime:0];
+}
+
+
+- (NSString*) description
+{
+    return [NSString stringWithFormat:@"SFSubtitleTrack:{trackInfo: %@}", _trackInfo];
+}
+//------------------------------------------------------------------------------
+- (void) setLanguageCode:(NSString *)languageCode
+{
+    [_trackInfo setValue:languageCode forKey:SFTrackInfoLanguage];
+}
+
+//------------------------------------------------------------------------------
+-(NSString*)languageCode
+{
+    return [_trackInfo valueForKey:SFTrackInfoLanguage];
 }
 @end

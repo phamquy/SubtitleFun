@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+#define SFTrackInfoLanguage @"language"
+
 @interface SFSubtitleTrack : NSObject
 
 #pragma mark Properties
-@property(nonatomic, strong) NSString* languageCode;
+@property(nonatomic) NSString* languageCode;
 @property(nonatomic, readonly) NSArray* subtitleFrames;
 @property(nonatomic) NSTimeInterval startOffset;
+@property(nonatomic) NSMutableDictionary* trackInfo;
 
 #pragma mark Instance methods 
 /**
@@ -34,6 +37,7 @@
              language: (NSString*) language;
 
 - (id) initWithFrames: (NSArray*) subtitleFrames;
+
 
 /**
  Frames manipulating methods

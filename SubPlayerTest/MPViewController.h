@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MPViewController : UIViewController
+- (IBAction)playHLS:(id)sender;
+- (IBAction)parseSRT:(id)sender;
 
 @end
