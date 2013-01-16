@@ -25,6 +25,11 @@
 		0437FDC716842E3F00A407F5 /* SubPlayerTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0437FDC616842E3F00A407F5 /* SubPlayerTestTests.m */; };
 		043E45A5169A4F6D0086F41D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043E45A4169A4F6D0086F41D /* MediaPlayer.framework */; };
 		043E45B0169AB5B70086F41D /* subtest.srt in Resources */ = {isa = PBXBuildFile; fileRef = 043E45AF169AB5B70086F41D /* subtest.srt */; };
+		043E45D1169C1ABD0086F41D /* MPSubMoviePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043E45D0169C1ABD0086F41D /* MPSubMoviePlayerController.m */; };
+		043E45D4169D5D370086F41D /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 043E45D3169D5D370086F41D /* folder.png */; };
+		043E45D8169FA5390086F41D /* SFSubtitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043E45D7169FA5390086F41D /* SFSubtitleView.m */; };
+		043E45DE16A3C71D0086F41D /* SFSubtitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043E45DD16A3C71B0086F41D /* SFSubtitleController.m */; };
+		043E45EB16A3D9B90086F41D /* MPPlaybackControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043E45EA16A3D9B90086F41D /* MPPlaybackControlsViewController.m */; };
 		045ABBEE1693C97900AA54CC /* SFMovieSubtitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 045ABBED1693C97900AA54CC /* SFMovieSubtitle.m */; };
 		045ABC2F1693D13100AA54CC /* Big5Freq.tab in Resources */ = {isa = PBXBuildFile; fileRef = 045ABBF21693D13100AA54CC /* Big5Freq.tab */; };
 		045ABC301693D13100AA54CC /* CharDistribution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 045ABBF31693D13100AA54CC /* CharDistribution.cpp */; };
@@ -99,6 +104,16 @@
 		0437FDC616842E3F00A407F5 /* SubPlayerTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubPlayerTestTests.m; sourceTree = "<group>"; };
 		043E45A4169A4F6D0086F41D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		043E45AF169AB5B70086F41D /* subtest.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = subtest.srt; sourceTree = SOURCE_ROOT; };
+		043E45CF169C1ABD0086F41D /* MPSubMoviePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSubMoviePlayerController.h; sourceTree = "<group>"; };
+		043E45D0169C1ABD0086F41D /* MPSubMoviePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSubMoviePlayerController.m; sourceTree = "<group>"; };
+		043E45D2169D387E0086F41D /* SubtitleFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SubtitleFoundation.h; path = SubtitleFoundation/SubtitleFoundation.h; sourceTree = "<group>"; };
+		043E45D3169D5D370086F41D /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
+		043E45D6169FA5380086F41D /* SFSubtitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFSubtitleView.h; path = SubtitleFoundation/SFSubtitleView.h; sourceTree = "<group>"; };
+		043E45D7169FA5390086F41D /* SFSubtitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFSubtitleView.m; path = SubtitleFoundation/SFSubtitleView.m; sourceTree = "<group>"; };
+		043E45DC16A3C7190086F41D /* SFSubtitleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFSubtitleController.h; path = SubtitleFoundation/SFSubtitleController.h; sourceTree = "<group>"; };
+		043E45DD16A3C71B0086F41D /* SFSubtitleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFSubtitleController.m; path = SubtitleFoundation/SFSubtitleController.m; sourceTree = "<group>"; };
+		043E45E916A3D9B90086F41D /* MPPlaybackControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPPlaybackControlsViewController.h; path = PlaybackControls/MPPlaybackControlsViewController.h; sourceTree = "<group>"; };
+		043E45EA16A3D9B90086F41D /* MPPlaybackControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPPlaybackControlsViewController.m; path = PlaybackControls/MPPlaybackControlsViewController.m; sourceTree = "<group>"; };
 		045ABBEC1693C97900AA54CC /* SFMovieSubtitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFMovieSubtitle.h; path = SubtitleFoundation/SFMovieSubtitle.h; sourceTree = "<group>"; };
 		045ABBED1693C97900AA54CC /* SFMovieSubtitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFMovieSubtitle.m; path = SubtitleFoundation/SFMovieSubtitle.m; sourceTree = "<group>"; };
 		045ABBF21693D13100AA54CC /* Big5Freq.tab */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Big5Freq.tab; sourceTree = "<group>"; };
@@ -199,6 +214,7 @@
 			children = (
 				045ABBF01693D12800AA54CC /* external */,
 				046AAEFA1687D9E4002998D3 /* SubtitleFoundationClasses */,
+				043E45CE169C1A840086F41D /* SubtitleEnablePlayerController */,
 				0437FD9B16842E3E00A407F5 /* SubPlayerTest */,
 				0437FDBF16842E3F00A407F5 /* SubPlayerTestTests */,
 				0437FD9416842E3E00A407F5 /* Frameworks */,
@@ -243,6 +259,7 @@
 		0437FD9C16842E3E00A407F5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				043E45D3169D5D370086F41D /* folder.png */,
 				043E45AF169AB5B70086F41D /* subtest.srt */,
 				0437FD9D16842E3E00A407F5 /* SubPlayerTest-Info.plist */,
 				0437FD9E16842E3E00A407F5 /* InfoPlist.strings */,
@@ -272,6 +289,25 @@
 				0437FDC216842E3F00A407F5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		043E45CE169C1A840086F41D /* SubtitleEnablePlayerController */ = {
+			isa = PBXGroup;
+			children = (
+				043E45E816A3D9510086F41D /* PlaybackControls */,
+				043E45CF169C1ABD0086F41D /* MPSubMoviePlayerController.h */,
+				043E45D0169C1ABD0086F41D /* MPSubMoviePlayerController.m */,
+			);
+			name = SubtitleEnablePlayerController;
+			sourceTree = "<group>";
+		};
+		043E45E816A3D9510086F41D /* PlaybackControls */ = {
+			isa = PBXGroup;
+			children = (
+				043E45E916A3D9B90086F41D /* MPPlaybackControlsViewController.h */,
+				043E45EA16A3D9B90086F41D /* MPPlaybackControlsViewController.m */,
+			);
+			name = PlaybackControls;
 			sourceTree = "<group>";
 		};
 		045ABBF01693D12800AA54CC /* external */ = {
@@ -369,6 +405,11 @@
 				045ABBED1693C97900AA54CC /* SFMovieSubtitle.m */,
 				045ABC511693E2F300AA54CC /* SFSubtitleParseService.h */,
 				045ABC521693E2F300AA54CC /* SFSubtitleParseService.m */,
+				043E45D2169D387E0086F41D /* SubtitleFoundation.h */,
+				043E45D6169FA5380086F41D /* SFSubtitleView.h */,
+				043E45D7169FA5390086F41D /* SFSubtitleView.m */,
+				043E45DC16A3C7190086F41D /* SFSubtitleController.h */,
+				043E45DD16A3C71B0086F41D /* SFSubtitleController.m */,
 			);
 			name = SubtitleFoundationClasses;
 			sourceTree = "<group>";
@@ -456,6 +497,7 @@
 				045ABC331693D13100AA54CC /* GB2312Freq.tab in Resources */,
 				045ABC341693D13100AA54CC /* JISFreq.tab in Resources */,
 				043E45B0169AB5B70086F41D /* subtest.srt in Resources */,
+				043E45D4169D5D370086F41D /* folder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +567,10 @@
 				045ABC4E1693D13100AA54CC /* UniversalDetector.m in Sources */,
 				045ABC4F1693D13100AA54CC /* WrappedUniversalDetector.cpp in Sources */,
 				045ABC531693E2F300AA54CC /* SFSubtitleParseService.m in Sources */,
+				043E45D1169C1ABD0086F41D /* MPSubMoviePlayerController.m in Sources */,
+				043E45D8169FA5390086F41D /* SFSubtitleView.m in Sources */,
+				043E45DE16A3C71D0086F41D /* SFSubtitleController.m in Sources */,
+				043E45EB16A3D9B90086F41D /* MPPlaybackControlsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

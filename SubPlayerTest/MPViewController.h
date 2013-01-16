@@ -11,5 +11,7 @@
 @interface MPViewController : UIViewController
 - (IBAction)playHLS:(id)sender;
 - (IBAction)parseSRT:(id)sender;
+- (IBAction)playMovie:(id)sender;
+- (IBAction)test:(id)sender;
 
 @end

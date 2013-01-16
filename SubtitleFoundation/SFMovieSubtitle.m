@@ -34,8 +34,26 @@
     self = [super init];
     if (self) {
         _subtitleTracks = [NSMutableArray arrayWithArray:[SFSubtitleParserService subtitleTracksFromContentURL:url languageHint:langCode]];
+        
+        if (!_subtitleTracks) {
+            return nil;
+        }
     }
     return self;
+}
+
+//-------------------------------------
+- (NSString*) description
+{
+    NSMutableString* description = [[NSMutableString alloc] init];
+    [description appendFormat:@"SFMovieSubtitle: { number of track: %d,\n", [_subtitleTracks count]];
+    for (SFSubtitleTrack* track in _subtitleTracks)
+    {
+        [description appendString: [track description]];
+    }
+    [description appendString:@"}"];
+    
+    return description;
 }
 
 //-------------------------------------
