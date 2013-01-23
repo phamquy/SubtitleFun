@@ -17,7 +17,7 @@
 
 //------------------------------------------------------------------------------
 #pragma mark Subtitle Category
-@interface MPSubMoviePlayerController(Subtitle) <SFMoviePlayerClock>
+@interface MPSubMoviePlayerController(Subtitle) <SFSubtitleClock>
 @property (nonatomic, readonly) SFSubtitleController* subtitleController;
 @property (nonatomic) BOOL showSubtitle;
 - (void) loadSubtitleFromFile: (NSString*) subPath

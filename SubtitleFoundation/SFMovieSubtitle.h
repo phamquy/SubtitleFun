@@ -35,6 +35,7 @@
 - (NSArray*) trackForLanguage: (NSString*) ISOLanguageCode;
 - (void) addTrack: (SFSubtitleTrack*) tracks;
 - (void) addTracksFromContentURL: (NSURL*) url;
+- (void) addTracksFromContentURL: (NSURL*) url asLang: (NSString*) languageCode;
 - (void) removeTrack: (SFSubtitleTrack*) tracks;
 - (void) removeTracksOfLanguage: (NSString*) ISOLanguageCode;
 - (void) appendTracksFromSubtitle: (SFMovieSubtitle*) subtitle;

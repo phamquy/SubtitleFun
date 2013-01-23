@@ -8,7 +8,7 @@
 
 #import "MPSubMoviePlayerController.h"
 //==============================================================================
-@interface MPSubMoviePlayerController ()
+@interface MPSubMoviePlayerController () 
 {
     UIView* _overlayView;
     SFSubtitleController* _subtitleController;
@@ -106,28 +106,35 @@
 
 //------------------------------------------------------------------------------
 - (void) loadSubtitleFromFile: (NSString*)subPath
-                   forLanguage: (NSString*)languageCode;
+                  forLanguage: (NSString*)languageCode;
 {
     NSURL* subURL = [NSURL fileURLWithPath:subPath];
-    if (!_subtitleController) {
-        _subtitleController = [[SFSubtitleController alloc] initWithViewer:_overlayView];
+    // Init subtitle controller
+    if (!_subtitleController)
+    {
+        _subtitleController =
+            [[SFSubtitleController alloc] initWithContentURL:subURL
+                                                  asLanguage:languageCode];
     }
     
-    [_subtitleController loadSubtitleFromContentURL:subURL
-                                         asLanguage:languageCode];
+    // set overlayview as view container for subtitle's output
+    if (_overlayView) {
+        [_subtitleController setOutputViewContainer:_overlayView];
+    }
+    
+    // Set this mediaplayer as clock source for subtitle controller
+    [_subtitleController setClock:self];
+    [_subtitleController setMediaPlayer:self];
 }
 
 //------------------------------------------------------------------------------
-#pragma mark SFClock Protocol
+#pragma mark SFSubtitleClock Protocol
 - (NSTimeInterval) currentPlayTime
 {
     return [self currentPlaybackTime];
 }
 
-
 @end
-
-
 
 //==============================================================================
 #pragma mark - Playback controls Category

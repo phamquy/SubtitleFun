@@ -33,7 +33,10 @@
 {
     self = [super init];
     if (self) {
-        _subtitleTracks = [NSMutableArray arrayWithArray:[SFSubtitleParserService subtitleTracksFromContentURL:url languageHint:langCode]];
+        _subtitleTracks =
+            [NSMutableArray arrayWithArray:[SFSubtitleParserService
+                                            subtitleTracksFromContentURL:url
+                                            languageHint:langCode]];
         
         if (!_subtitleTracks) {
             return nil;
