@@ -48,6 +48,7 @@
         [label setTextAlignment:(NSTextAlignmentCenter)];
         [label setLineBreakMode:(NSLineBreakByWordWrapping)];
         [_overlayView addSubview:label];
+        
         [self.view addSubview:_overlayView];
         
         _playControlView = [[UIView alloc] init];
@@ -60,6 +61,7 @@
         //[button actionsForTarget:self forControlEvent:(UIControlEventTouchUpInside)];
         [button addTarget:self action:@selector(toggleText:) forControlEvents:(UIControlEventTouchUpInside)];
         [_playControlView addSubview:button];
+  
         [self.view addSubview:_playControlView];
     }
     return self;
@@ -104,7 +106,7 @@
 
 //------------------------------------------------------------------------------
 - (void) loadSubtitleFromFile: (NSString*)subPath
-                   asLanguage: (NSString*)languageCode;
+                   forLanguage: (NSString*)languageCode;
 {
     NSURL* subURL = [NSURL fileURLWithPath:subPath];
     if (!_subtitleController) {

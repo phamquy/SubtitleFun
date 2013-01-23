@@ -65,7 +65,7 @@
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     
     subPlayer = [[MPSubMoviePlayerController alloc] initWithContentURL:movieURL];
-    [subPlayer loadSubtitleFromFile: subPath asLanguage:@"en"];
+    [subPlayer loadSubtitleFromFile: subPath forLanguage:@"en"];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(moviePlaybackDidFinish:)

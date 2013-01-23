@@ -21,7 +21,7 @@
 @property (nonatomic, readonly) SFSubtitleController* subtitleController;
 @property (nonatomic) BOOL showSubtitle;
 - (void) loadSubtitleFromFile: (NSString*) subPath
-                   asLanguage: (NSString*) languageCode;
+                   forLanguage: (NSString*) languageCode;
 @end
 //------------------------------------------------------------------------------
 #pragma mark Playback Controls
