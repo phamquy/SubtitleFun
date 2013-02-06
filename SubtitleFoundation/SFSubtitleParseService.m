@@ -9,6 +9,7 @@
 #import "SFSubtitleParseService.h"
 #import "UniversalDetector.h"
 #import "SFSubtitleFrame.h"
+#import "SFFrameData.h"
 
 #define SFSubtitleExtensionSrt @"srt"
 #define SFSubtitleExtensionSmi @"smi"
@@ -80,8 +81,10 @@ static SFSubtitleParserService* _shareInstance = nil;
     //NSData* subData = [NSData dataWithContentsOfURL:url];
     
     // Read subtitle file to string
-    NSString* subString = [SFSubtitleParserService subtitleContentFromURL:url
-                                                             languageHint:langCode];
+    NSString* subString = [SFSubtitleParserService
+                           subtitleContentFromURL:url
+                           languageHint:langCode];
+    
     // trim off empty character
     subString = [subString stringByTrimmingCharactersInSet:
                  [NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -92,7 +95,8 @@ static SFSubtitleParserService* _shareInstance = nil;
     // Parsing SRT subtitle
     if ([subExt compare:SFSubtitleExtensionSrt
                 options:NSCaseInsensitiveSearch] == NSOrderedSame) {
-        return [SFSubtitleParserService parseSRTSubtitle: subString language:langCode];
+        return [SFSubtitleParserService parseSRTSubtitle: subString
+                                                language: langCode];
     }
     
     // Parsing SMI subtitle
@@ -113,33 +117,92 @@ static SFSubtitleParserService* _shareInstance = nil;
 + (NSArray*) parseSRTSubtitle: (NSString*) content
                      language: (NSString*) languageCode
 {
-    NSString* nixContent = [content stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+    NSString* nixContent = [content stringByReplacingOccurrencesOfString:@"\r"
+                                                              withString:@""];
+    
     NSArray* subStrings = [nixContent componentsSeparatedByString:@"\n\n"];
+    
     NSLog(@"%d", [subStrings count]);
     
     NSMutableArray* subFrames = [[NSMutableArray alloc] init];
     
     for(NSString *subString in subStrings){
-        //NSArray* line = [subCue componentsSeparatedByString:@"\n"];
-        id<SFSubtitleFrame> subFrame = [SFSubtitleFrameMaker
-                                        makeSubtitleFrameFromeString:subString
-                                        withType:SFSubtitleFrameTypeSubRip];
+        SFSubtitleFrame* subFrame =
+        [SFSubtitleParserService makeSubtitleFrameFromSRTString:subString];
         if (subFrame) {
             [subFrames addObject:subFrame];
         }
     }
     
     if ([subFrames count] > 0) {
-        return [NSArray arrayWithObject:[[SFSubtitleTrack alloc] initWithFrames:subFrames
-                                                                       language:languageCode]];
+        return [NSArray
+                arrayWithObject:[[SFSubtitleTrack alloc]
+                                 initWithFrames:subFrames
+                                 language:languageCode]];
     }
     return nil;
 }
 
 //-----------------------------------------------------------------------------
++ (SFSubtitleFrame*) makeSubtitleFrameFromSRTString: (NSString*) subtitleString
+{
+    SFSubtitleFrame* subFrame = [[SFSubtitleFrame alloc] init];
+    // seqId
+    NSArray* lines = [subtitleString componentsSeparatedByString:@"\n"];
+    
+    NSInteger seqNo = [[lines objectAtIndex:0] intValue];
+    if ( seqNo != INT_MAX && seqNo!=INT_MIN ){
+        [subFrame setSeqId: seqNo];
+    }else{
+        [subFrame setSeqId: 0];
+    }
+    
+    // Parse time
+    NSArray* times =
+    [[lines objectAtIndex:1]
+     componentsSeparatedByCharactersInSet:
+     [NSCharacterSet characterSetWithCharactersInString:@" "]];
+    
+    // For srt format, it strict to be 3 component in time cue line:
+    // "<starttime> --> <endtime>" so if the count != 3 mean this string
+    // have bad time marker.
+    if ([times count] != 3){
+        return nil;
+    }
+    
+    NSTimeInterval startTime = [SFSubtitleParserService
+                                parseTime: [times objectAtIndex:0]];
+    if(startTime < 0)
+        return nil;
+    else
+        [subFrame setStartTime:startTime];
+    
+    NSTimeInterval endTime = [self parseTime:[times objectAtIndex:2]];
+    if (endTime < 0)
+        return nil;
+    else
+        [subFrame setEndTime:endTime];
+    
+    NSMutableString* text = [[NSMutableString alloc] init];
+    for(int i = 2; i < [lines count]; i++){
+        NSString* line = [lines objectAtIndex:i];
+        if([text length] > 0 && [line length] >0){
+            [text appendString:@"\n"];
+        }
+        
+        [text appendString:line];
+    }
+    [subFrame setData:[SFFrameData
+                       frameWithSRTString: [NSString stringWithString:text]]];
+    
+    return subFrame;
+}
+
+//-----------------------------------------------------------------------------
 + (NSArray*) parseSMISubtitle: (NSString*) content
 {
-    
+    // TODO: Implementation
+    return nil;
 }
 
 
@@ -197,6 +260,21 @@ static SFSubtitleParserService* _shareInstance = nil;
 	
 	[outData setLength:outIndex];
 	return outData;
+}
+
+//-----------------------------------------------------------------------------
++ (NSTimeInterval) parseTime: (NSString*) timeString
+{
+    NSArray* timeElements = [timeString componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@":"]];
+    NSTimeInterval seconds = 0.0;
+    if ([timeElements count] == 3) {
+        seconds +=  [[timeElements objectAtIndex:2] doubleValue] +
+        [[timeElements objectAtIndex:1] doubleValue] * 60.0f +
+        [[timeElements objectAtIndex:1] doubleValue] * 3600.0f;
+        return seconds;
+    }else{
+        return -1.0f;
+    }
 }
 @end
 //------------------------------------------------------------------------------

@@ -12,7 +12,7 @@
 /**
  Define methods that controlled object may receive from controller
  */
-@protocol MPPlaybackControlsDelegate <NSObject>
+@protocol MPPlaybackControlsDelegate
 - (void) start;
 - (void) stop;
 - (void) pause;

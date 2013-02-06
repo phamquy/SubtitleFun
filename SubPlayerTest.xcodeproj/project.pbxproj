@@ -67,6 +67,8 @@
 		045ABC531693E2F300AA54CC /* SFSubtitleParseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 045ABC521693E2F300AA54CC /* SFSubtitleParseService.m */; };
 		046AAF0616882E02002998D3 /* SFSubtitleFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AAF0516882E02002998D3 /* SFSubtitleFrame.m */; };
 		046AAF0D16883DD9002998D3 /* SFSubtitleTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AAF0C16883DD9002998D3 /* SFSubtitleTrack.m */; };
+		048012BB16B0EA7B00FC2DD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048012BA16B0EA7A00FC2DD2 /* QuartzCore.framework */; };
+		048B182516C21E9800F81ABA /* SFFrameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B182416C21E9700F81ABA /* SFFrameData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +184,9 @@
 		046AAF0516882E02002998D3 /* SFSubtitleFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFSubtitleFrame.m; path = SubtitleFoundation/SFSubtitleFrame.m; sourceTree = "<group>"; };
 		046AAF0B16883DD9002998D3 /* SFSubtitleTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFSubtitleTrack.h; path = SubtitleFoundation/SFSubtitleTrack.h; sourceTree = "<group>"; };
 		046AAF0C16883DD9002998D3 /* SFSubtitleTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFSubtitleTrack.m; path = SubtitleFoundation/SFSubtitleTrack.m; sourceTree = "<group>"; };
+		048012BA16B0EA7A00FC2DD2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		048B182316C21E9700F81ABA /* SFFrameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFFrameData.h; path = SubtitleFoundation/SFFrameData.h; sourceTree = "<group>"; };
+		048B182416C21E9700F81ABA /* SFFrameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFFrameData.m; path = SubtitleFoundation/SFFrameData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048012BB16B0EA7B00FC2DD2 /* QuartzCore.framework in Frameworks */,
 				043E45A5169A4F6D0086F41D /* MediaPlayer.framework in Frameworks */,
 				0437FD9616842E3E00A407F5 /* UIKit.framework in Frameworks */,
 				0437FD9816842E3E00A407F5 /* Foundation.framework in Frameworks */,
@@ -234,6 +240,7 @@
 		0437FD9416842E3E00A407F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				048012BA16B0EA7A00FC2DD2 /* QuartzCore.framework */,
 				043E45A4169A4F6D0086F41D /* MediaPlayer.framework */,
 				0437FD9516842E3E00A407F5 /* UIKit.framework */,
 				0437FD9716842E3E00A407F5 /* Foundation.framework */,
@@ -397,6 +404,8 @@
 		046AAEFA1687D9E4002998D3 /* SubtitleFoundationClasses */ = {
 			isa = PBXGroup;
 			children = (
+				048B182316C21E9700F81ABA /* SFFrameData.h */,
+				048B182416C21E9700F81ABA /* SFFrameData.m */,
 				046AAF0416882E02002998D3 /* SFSubtitleFrame.h */,
 				046AAF0516882E02002998D3 /* SFSubtitleFrame.m */,
 				046AAF0B16883DD9002998D3 /* SFSubtitleTrack.h */,
@@ -571,6 +580,7 @@
 				043E45D8169FA5390086F41D /* SFSubtitleView.m in Sources */,
 				043E45DE16A3C71D0086F41D /* SFSubtitleController.m in Sources */,
 				043E45EB16A3D9B90086F41D /* MPPlaybackControlsViewController.m in Sources */,
+				048B182516C21E9800F81ABA /* SFFrameData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

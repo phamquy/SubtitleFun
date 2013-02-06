@@ -10,6 +10,8 @@
 #import "SFSubtitleController.h"
 #import "MPPlaybackControlsViewController.h"
 
+@protocol MPMediaPlayback;
+
 //------------------------------------------------------------------------------
 @interface MPSubMoviePlayerController : MPMoviePlayerController
 

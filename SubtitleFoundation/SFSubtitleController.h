@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <MediaPlayer/MediaPlayer.h>
-#import "SFMovieSubtitle.h"
+
+@class SFMovieSubtitle;
+@class SFSubtitleView;
 @protocol SFSubtitleClock <NSObject>
 @required
 /**
@@ -17,17 +19,17 @@
 - (NSTimeInterval) currentPlayTime;
 @end
 
-
+#pragma mark -
 //------------------------------------------------------------------------------
 @interface SFSubtitleController : NSObject
 @property(nonatomic, weak) id<SFSubtitleClock> clock;
 @property(nonatomic, strong) SFMovieSubtitle* subtitle;
-@property(nonatomic, strong) UIView* outputView;
+@property(nonatomic, readonly) SFSubtitleView* outputView;
 @property(nonatomic, weak) UIView* outputViewContainer;
-@property(nonatomic, weak) MPMoviePlayerController* mediaPlayer;
 @property(nonatomic) BOOL showSubtitle;
+@property(nonatomic) NSTimeInterval outputRefreshInterval;
 
-//- (id) initWithViewer: (UIView*) viewer;
+#pragma mark Subtitle Init Methods
 - (id) initWithContentURL: (NSURL*) url
                asLanguage: (NSString*) languageCode
                     clock: (id<SFSubtitleClock>) clock;
@@ -37,24 +39,16 @@
 
 
 - (id) initWithContentURL: (NSURL*) url;
-@end
 
-//------------------------------------------------------------------------------
-/*!
- Methods to handle subtitle data such as add, remove tracks 
- */
-@interface SFSubtitleController (SubtitleData)
+#pragma mark Subtitle Data Methods
 - (void) addSubtitleFromContentURL: (NSURL*) url
                         asLanguage: (NSString*) languageCode;
 
 
-@end
-//------------------------------------------------------------------------------
-@interface SFSubtitleController (SubtitleDisplay)
 
-@end
-
-//------------------------------------------------------------------------------
-@interface SFSubtitleController (SubtitlePlayback)
+#pragma mark Subtitle Control
+- (void) stop;
+- (void) start;
+- (void) renderSubtitleAtPlayTime: (NSTimeInterval) playTime;
 
 @end

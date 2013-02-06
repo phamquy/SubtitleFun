@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SFSubtitleTrack.h"
 
+@class SFSubtitleTrack;
+@class SFFrameData;
 //------------------------------------------------------------------------------
 /**
  Protocol an object need to comform to display 'SFMoviesSubtitle'.
@@ -17,14 +18,20 @@
 
 @end
 
-
-//------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 @interface SFMovieSubtitle : NSObject
 @property(nonatomic, readonly) NSArray* subtitleTracks;
+@property(nonatomic, readonly) SFSubtitleTrack* activeTrack;
 
 - (id) initWithTracks: (NSArray*) tracks;
 - (id) initWithContentURL: (NSURL*) url languageHint: (NSString*) langCode;
+
+
+- (void) setActiveTrackAtIndex: (NSInteger) index;
+- (NSInteger) trackCount;
+- (SFFrameData*) renderDataForFrameAtTime: (NSTimeInterval) timeStamp;
+
+
 /**
  @description return an array of `SFSubtitleTrack` contain subtitle of language
  indicated by language code
@@ -32,6 +39,7 @@
  @param ISOLanguageCode languageCode
  @return array of `SFSubtitleTrack`
  */
+
 - (NSArray*) trackForLanguage: (NSString*) ISOLanguageCode;
 - (void) addTrack: (SFSubtitleTrack*) tracks;
 - (void) addTracksFromContentURL: (NSURL*) url;
@@ -39,5 +47,8 @@
 - (void) removeTrack: (SFSubtitleTrack*) tracks;
 - (void) removeTracksOfLanguage: (NSString*) ISOLanguageCode;
 - (void) appendTracksFromSubtitle: (SFMovieSubtitle*) subtitle;
+
+
+
 @end
 //------------------------------------------------------------------------------

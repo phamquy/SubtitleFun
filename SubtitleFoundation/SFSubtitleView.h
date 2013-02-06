@@ -8,13 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-//==============================================================================
+//------------------------------------------------------------------------------
 @interface SFSubtitleLabel : UILabel
 
 @end
 
+//------------------------------------------------------------------------------
+@class SFFrameData;
+@protocol SFSubtitleDisplayer <NSObject>
 
-//==============================================================================
-@interface SFSubtitleView : UIView
+@required
+- (void) renderSubtitle:(SFFrameData*) renderData;
+
+@end
+
+//------------------------------------------------------------------------------
+@interface SFSubtitleView : UIView <SFSubtitleDisplayer>
 
 @end

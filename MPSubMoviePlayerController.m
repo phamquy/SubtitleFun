@@ -6,20 +6,21 @@
 //  Copyright (c) 2013 Clunet. All rights reserved.
 //
 
+// Post when seeking position change: by user moving player head, or by command
+NSString *const MPMoviePlayerSeekingPositionDidChange = @"MPMoviePlayerSeekingPositionDidChange";
+
 #import "MPSubMoviePlayerController.h"
+#import <QuartzCore/QuartzCore.h>
+
 //==============================================================================
 @interface MPSubMoviePlayerController () 
 {
     UIView* _overlayView;
     SFSubtitleController* _subtitleController;
     MPPlaybackControlsViewController* _playControls;
+    UIView* playControlView;
     
-    
-    // TEST
-    UIView* _playControlView;
-    UILabel* label;
 }
-- (void) toggleText: (id)sender;
 @end
 
 //==============================================================================
@@ -29,48 +30,55 @@
 {
     self = [super initWithContentURL:url];
     if (self) {
-        [self setControlStyle:(MPMovieControlStyleNone)];
+        [self setControlStyle:(MPMovieControlStyleFullscreen)];
         
         // TODO: Need more specific initialization for overlay view ivar
         _overlayView = [[UIView alloc] init];
         [_overlayView setFrame: CGRectMake(0,0, 1, 1) ];
         
         // Always make it cover full player screen
-        [_overlayView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-        
-        // Test
-        label = [[UILabel alloc] init];
-        [label setText:@"here is a subtitle text in \nmultiline and i know it"];
-        [label setFrame:CGRectMake(100, 0, 200, 50)];
-        [label setNumberOfLines:0];
-        [label setBackgroundColor:[UIColor clearColor]];
-        [label setTextColor:[UIColor whiteColor]];
-        [label setTextAlignment:(NSTextAlignmentCenter)];
-        [label setLineBreakMode:(NSLineBreakByWordWrapping)];
-        [_overlayView addSubview:label];
+        [_overlayView setAutoresizingMask:
+            UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+
+        [_overlayView setUserInteractionEnabled:NO];
         
         [self.view addSubview:_overlayView];
-        
-        _playControlView = [[UIView alloc] init];
-        [_playControlView setFrame:CGRectMake(0, 0, 1, 1)];
-        [_playControlView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-        
-        UIButton* button = [UIButton buttonWithType:(UIButtonTypeRoundedRect)];
-        [button setFrame: CGRectMake(100, 100, 100, 30)];
-        [button setTitle:@"play control" forState:(UIControlStateNormal)];
-        //[button actionsForTarget:self forControlEvent:(UIControlEventTouchUpInside)];
-        [button addTarget:self action:@selector(toggleText:) forControlEvents:(UIControlEventTouchUpInside)];
-        [_playControlView addSubview:button];
-  
-        [self.view addSubview:_playControlView];
     }
     return self;
 }
 
 
-- (void) toggleText:(id)sender
+//------------------------------------------------------------------------------
+- (void) playVideo:(id)sender
 {
-     [label setText:@"textToggled \nmultiline and i know it"];
+    [self play];
+    //[label setText:@"textToggled \nmultiline and i know it"];
+    //[self setCurrentPlaybackTime:([self currentPlaybackTime] + 5.0f)];
+}
+
+
+//------------------------------------------------------------------------------
+- (void) pauseVideo:(id)sender
+{
+    [self pause];
+     //[label setText:@"textToggled \nmultiline and i know it"];
+    //[self setCurrentPlaybackTime:([self currentPlaybackTime] + 5.0f)];
+}
+
+//------------------------------------------------------------------------------
+- (void) dealloc
+{
+
+    // Remove notification observer for this object
+    [[NSNotificationCenter defaultCenter]
+     removeObserver:self
+     name:MPMoviePlayerPlaybackStateDidChangeNotification
+     object:self];
+
+    [[NSNotificationCenter defaultCenter]
+     removeObserver:self
+     name:MPMoviePlayerSeekingPositionDidChange
+     object:self];
 }
 
 @end
@@ -84,10 +92,6 @@
     return _subtitleController;
 }
 
-//- (void) setSubtitle:(SFSubtitleController *)controller{
-//    _subtitleController = controller;
-//}
-
 //------------------------------------------------------------------------------
 @dynamic showSubtitle;
 - (BOOL) isShowSubtitle {
@@ -98,6 +102,7 @@
     }
 }
 
+//------------------------------------------------------------------------------
 - (void) setShowSubtitle:(BOOL)showSubtitle{
     if (_subtitleController) {
         [_subtitleController setShowSubtitle:showSubtitle];
@@ -118,13 +123,24 @@
     }
     
     // set overlayview as view container for subtitle's output
-    if (_overlayView) {
+    if (_subtitleController && _overlayView) {
         [_subtitleController setOutputViewContainer:_overlayView];
+        // Set this mediaplayer as clock source for subtitle controller
+        [_subtitleController setClock:self];
     }
     
-    // Set this mediaplayer as clock source for subtitle controller
-    [_subtitleController setClock:self];
-    [_subtitleController setMediaPlayer:self];
+    // Add notification handler
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(moviePlaybackDidChangeState:)
+     name:MPMoviePlayerPlaybackStateDidChangeNotification
+     object:self];
+
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(seekPositionDidChange:)
+     name:MPMoviePlayerSeekingPositionDidChange
+     object:self];
 }
 
 //------------------------------------------------------------------------------
@@ -134,6 +150,40 @@
     return [self currentPlaybackTime];
 }
 
+
+#pragma mark Notification Handler
+- (void) moviePlaybackDidChangeState:(NSNotification*)notification
+{
+    MPMoviePlaybackState playbackState = [self playbackState];
+    switch (playbackState) {
+        case MPMoviePlaybackStateStopped:
+        case MPMoviePlaybackStatePaused:
+        case MPMoviePlaybackStateInterrupted:
+            [_subtitleController stop];
+            break;
+        case MPMoviePlaybackStatePlaying:
+            [_subtitleController start];
+            break;
+        case MPMoviePlaybackStateSeekingBackward:
+        case MPMoviePlaybackStateSeekingForward:
+            [_subtitleController stop];
+            break;
+        default:
+            break;
+    }
+    
+}
+
+//------------------------------------------------------------------------------
+- (void) seekPositionDidChange: (NSNotification*) notification
+{
+    // Check current seek position from notification object
+    NSTimeInterval playTime = 0;
+    // TODO: work out playTime for current seek position
+    
+    // Render instantly subtitle for that position
+    [_subtitleController renderSubtitleAtPlayTime:playTime];
+}
 @end
 
 //==============================================================================
@@ -165,10 +215,13 @@
 //------------------------------------------------------------------------------
 // TODO: Implement protocol
 #pragma mark MPPlaybackControlsDelegate
-- (void) start{}
-- (void) stop{}
-- (void) pause{}
-- (void) resume{}
-- (void) seekDelta: (double) movement{}
-- (void) seekTo: (double) position{}
+//- (void) start{}
+//- (void) stop{}
+//- (void) pause{}
+//- (void) resume{}
+//- (void) seekDelta: (double) movement{}
+//- (void) seekTo: (double) position{}
+
+
+
 @end

@@ -7,18 +7,30 @@
 //
 
 #import "SFSubtitleController.h"
+#import "MPSubMoviePlayerController.h"
+#import "SFSubtitleView.h"
+#import "SFMovieSubtitle.h"
+#import "SFFrameData.h"
 
 #define kSFSubtitleDefaultLanguage @"en"
+#define kSFSubtitleDefaultRefreshRate 0.5f
 //==============================================================================
 @interface SFSubtitleController ()
 {
     __weak id<SFSubtitleClock> _clock;
     SFMovieSubtitle* _subtitle;
-    UIView* _outputView;
+    SFSubtitleView* _outputView;
     __weak UIView* _outputViewContainer;
-    __weak MPMoviePlayerController* _mediaPlayer;
+    //__weak MPMoviePlayerController* _mediaPlayer;
     BOOL _showSubtitle;
     NSTimer* _refreshTimer;
+    NSTimeInterval _outputRefreshInterval;
+    
+    BOOL _isActivated;
+    
+    
+    // TEST
+    UILabel* label;
 }
 @end
 
@@ -28,24 +40,7 @@
 @synthesize clock=_clock;
 @synthesize subtitle=_subtitle;
 @synthesize outputView=_outputView;
-@synthesize outputViewContainer=_outputViewContainer;
-@synthesize showSubtitle=_showSubtitle;
-
-//------------------------------------------------------------------------------
--(MPMoviePlayerController*) mediaPlayer
-{
-    return _mediaPlayer;
-}
-//------------------------------------------------------------------------------
--(void) setMediaPlayer:(MPMoviePlayerController *)mediaPlayer
-{
-    _mediaPlayer = mediaPlayer;
-    // TODO: add it self as a observer of media notification.
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(moviePlaybackDidChangeState:)
-                                                 name:MPMoviePlayerPlaybackStateDidChangeNotification
-                                               object:mediaPlayer];
-}
+@synthesize outputRefreshInterval=_outputRefreshInterval;
 
 //------------------------------------------------------------------------------
 - (id) initWithContentURL: (NSURL*) url
@@ -53,8 +48,7 @@
     self = [self initWithContentURL:url
                          asLanguage:kSFSubtitleDefaultLanguage
                               clock:nil];
-    if (self)
-    {
+    if (self){
         
     }
     return self;
@@ -67,8 +61,7 @@
     self = [self initWithContentURL:url
                          asLanguage:languageCode
                               clock:nil];
-    if (self)
-    {
+    if (self){
 
     }
     return self;
@@ -83,6 +76,20 @@
     if (self) {
         [self addSubtitleFromContentURL:url asLanguage:languageCode];
         _clock = clock;
+        [self initOutputView];
+        _outputRefreshInterval = kSFSubtitleDefaultRefreshRate;
+        
+        _refreshTimer =[NSTimer
+                        timerWithTimeInterval:_outputRefreshInterval
+                        target:self
+                        selector:@selector(refreshOutputByTimer:)
+                        userInfo:nil
+                        repeats:YES];
+        
+        NSRunLoop* runloop = [NSRunLoop currentRunLoop];
+        [runloop addTimer:_refreshTimer
+                  forMode:NSDefaultRunLoopMode];
+
     }
     return self;
 }
@@ -90,77 +97,172 @@
 //------------------------------------------------------------------------------
 - (void) dealloc
 {
-    // ???: will __week ivar cause any problem here?
-    [[NSNotificationCenter defaultCenter]
-     removeObserver:self
-     name:MPMoviePlayerPlaybackStateDidChangeNotification
-     object:_mediaPlayer];
+    // remove subtitle layer from container
+    [_outputView removeFromSuperview];
+    [_refreshTimer invalidate];
 }
 
-//------------------------------------------------------------------------------
-- (void) moviePlaybackDidChangeState:(NSNotification*)notification
-{
-    MPMoviePlaybackState playbackState = [_mediaPlayer playbackState];
-    switch (playbackState) {
-        case MPMoviePlaybackStateStopped:
-        case MPMoviePlaybackStatePaused:
-        case MPMoviePlaybackStateInterrupted:
-        
-            // TODO: deactive refresh timer
-            [self deactivateRefreshTimer];
-            break;
-        case MPMoviePlaybackStatePlaying:
-            // TODO: reactive timer if it is not
-            [self activateRefreshTimer];
-            break;
-        case MPMoviePlaybackStateSeekingBackward:
-        case MPMoviePlaybackStateSeekingForward:
-            // ???: Probably subtitle need to make appear instantly
-            // during seeking
-            // TODO: Need to check real meaning of this state
-            break;
-        default:
-            break;
-    }
-}
-
-//------------------------------------------------------------------------------
+//==============================================================================
+#pragma mark - Refresh subtitle output
 - (void) activateRefreshTimer
 {
-    
+    _isActivated = YES;
 }
 
 //------------------------------------------------------------------------------
 - (void) deactivateRefreshTimer
 {
     
+    _isActivated = NO;
 }
-@end
+
+//------------------------------------------------------------------------------
+- (void) refreshOutputByTimer: (NSTimer* ) timer
+{
+    if (timer == _refreshTimer) {
+        
+        NSTimeInterval playTimeStamp = [_clock currentPlayTime];        
+        [self renderSubtitleAtPlayTime:playTimeStamp];
+
+    }
+}
+
+
 
 //==============================================================================
 #pragma mark - SFSubtitleController (SubtitleData)
-@implementation SFSubtitleController (SubtitleData)
 
 
-//------------------------------------------------------------------------------
 - (void) addSubtitleFromContentURL: (NSURL*) url
                         asLanguage: (NSString*) languageCode
 {
     if (!_subtitle) { // If there first time, create subtitle obj
         _subtitle = [[SFMovieSubtitle alloc] initWithContentURL:url
                                                    languageHint:languageCode];
+        
+        // Set first track as active track.
+        if ([_subtitle trackCount]) {
+            [_subtitle setActiveTrackAtIndex:0];
+        }
+        
     }else{ // else, add subtitle tracks from url to current subtitle
         [_subtitle addTracksFromContentURL:url
                                     asLang:languageCode];
     }
 }
 
-@end
 
 //==============================================================================
 #pragma mark - SFSubtitleController (SubtitleDisplay)
-@implementation SFSubtitleController (SubtitleDisplay)
+//@synthesize outputViewContainer=_outputViewContainer;
+
+//------------------------------------------------------------------------------
+// NOTE: atm, we make subtitle view take entire space of it container
+- (void) setOutputViewContainer:(UIView *)outputViewContainer
+{
+    _outputViewContainer = outputViewContainer;
+    if (_outputView) {
+        [_outputView setFrame:[_outputViewContainer bounds]];
+        [_outputViewContainer addSubview:_outputView];
+    }
+}
+
+//------------------------------------------------------------------------------
+- (UIView*) outputViewContainer
+{
+    return _outputViewContainer;
+}
+
+//------------------------------------------------------------------------------
+- (void) initOutputView
+{
+    _outputView = [[SFSubtitleView alloc] init];
+    [_outputView setFrame:CGRectMake(0, 0, 1, 1)];
+    [_outputView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|
+     UIViewAutoresizingFlexibleHeight];
+    
+    // Set _outputView appearance setting to make it transparent
+    //[_outputView setBackgroundColor:[UIColor grayColor]];
+    //[_outputView setAlpha:0.5f];
+    [_outputView setUserInteractionEnabled:NO];
+    
+    // TEST
+    label = [[UILabel alloc] init];
+    [label setText:@"here is a subtitle text in \nmultiline and i know it"];
+    [label setFrame:CGRectMake(50, 350, 200, 50)];
+    [label setNumberOfLines:0];
+    [label setBackgroundColor:[UIColor clearColor]];
+    [label setTextColor:[UIColor whiteColor]];
+    [label setTextAlignment:(NSTextAlignmentCenter)];
+    [label setLineBreakMode:(NSLineBreakByWordWrapping)];
+    
+    [_outputView addSubview:label];
+    [self setShowSubtitle:NO];
+}
 
 
+//==============================================================================
+#pragma mark - SFSubtitleController (Subtitle Control)
+- (void) stop
+{
+    [self deactivateRefreshTimer];
+}
 
+//------------------------------------------------------------------------------
+- (void) start
+{
+    [self activateRefreshTimer];
+}
+
+//------------------------------------------------------------------------------
+- (BOOL) isShowSubtitle
+{
+    return _showSubtitle;
+}
+
+
+//------------------------------------------------------------------------------
+- (void) setShowSubtitle:(BOOL)showSubtitle
+{
+    _showSubtitle = showSubtitle;
+    if (_showSubtitle) {
+        [_outputView setHidden:NO];
+    }else{
+        [_outputView setHidden:YES];
+    }
+}
+
+//------------------------------------------------------------------------------
+- (void) renderSubtitleAtPlayTime: (NSTimeInterval) playTime
+{
+    SFFrameData* renderData =
+//    [_subtitle renderDataForFrame: [_outputView bounds]
+//                           atTime: playTime];
+    [_subtitle renderDataForFrameAtTime: playTime];
+    
+    [self renderSubtitle: renderData];
+}
+
+//------------------------------------------------------------------------------
+#pragma mark - SFSubtitleController (Private Utility Methods)
+// Render data
+- (void) renderSubtitle: (SFFrameData*) renderData
+{
+    if(_isActivated && _showSubtitle)
+    {
+        //[_outputView ];
+//        // Set _outputView appearance setting to make it transparent
+//        [_outputView setBackgroundColor:[UIColor colorWithRed:rand()/RAND_MAX
+//                                                        green:rand()/RAND_MAX
+//                                                         blue:rand()/RAND_MAX
+//                                                        alpha:0.5]];
+        
+        NSDate* date = [NSDate date];
+        [label setText:[NSString stringWithFormat:@"%@", date]];
+        //TODO: implementation       
+    }
+}
 @end
+
+
+

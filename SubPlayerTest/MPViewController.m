@@ -6,6 +6,11 @@
 //  Copyright (c) 2012 Clunet. All rights reserved.
 //
 
+
+//TEST
+#import <objc/runtime.h>
+
+
 #import "MPViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "SFSubtitleParseService.h"
@@ -35,27 +40,35 @@
 
 //------------------------------------------------------------------------------
 - (IBAction)playHLS:(id)sender {
-//    NSString* str = @"https:​/​/​devimages.apple.com.edgekey.net/​resources/​http-streaming/​examples/​bipbop_16x9/​bipbop_16x9_variant.m3u8";
-    NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithUTF8String:"https://devimages.apple.com.edgekey.net/resources/http-streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"]];
-//   NSURL *url = [NSURL URLWithString:@"https://devimages.apple.com.edgekey.net/resources/http-streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"];
+
+    NSURL *url = [[NSURL alloc]
+                  initWithString:[NSString
+                                  stringWithUTF8String:"https://devimages.apple.\
+                                  com.edgekey.net/resources/http-streaming/examples\
+                                  /bipbop_16x9/bipbop_16x9_variant.m3u8"]];
+    
     MPMoviePlayerViewController *theMovie = [[MPMoviePlayerViewController alloc]
                                              initWithContentURL: url];
    
     [self presentMoviePlayerViewControllerAnimated:theMovie];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(myMovieFinishedCallback:)
-                                                 name:MPMoviePlayerPlaybackDidFinishNotification
-                                               object:theMovie];
+    
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(myMovieFinishedCallback:)
+     name:MPMoviePlayerPlaybackDidFinishNotification
+     object:theMovie];
 }
-
 
 //------------------------------------------------------------------------------
 - (IBAction)parseSRT:(id)sender {
-    NSArray* subTracks = [SFSubtitleParserService
-                          subtitleTracksFromContentURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"subtest" ofType:@"srt"]] languageHint:@"en"];
+    NSArray* subTracks =
+    [SFSubtitleParserService
+     subtitleTracksFromContentURL:[NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                          pathForResource:@"subtest"
+                                                          ofType:@"srt"]]
+     languageHint:@"en"];
     
     NSLog(@"%@", [subTracks objectAtIndex:0]);
-    
 }
 
 //------------------------------------------------------------------------------
@@ -66,18 +79,49 @@
     
     subPlayer = [[MPSubMoviePlayerController alloc] initWithContentURL:movieURL];
     [subPlayer loadSubtitleFromFile: subPath forLanguage:@"en"];
+    [subPlayer setShowSubtitle:YES];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(moviePlaybackDidFinish:)
-                                                 name:MPMoviePlayerPlaybackDidFinishNotification
-                                               object:subPlayer];
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(moviePlaybackDidFinish:)
+     name:MPMoviePlayerPlaybackDidFinishNotification
+     object:subPlayer];
+
     
-//    subPlayer.controlStyle = MPMovieControlStyleFullscreen;
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(moviePlaybackStateDidChange:)
+     name:MPMoviePlayerPlaybackStateDidChangeNotification
+     object:subPlayer];
+
     subPlayer.shouldAutoplay = NO;
     [subPlayer.view setFrame:[[self view] bounds]];
-    [subPlayer.view setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin)];
+    
+    [subPlayer.view setAutoresizingMask:(UIViewAutoresizingFlexibleWidth |
+                                         UIViewAutoresizingFlexibleHeight)];
+    
     [self.view addSubview:subPlayer.view];
     [subPlayer play];
+    
+    [self performSelector:@selector(inspectPlayerView) withObject:nil afterDelay:0.1];
+
+}
+
+
+//------------------------------------------------------------------------------
+// TEST
+-(void)inspectPlayerView
+{
+    [self recursiveViewTraversal:subPlayer.view counter:0];
+}
+
+//------------------------------------------------------------------------------
+-(void)recursiveViewTraversal:(UIView*)view counter:(int)counter {
+    const char* className = class_getName([view class]);
+    NSLog(@"Depth %d - %s", counter, className); //For debug
+    for(UIView *child in [view subviews]) {
+        [self recursiveViewTraversal:child counter:counter+1];
+    }    
 }
 
 //------------------------------------------------------------------------------
@@ -89,6 +133,12 @@
     [subPlayer.view removeFromSuperview];
     subPlayer = nil;
 }
+
+- (void) moviePlaybackStateDidChange: (NSNotification*) notification {
+    NSLog(@"moviePlaybackStateDidChange to: %d", [subPlayer playbackState] );
+    NSLog(@"Movie current playback tim: %.3f", [subPlayer currentPlaybackTime]);
+}
+
 
 //------------------------------------------------------------------------------
 - (IBAction)test:(id)sender {
