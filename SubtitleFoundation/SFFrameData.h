@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface SFFrameData : NSObject
-+ (SFFrameData*) frameWithSRTString: (NSString*) srtString;
+@property (nonatomic, strong) NSAttributedString* attText;
 @end

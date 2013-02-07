@@ -29,7 +29,7 @@
 
 - (void) setActiveTrackAtIndex: (NSInteger) index;
 - (NSInteger) trackCount;
-- (SFFrameData*) renderDataForFrameAtTime: (NSTimeInterval) timeStamp;
+- (SFFrameData*) renderDataOfFrameAtTime: (NSTimeInterval) timeStamp;
 
 
 /**

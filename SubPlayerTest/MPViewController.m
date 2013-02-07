@@ -73,8 +73,8 @@
 
 //------------------------------------------------------------------------------
 - (IBAction)playMovie:(id)sender {
-    NSString* moviePath = @"/Users/jack/clunet/vicloud/0.tmp/LifeOfPi.mp4";
-    NSString* subPath = @"/Users/jack/clunet/vicloud/0.tmp/LifeOfPi.srt";
+    NSString* moviePath = @"/Users/jack/clunet/vicloud/0.tmp/howimet.mp4";
+    NSString* subPath = @"/Users/jack/clunet/vicloud/0.tmp/howimet.srt";
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     
     subPlayer = [[MPSubMoviePlayerController alloc] initWithContentURL:movieURL];

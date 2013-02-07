@@ -27,3 +27,22 @@
 + (NSArray*) subtitleTracksFromContentURL: (NSURL*) url
                              languageHint: (NSString*) langCode;
 @end
+
+//------------------------------------------------------------------------------
+@protocol SFSubtitleParser <NSObject>
+@required
+- (NSArray*) tracksFromContentString: (NSString*) content
+                      preferLanguage: (NSString*) lang;
+@optional
+- (NSArray*) tracksFromContentURL: (NSURL*) url;
+
+@end
+
+//------------------------------------------------------------------------------
+@interface SFSrtParser : NSObject <SFSubtitleParser>
+
+@end
+//------------------------------------------------------------------------------
+@interface SFSmiParser : NSObject <SFSubtitleParser>
+
+@end

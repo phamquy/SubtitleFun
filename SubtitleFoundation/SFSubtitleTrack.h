@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SFSubtitleFrame.h"
 
 #define SFTrackInfoLanguage @"language"
 
@@ -38,6 +39,11 @@
 
 - (id) initWithFrames: (NSArray*) subtitleFrames;
 
+
+/**
+ Frames accessing methods
+ */
+- (SFSubtitleFrame*) subtitleFrameForTimestamp: (NSTimeInterval) timeStamp;
 
 /**
  Frames manipulating methods

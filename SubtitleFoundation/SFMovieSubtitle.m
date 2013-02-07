@@ -68,12 +68,18 @@
     return _subtitleTracks;
 }
 
+//------------------------------------------------------------------------------
 
 #pragma mark Render Data Creation
-- (SFFrameData*) renderDataForFrameAtTime: (NSTimeInterval) timeStamp
+- (SFFrameData*) renderDataOfFrameAtTime: (NSTimeInterval) timeStamp
 {
+    SFSubtitleFrame* subFrame = nil;
     if (_activeTrack) {
-        
+        subFrame = [_activeTrack subtitleFrameForTimestamp: timeStamp];
+    }
+    
+    if (subFrame) {
+        return  subFrame.data;
     }
     return nil;
 }
@@ -85,7 +91,7 @@
 - (void) setActiveTrackAtIndex: (NSInteger) index
 {
     if (index < [_subtitleTracks count]) {
-        _activeTrack = [_subtitleTracks objectAtIndex:index];
+        _activeTrack = [_subtitleTracks objectAtIndex:index];        
     }
 }
 

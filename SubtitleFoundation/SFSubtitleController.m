@@ -27,10 +27,6 @@
     NSTimeInterval _outputRefreshInterval;
     
     BOOL _isActivated;
-    
-    
-    // TEST
-    UILabel* label;
 }
 @end
 
@@ -119,7 +115,7 @@
 //------------------------------------------------------------------------------
 - (void) refreshOutputByTimer: (NSTimer* ) timer
 {
-    if (timer == _refreshTimer) {
+    if ((timer == _refreshTimer) && _isActivated) {
         
         NSTimeInterval playTimeStamp = [_clock currentPlayTime];        
         [self renderSubtitleAtPlayTime:playTimeStamp];
@@ -185,18 +181,6 @@
     //[_outputView setBackgroundColor:[UIColor grayColor]];
     //[_outputView setAlpha:0.5f];
     [_outputView setUserInteractionEnabled:NO];
-    
-    // TEST
-    label = [[UILabel alloc] init];
-    [label setText:@"here is a subtitle text in \nmultiline and i know it"];
-    [label setFrame:CGRectMake(50, 350, 200, 50)];
-    [label setNumberOfLines:0];
-    [label setBackgroundColor:[UIColor clearColor]];
-    [label setTextColor:[UIColor whiteColor]];
-    [label setTextAlignment:(NSTextAlignmentCenter)];
-    [label setLineBreakMode:(NSLineBreakByWordWrapping)];
-    
-    [_outputView addSubview:label];
     [self setShowSubtitle:NO];
 }
 
@@ -235,33 +219,14 @@
 //------------------------------------------------------------------------------
 - (void) renderSubtitleAtPlayTime: (NSTimeInterval) playTime
 {
-    SFFrameData* renderData =
-//    [_subtitle renderDataForFrame: [_outputView bounds]
-//                           atTime: playTime];
-    [_subtitle renderDataForFrameAtTime: playTime];
-    
-    [self renderSubtitle: renderData];
-}
-
-//------------------------------------------------------------------------------
-#pragma mark - SFSubtitleController (Private Utility Methods)
-// Render data
-- (void) renderSubtitle: (SFFrameData*) renderData
-{
-    if(_isActivated && _showSubtitle)
-    {
-        //[_outputView ];
-//        // Set _outputView appearance setting to make it transparent
-//        [_outputView setBackgroundColor:[UIColor colorWithRed:rand()/RAND_MAX
-//                                                        green:rand()/RAND_MAX
-//                                                         blue:rand()/RAND_MAX
-//                                                        alpha:0.5]];
+    if (_showSubtitle) {
+        SFFrameData* renderData = [_subtitle
+                                   renderDataOfFrameAtTime: playTime];
         
-        NSDate* date = [NSDate date];
-        [label setText:[NSString stringWithFormat:@"%@", date]];
-        //TODO: implementation       
+        [_outputView renderSubtitle:renderData];
     }
 }
+
 @end
 
 

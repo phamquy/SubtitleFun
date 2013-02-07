@@ -68,4 +68,23 @@
 {
     return [_trackInfo valueForKey:SFTrackInfoLanguage];
 }
+//------------------------------------------------------------------------------
+#pragma mark Frame Accessing methods
+- (SFSubtitleFrame*) subtitleFrameForTimestamp: (NSTimeInterval) timeStamp
+{
+    SFSubtitleFrame* foundFrame = nil;
+    for (SFSubtitleFrame* subframe in _subtitleFrames) {
+        if ((subframe.startTime <= timeStamp) && (timeStamp <= subframe.endTime)) {
+            foundFrame = subframe;
+            break;
+        }
+    }
+    
+    NSLog(@"Found frame: %.3f-->%.3f for time: %.2f", foundFrame.startTime, foundFrame.endTime, timeStamp);
+    return foundFrame;
+}
+
+
 @end
+
+

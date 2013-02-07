@@ -9,8 +9,5 @@
 #import "SFFrameData.h"
 
 @implementation SFFrameData
-+ (SFFrameData*) frameWithSRTString: (NSString*) srtString
-{
-    return nil;
-}
+@synthesize attText=_attText;
 @end
