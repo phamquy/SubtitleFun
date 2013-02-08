@@ -1,0 +1,3820 @@
+﻿1
+00:00:01,000 --> 00:00:04,074
+Subtitles downloaded from www.OpenSubtitles.org
+
+2
+00:01:11,328 --> 00:01:16,634
+LIFE OF PI
+Transcript and sync: jcdr
+
+3
+00:03:52,857 --> 00:03:55,709
+– So, you were raised in a zoo?
+– Born and raised...
+
+4
+00:03:56,049 --> 00:03:59,242
+.. In Pondicherry, in what was
+the French part of India.
+
+5
+00:03:59,765 --> 00:04:01,312
+My father owned the zoo.
+
+6
+00:04:01,648 --> 00:04:04,815
+And I was delivered on short notice
+by a herpetologist,
+
+7
+00:04:05,159 --> 00:04:07,874
+who was there to check
+on the Bengal monitor lizard.
+
+8
+00:04:08,730 --> 00:04:10,919
+Mother and I were both healthy,
+
+9
+00:04:11,545 --> 00:04:13,268
+but the poor lizard escaped,
+
+10
+00:04:13,284 --> 00:04:16,322
+and was trampled by
+a frightening category.
+
+11
+00:04:18,606 --> 00:04:20,873
+The way of Karma, huh?
+
+12
+00:04:21,394 --> 00:04:22,684
+The way of God.
+
+13
+00:04:23,815 --> 00:04:24,812
+That's quite a story.
+
+14
+00:04:26,179 --> 00:04:28,921
+I'd assumed your father was
+a mathematician, because of your name.
+
+15
+00:04:29,300 --> 00:04:32,020
+Not far from it, I was named
+after a swimming pool.
+
+16
+00:04:33,240 --> 00:04:34,782
+There was a pool named "PI"?
+
+17
+00:04:36,648 --> 00:04:40,782
+You see, my uncle Francis was born
+with too much water in his lungs.
+
+18
+00:04:41,522 --> 00:04:45,791
+They say the doctor swung Francis around
+by the ankle, to clear the water out.
+
+19
+00:04:46,043 --> 00:04:48,835
+And that's what gives him
+his huge chest and skinny legs,
+
+20
+00:04:48,891 --> 00:04:50,543
+that made him such a great swimmer.
+
+21
+00:04:52,114 --> 00:04:55,413
+Is Francis actually your uncle,
+he said he was friend with your father?
+
+22
+00:04:55,740 --> 00:04:58,406
+Well, he's my "Honorary" Uncle.
+I call him "Mamaji".
+
+23
+00:04:58,964 --> 00:05:01,596
+My father's best friend, my swimming guru.
+
+24
+00:05:01,960 --> 00:05:04,434
+I trained with him three times
+a week at the Ashton.
+
+25
+00:05:05,637 --> 00:05:08,216
+His lessons would save my life in the end.
+
+26
+00:05:09,443 --> 00:05:11,909
+A mouthful of water will not harden you.
+
+27
+00:05:12,177 --> 00:05:13,845
+But panic will.
+
+28
+00:05:14,921 --> 00:05:18,119
+And remember to breath now,
+don't hold your breath.
+
+29
+00:05:18,985 --> 00:05:19,952
+Good boy.
+
+30
+00:05:23,689 --> 00:05:25,464
+I hope you don't mind vegetarian.
+
+31
+00:05:25,555 --> 00:05:27,238
+No, no. Not at all.
+
+32
+00:05:27,971 --> 00:05:29,949
+– And your name?
+– Uh?
+
+33
+00:05:30,200 --> 00:05:32,849
+You were going to tell me
+how you got your name, I think.
+
+34
+00:05:32,985 --> 00:05:36,515
+Oh yes! I got it from something
+Mamaji once told my father.
+
+35
+00:05:37,155 --> 00:05:40,926
+You see, most travelers collect postcards
+or tea cups and their jewelries,
+
+36
+00:05:40,950 --> 00:05:41,854
+but not Mamaji.
+
+37
+00:05:41,949 --> 00:05:43,733
+Mamaji collects swimming pools.
+
+38
+00:05:44,165 --> 00:05:46,515
+He swims in every pool he comes upon.
+
+39
+00:05:54,786 --> 00:05:58,813
+One day, Mamaji said to my father,
+that of all the pools in the world,
+
+40
+00:05:58,821 --> 00:06:01,665
+the most beautiful was
+a public pool in Paris.
+
+41
+00:06:02,048 --> 00:06:03,628
+That the water there was so clear,
+
+42
+00:06:03,629 --> 00:06:05,886
+you could make your
+morning coffee with it.
+
+43
+00:06:06,099 --> 00:06:08,922
+That a single swim there changed his life.
+
+44
+00:06:23,325 --> 00:06:25,088
+Before I was born, he said:
+
+45
+00:06:25,277 --> 00:06:27,769
+"If you want your son
+to have a clean soul,
+
+46
+00:06:28,099 --> 00:06:32,128
+you must take him one day
+to swim in the "piscine Molitor".
+
+47
+00:06:32,702 --> 00:06:36,386
+I never understood why my father
+took this so much too heart.
+
+48
+00:06:36,862 --> 00:06:38,020
+But he did.
+
+49
+00:06:38,708 --> 00:06:41,334
+And I was named "Piscine Molitor Patel".
+
+50
+00:06:43,109 --> 00:06:45,247
+Imagine me trying to explain that name.
+
+51
+00:06:45,598 --> 00:06:47,905
+I barely made it to the age of eleven.
+
+52
+00:06:47,919 --> 00:06:48,267
+before...
+
+53
+00:06:48,268 --> 00:06:49,634
+before...
+– Hey, "pissing"!
+
+54
+00:06:51,472 --> 00:06:53,181
+Are you pissing right now?
+
+55
+00:06:54,679 --> 00:06:56,629
+Look at him, he is pissing.
+
+56
+00:06:56,739 --> 00:07:00,871
+With one word, my name went
+from an elegant French swimming pool
+
+57
+00:07:00,882 --> 00:07:02,727
+to a stinking Indian latrine.
+
+58
+00:07:02,802 --> 00:07:04,751
+I was "pissing" everywhere.
+
+59
+00:07:04,840 --> 00:07:06,748
+No pissing in the schoolyard!
+
+60
+00:07:08,960 --> 00:07:11,893
+Even the teacher started doing it.
+Not deliberately, of course.
+
+61
+00:07:12,274 --> 00:07:12,915
+So then...
+
+62
+00:07:13,184 --> 00:07:15,863
+What made the kettle
+to release gas too quickly?
+
+63
+00:07:16,251 --> 00:07:17,344
+Pissing?
+
+64
+00:07:18,005 --> 00:07:20,108
+He said pissing, guys.
+
+65
+00:07:22,444 --> 00:07:23,844
+Pissing!
+
+66
+00:07:25,506 --> 00:07:26,415
+That's enough!
+
+67
+00:07:28,758 --> 00:07:32,986
+When we returned the next for our
+first day of school, I was prepared.
+
+68
+00:07:33,126 --> 00:07:34,155
+Present, sir!
+
+69
+00:07:34,562 --> 00:07:35,952
+Piscine Patel.
+
+70
+00:07:42,217 --> 00:07:42,891
+Good Morning.
+
+71
+00:07:43,109 --> 00:07:45,076
+I am Piscine Molitor Patel.
+
+72
+00:07:46,197 --> 00:07:47,542
+Know to all as:
+
+73
+00:07:48,928 --> 00:07:49,822
+"PI"
+
+74
+00:07:50,276 --> 00:07:52,235
+The sixteenth letter
+of the Greek alphabet.
+
+75
+00:07:52,430 --> 00:07:55,812
+Which is also used in mathematics
+to represent the ratio
+
+76
+00:07:56,046 --> 00:07:59,591
+of any circle circcomference
+to its diameter.
+
+77
+00:07:59,871 --> 00:08:04,482
+An irrational number of infinite length,
+usually rounded to three digits,
+
+78
+00:08:04,483 --> 00:08:08,754
+as 3 .1 4,
+
+79
+00:08:09,296 --> 00:08:10,180
+PI.
+
+80
+00:08:12,456 --> 00:08:14,446
+Very impressive... PI.
+
+81
+00:08:15,430 --> 00:08:16,891
+Now sit down.
+
+82
+00:08:19,484 --> 00:08:20,783
+– Arvelu Sami?
+– Present.
+
+83
+00:08:20,798 --> 00:08:22,575
+And from then on, you were Pi?
+
+84
+00:08:22,710 --> 00:08:24,681
+Well no, not quite.
+
+85
+00:08:25,270 --> 00:08:26,964
+Nice try, Pissing.
+
+86
+00:08:28,750 --> 00:08:30,811
+But I still had the whole day ahead of me.
+
+87
+00:08:31,227 --> 00:08:32,398
+French class was next.
+
+88
+00:08:32,853 --> 00:08:34,897
+Je m'appelle Piscine Molitor Patel.
+
+89
+00:08:35,077 --> 00:08:36,380
+Dit: Pi.
+
+90
+00:08:39,072 --> 00:08:40,304
+Then geography.
+
+91
+00:08:40,553 --> 00:08:43,456
+These are the first twenty
+decimal places of Pi.
+
+92
+00:08:44,249 --> 00:08:47,125
+My last class of the day was mathematics.
+
+93
+00:08:54,822 --> 00:08:55,469
+4...
+
+94
+00:08:56,015 --> 00:08:56,721
+3...
+
+95
+00:08:57,468 --> 00:08:58,375
+7...
+
+96
+00:08:59,055 --> 00:08:59,890
+5...
+
+97
+00:09:00,708 --> 00:09:01,428
+8...
+
+98
+00:09:01,956 --> 00:09:06,719
+5... 8... 5... 8....
+
+99
+00:09:07,858 --> 00:09:10,927
+It's right!
+He's really doing this!
+
+100
+00:09:14,500 --> 00:09:18,448
+By the end of that day, I was
+"PI Patel", school legend.
+
+101
+00:09:21,756 --> 00:09:24,346
+Mamaji tells me you're
+a legend among sailors, do you?
+
+102
+00:09:24,521 --> 00:09:25,700
+Out there, all alone.
+
+103
+00:09:25,701 --> 00:09:27,947
+Oh, I don't even know how to sail.
+
+104
+00:09:28,170 --> 00:09:31,298
+And I wasn't alone out there,
+Richard Parker was with me.
+
+105
+00:09:31,831 --> 00:09:33,571
+Richard Parker?
+
+106
+00:09:34,053 --> 00:09:35,999
+Mamaji, he didn't tell me everything,
+
+107
+00:09:36,015 --> 00:09:38,481
+he just said I should look you up
+when I got back to Montreal.
+
+108
+00:09:38,951 --> 00:09:40,512
+So what were you doing in Pondicherry?
+
+109
+00:09:41,827 --> 00:09:43,555
+Writing a novel.
+
+110
+00:09:44,011 --> 00:09:46,028
+By the way, I enjoyed your first book.
+
+111
+00:09:46,983 --> 00:09:48,536
+So this new one is set in India?
+
+112
+00:09:48,678 --> 00:09:52,132
+No, Portugal actually.
+But it's cheaper living in India.
+
+113
+00:09:55,573 --> 00:09:57,055
+Well, I look forward to reading it.
+
+114
+00:09:57,309 --> 00:09:58,709
+You can't.
+
+115
+00:09:59,053 --> 00:10:00,106
+I threw it out.
+
+116
+00:10:00,693 --> 00:10:03,768
+Two years I was trying to bring
+these things to life, and they one day...
+
+117
+00:10:04,289 --> 00:10:05,793
+Spattered Caughin died.
+
+118
+00:10:07,358 --> 00:10:08,935
+Oh, I'm sorry.
+
+119
+00:10:10,601 --> 00:10:13,813
+So I was sitting in this
+coffee house in Pondicherry
+
+120
+00:10:13,814 --> 00:10:16,297
+one afternoon mourning
+my boss, when this
+
+121
+00:10:16,766 --> 00:10:19,719
+old man at the table next to me,
+struck up a conversation.
+
+122
+00:10:19,769 --> 00:10:21,197
+Yeah, Mamaji he does that.
+
+123
+00:10:21,367 --> 00:10:23,577
+When I told him my abandoned
+book, he said:
+
+124
+00:10:23,593 --> 00:10:26,405
+So, a Canadian.
+Let's come to French India,
+
+125
+00:10:26,429 --> 00:10:28,575
+and seach for a story. Well, my friend,
+
+126
+00:10:28,673 --> 00:10:33,711
+I know an Indian in French Canada,
+with the most incredible story to tell.
+
+127
+00:10:33,910 --> 00:10:37,820
+It must be fate that the
+two of you should meet.
+
+128
+00:10:41,210 --> 00:10:44,245
+Well I haven't spoken about Richard Parker
+in so many years.
+
+129
+00:10:44,889 --> 00:10:47,004
+So what has Mamaji already told you?
+
+130
+00:10:47,535 --> 00:10:50,192
+He said you had a story that
+would make me believe in God.
+
+131
+00:10:52,100 --> 00:10:53,938
+He would say that about a nice meal.
+
+132
+00:10:56,153 --> 00:10:58,176
+As for God, I can only tell you my story.
+
+133
+00:11:00,247 --> 00:11:02,490
+You'll decide for yourself
+what you believe.
+
+134
+00:11:02,626 --> 00:11:04,026
+Fair enough.
+
+135
+00:11:04,730 --> 00:11:06,643
+Let's see then. Where to begin?
+
+136
+00:11:07,992 --> 00:11:09,367
+Pondicherry...
+
+137
+00:11:10,003 --> 00:11:12,251
+is the French Bureau of India.
+
+138
+00:11:16,341 --> 00:11:18,202
+In this place, closest to the ocean,
+
+139
+00:11:18,203 --> 00:11:20,736
+you might think you are
+in the south of France.
+
+140
+00:11:23,908 --> 00:11:26,548
+A few blocks inland, there's a canal.
+
+141
+00:11:27,016 --> 00:11:29,395
+Just beyond that, is Indian Pondicherry.
+
+142
+00:11:29,946 --> 00:11:33,000
+And the Muslim quarter
+is just to the west.
+
+143
+00:11:33,907 --> 00:11:37,595
+When the French handed
+Pondicherry back to us in 1954,
+
+144
+00:11:37,679 --> 00:11:40,684
+the town decided that some
+sort of commemoration was in order.
+
+145
+00:11:41,432 --> 00:11:43,677
+My father was a clever businessman.
+
+146
+00:11:43,806 --> 00:11:45,039
+He came up with one.
+
+147
+00:11:45,289 --> 00:11:48,706
+He ran a hotel,
+and he got the idea to open a zoo
+
+148
+00:11:48,742 --> 00:11:51,629
+in the local botanical gardens instead.
+
+149
+00:11:53,954 --> 00:11:57,467
+As it also happened, my mother
+was a botanist in the gardens.
+
+150
+00:11:58,114 --> 00:12:01,800
+They met, married, and a year later,
+my brother Ravi was born.
+
+151
+00:12:02,783 --> 00:12:05,069
+I came two years after that.
+
+152
+00:12:06,109 --> 00:12:10,097
+Sounds magical.
+Growing up in...
+
+153
+00:12:15,117 --> 00:12:16,249
+Amen.
+
+154
+00:12:17,193 --> 00:12:18,569
+Yeah, let's eat.
+
+155
+00:12:19,466 --> 00:12:21,051
+I did not know Hindus said Amen.
+
+156
+00:12:21,147 --> 00:12:22,730
+Catholics Hindus do
+
+157
+00:12:22,816 --> 00:12:23,630
+Catholic Hindus?
+
+158
+00:12:23,926 --> 00:12:27,927
+We get to feel guilty before
+hundreds of gods, instead of just one.
+
+159
+00:12:28,939 --> 00:12:30,954
+But you're a Hindu first.
+
+160
+00:12:31,496 --> 00:12:34,112
+None of us knows God
+until someone introduces us.
+
+161
+00:12:34,610 --> 00:12:37,454
+I was first introduced to God as a Hindu.
+
+162
+00:12:37,551 --> 00:12:40,072
+There are 33 million gods
+in the Hindu regilion.
+
+163
+00:12:40,305 --> 00:12:42,724
+How can I not come to know a few of them?
+
+164
+00:12:44,217 --> 00:12:45,782
+I met Krishna, first.
+
+165
+00:13:51,649 --> 00:13:54,194
+The gods were my superheroes, growing up.
+
+166
+00:13:54,816 --> 00:13:56,965
+Hanuman, the monkey god.
+
+167
+00:13:57,315 --> 00:14:01,011
+Lifting an entire mountain
+to save his friend, Laksh woman.
+
+168
+00:14:01,046 --> 00:14:03,156
+Ganesh, the elephant headed,
+
+169
+00:14:03,484 --> 00:14:07,369
+risking his life to defend
+the honor of his mother, Parvati.
+
+170
+00:14:08,254 --> 00:14:10,977
+Vishnu, the supreme soul,
+
+171
+00:14:11,200 --> 00:14:13,066
+the source of all things.
+
+172
+00:14:13,824 --> 00:14:17,786
+Vishnu sleeps, floating on the
+shoreless cosmic ocean,
+
+173
+00:14:17,822 --> 00:14:20,169
+and we are the stuff of his dreaming.
+
+174
+00:14:22,196 --> 00:14:23,336
+Spectacle.
+
+175
+00:14:24,069 --> 00:14:28,897
+Don't let the stories and
+pretty lies fool you, boys.
+
+176
+00:14:29,673 --> 00:14:32,734
+Religion is darkness.
+
+177
+00:14:34,800 --> 00:14:38,472
+My dear Apa believed himself
+part of the new India.
+
+178
+00:14:39,102 --> 00:14:41,087
+As a child, he'd had polio.
+
+179
+00:14:41,545 --> 00:14:45,592
+He used to lie in bed wracked with pain,
+wondering where God was.
+
+180
+00:14:46,524 --> 00:14:50,237
+In the end, God didn't save him,
+Western medecine did.
+
+181
+00:14:53,989 --> 00:14:55,988
+My Amma went to college and thought
+
+182
+00:14:55,996 --> 00:14:58,467
+our familly was part
+of the new India as well,
+
+183
+00:14:58,665 --> 00:15:02,896
+But then her parents cut her off, because
+they thought she was marying Benito.
+
+184
+00:15:04,091 --> 00:15:07,283
+Our religion was the only link
+she had to her past.
+
+185
+00:15:17,549 --> 00:15:20,592
+I met Christ in the mountains
+when I was 12.
+
+186
+00:15:21,456 --> 00:15:24,473
+We were visiting relatives,
+Pigroes in Monar.
+
+187
+00:15:25,127 --> 00:15:29,259
+It was a third there,
+Ravi and I were terribly bored.
+
+188
+00:15:29,333 --> 00:15:31,949
+Challenge. I give you two ruppies.
+
+189
+00:15:32,346 --> 00:15:34,866
+Run into that church,
+and drink the holy water.
+
+190
+00:16:04,145 --> 00:16:05,286
+You must be thirsty.
+
+191
+00:16:09,241 --> 00:16:10,047
+Here.
+
+192
+00:16:11,151 --> 00:16:12,439
+I brought you this.
+
+193
+00:16:27,958 --> 00:16:30,090
+Why would a God do that?
+
+194
+00:16:31,515 --> 00:16:36,537
+Why would he send his own son
+to suffer for the sins of ordinary people?
+
+195
+00:16:37,038 --> 00:16:38,179
+Because he loves us.
+
+196
+00:16:39,556 --> 00:16:44,438
+God made himself approachable to us,
+human, so we could understand him.
+
+197
+00:16:45,075 --> 00:16:47,104
+We can't understand God
+nor his perfection.
+
+198
+00:16:47,802 --> 00:16:49,715
+But we can understand God son,
+
+199
+00:16:49,957 --> 00:16:53,135
+and his suffering,
+as we would of brothers.
+
+200
+00:16:53,252 --> 00:16:54,649
+That made no sense!
+
+201
+00:16:55,730 --> 00:16:59,413
+Sacrificing the innocent,
+to atone for the sins of the guilty,
+
+202
+00:17:00,121 --> 00:17:01,948
+what kind of love is that?
+
+203
+00:17:05,027 --> 00:17:08,918
+But this son,
+I couldn't get him out of my head.
+
+204
+00:17:11,588 --> 00:17:14,493
+If God is so perfect, and we are not,
+
+205
+00:17:14,694 --> 00:17:17,332
+why would he want to create all this?
+
+206
+00:17:18,031 --> 00:17:19,810
+Why does he need us at all?
+
+207
+00:17:20,528 --> 00:17:23,063
+All you have to know is that he loves us.
+
+208
+00:17:24,033 --> 00:17:27,026
+God so loved his world
+that he gave his only son.
+
+209
+00:17:27,265 --> 00:17:31,793
+The longer I listened to the priest,
+the more I came to like the son of God.
+
+210
+00:17:32,353 --> 00:17:35,763
+Thank you Vishnu,
+for introducing me to Christ.
+
+211
+00:17:43,632 --> 00:17:47,940
+I came to faith through Hinduism,
+and I found God's love through Christ.
+
+212
+00:17:48,454 --> 00:17:50,394
+But God wasn't finished with me yet.
+
+213
+00:18:01,054 --> 00:18:02,761
+God works in mysterious ways.
+
+214
+00:18:03,715 --> 00:18:06,321
+And so it was he introduced him
+to me again,
+
+215
+00:18:06,547 --> 00:18:08,183
+this time by the name of Allah.
+
+216
+00:18:28,412 --> 00:18:30,577
+My Arabic was never very good.
+
+217
+00:18:30,851 --> 00:18:34,035
+But the sound and feel of the words
+brought me closer to God.
+
+218
+00:18:34,691 --> 00:18:38,324
+In performing "Salah", the ground
+I touched became holly ground,
+
+219
+00:18:38,537 --> 00:18:41,574
+and I found a feeling of serenity
+and brotherhood.
+
+220
+00:18:51,549 --> 00:18:54,034
+This lamb is exquisite.
+
+221
+00:18:54,775 --> 00:18:57,118
+It's the best dish on the table.
+
+222
+00:18:57,396 --> 00:18:58,806
+You're all missing out.
+
+223
+00:19:00,104 --> 00:19:03,288
+You only need to convert
+to three more religions, Piscine,
+
+224
+00:19:03,424 --> 00:19:05,625
+and you'll spend your life on holiday.
+
+225
+00:19:06,694 --> 00:19:09,997
+Are you going to Mecca
+this year, Swami Jesus?
+
+226
+00:19:10,271 --> 00:19:13,657
+Or to Rome for your coronation as Popeius?
+
+227
+00:19:13,713 --> 00:19:15,064
+Yourself, don't be silly.
+
+228
+00:19:15,257 --> 00:19:17,579
+Just like you like cricket,
+Pi has his own interest.
+
+229
+00:19:17,842 --> 00:19:20,289
+No, Gita. Ravi has a point, you know?
+
+230
+00:19:20,511 --> 00:19:24,145
+You cannot follow three different
+religions at the same time, Piscine.
+
+231
+00:19:24,977 --> 00:19:26,120
+Why not?
+
+232
+00:19:26,440 --> 00:19:30,136
+Because, believing in
+everything at the same time,
+
+233
+00:19:30,137 --> 00:19:33,039
+is the same as not believing
+in anything at all.
+
+234
+00:19:33,440 --> 00:19:36,849
+He's young, Santosh.
+He's still finding his way.
+
+235
+00:19:36,850 --> 00:19:40,392
+And how can he find his way,
+if he does not choose a path?
+
+236
+00:19:41,263 --> 00:19:45,722
+Listen, instead of leaping
+from one region to the next,
+
+237
+00:19:45,765 --> 00:19:47,653
+why not start with reason?
+
+238
+00:19:48,218 --> 00:19:52,332
+In few hundred years, science has taken us
+farther in undertanding the universe,
+
+239
+00:19:52,393 --> 00:19:54,947
+than the regilon has in ten thousand.
+
+240
+00:19:56,660 --> 00:19:57,937
+That is true.
+
+241
+00:19:58,800 --> 00:20:00,044
+Your father is right.
+
+242
+00:20:00,673 --> 00:20:03,409
+Science can teach us more
+about what is out there,
+
+243
+00:20:03,752 --> 00:20:05,826
+but not what is in here.
+
+244
+00:20:06,270 --> 00:20:08,957
+Yeah. Some eat meat, some eat vegetable,
+
+245
+00:20:09,660 --> 00:20:12,468
+I do not expect us to all
+to agree about everything, but
+
+246
+00:20:12,825 --> 00:20:16,084
+I would much prefer they'll have you
+believe in something I don't agree with,
+
+247
+00:20:16,101 --> 00:20:18,386
+than to accept everything blindly.
+
+248
+00:20:18,887 --> 00:20:22,361
+And that begins with thinking rationally.
+
+249
+00:20:23,862 --> 00:20:24,891
+You understand?
+
+250
+00:20:28,017 --> 00:20:28,814
+Good.
+
+251
+00:20:35,011 --> 00:20:36,987
+I would like to be baptised.
+
+252
+00:20:43,959 --> 00:20:46,171
+So, you're a Christian, and a Muslim.
+
+253
+00:20:46,219 --> 00:20:47,575
+And an Hindu, of course.
+
+254
+00:20:47,703 --> 00:20:48,823
+And a Jew, I suppose.
+
+255
+00:20:49,190 --> 00:20:52,007
+Well I do teach the course
+on the Kabala at the University.
+
+256
+00:20:52,259 --> 00:20:54,977
+And why not?
+Faith is a house with many rooms.
+
+257
+00:20:55,262 --> 00:20:56,513
+But no room for doubt?
+
+258
+00:20:56,554 --> 00:20:58,601
+Oh, plenty. On every floor.
+
+259
+00:20:58,721 --> 00:20:59,845
+Doubt is useful.
+
+260
+00:21:00,241 --> 00:21:01,983
+It keeps Faith a living thing.
+
+261
+00:21:02,450 --> 00:21:06,235
+After all, you cannot know the strength
+of your faith until it has been tested.
+
+262
+00:21:09,695 --> 00:21:12,340
+Where' Sothom?
+We shouldn't be in here without him.
+
+263
+00:21:12,713 --> 00:21:13,862
+Stop worrying.
+
+264
+00:21:15,666 --> 00:21:18,474
+I have seen him do this a thousand times.
+
+265
+00:21:21,308 --> 00:21:23,123
+I want to meet our new tigre.
+
+266
+00:21:24,686 --> 00:21:25,915
+Pi!
+
+267
+00:21:26,186 --> 00:21:28,493
+Hello? Richard Parker?
+
+268
+00:21:29,144 --> 00:21:30,340
+tigre?
+
+269
+00:21:30,984 --> 00:21:32,333
+Richard Parker was a tigre?
+
+270
+00:21:32,334 --> 00:21:34,720
+Yeah, he got this name
+through a clerical error.
+
+271
+00:21:35,336 --> 00:21:38,445
+A hunter caught him drinking
+from a stream when he was a cub,
+
+272
+00:21:38,524 --> 00:21:39,794
+and named him "Thirsty".
+
+273
+00:21:40,382 --> 00:21:43,701
+When Thirsty got too big,
+the hunter sold him to our zoo,
+
+274
+00:21:43,780 --> 00:21:45,841
+but the name got switched
+on the paperwork.
+
+275
+00:21:47,093 --> 00:21:50,832
+The hunter was listed as Thirsty,
+and the tigre was called Richard Parker.
+
+276
+00:21:51,493 --> 00:21:53,178
+We laughed about it.
+
+277
+00:21:53,401 --> 00:21:54,529
+And the name stuck!
+
+278
+00:21:55,402 --> 00:21:56,314
+Let's go...
+
+279
+00:21:57,493 --> 00:21:59,540
+Before we get into trouble!
+
+280
+00:21:59,980 --> 00:22:01,585
+I want to see him closer.
+
+281
+00:22:01,831 --> 00:22:03,382
+You're not the zoo people!
+
+282
+00:22:03,624 --> 00:22:04,449
+Come on!
+
+283
+00:22:23,271 --> 00:22:25,350
+That's it Richard Parker.
+
+284
+00:22:25,558 --> 00:22:27,034
+It's for you.
+
+285
+00:22:56,986 --> 00:22:57,831
+No!
+
+286
+00:22:59,060 --> 00:23:00,579
+What are you thinking?
+
+287
+00:23:01,684 --> 00:23:02,912
+Are you out of your mind?
+
+288
+00:23:03,132 --> 00:23:05,015
+Who gave you the permission
+to come back here?
+
+289
+00:23:05,310 --> 00:23:07,968
+You just ignored everything
+I've ever taught you?
+
+290
+00:23:09,249 --> 00:23:11,818
+I-I just wanted to say Hello to him.
+
+291
+00:23:12,494 --> 00:23:14,212
+You think that tigre is your friend.
+
+292
+00:23:14,385 --> 00:23:16,862
+He's an animal, not a playmate!
+
+293
+00:23:17,962 --> 00:23:19,709
+Animals have souls.
+
+294
+00:23:20,276 --> 00:23:23,126
+I have seen it in their eyes.
+
+295
+00:23:25,297 --> 00:23:26,369
+Find Selvan.
+
+296
+00:23:43,012 --> 00:23:45,161
+Animals do not think like we do.
+
+297
+00:23:45,862 --> 00:23:49,806
+People who forget that,
+get themselves killed. That tigre...
+
+298
+00:23:50,687 --> 00:23:52,949
+is not your friend.
+
+299
+00:23:53,190 --> 00:23:54,690
+When you look into his eyes,
+
+300
+00:23:54,698 --> 00:23:57,859
+you are seeing your own emotions
+reflected back at you.
+
+301
+00:23:58,312 --> 00:23:59,712
+Nothing else.
+
+302
+00:24:00,485 --> 00:24:02,517
+You stupid.
+Say "I'm sorry."
+
+303
+00:24:04,080 --> 00:24:05,567
+What have you done, Piscine?
+
+304
+00:24:06,168 --> 00:24:08,595
+You know what your father said
+about coming back here?
+
+305
+00:24:08,967 --> 00:24:10,105
+I am sorry.
+
+306
+00:24:10,844 --> 00:24:12,244
+I was...
+
+307
+00:24:12,800 --> 00:24:14,061
+What are you thinking?
+
+308
+00:24:14,157 --> 00:24:16,150
+This is between a father and his sons.
+
+309
+00:24:16,295 --> 00:24:17,531
+Selvan, cut away!
+
+310
+00:24:17,918 --> 00:24:20,955
+He said he's sorry.
+You'll just scare them for life.
+
+311
+00:24:21,122 --> 00:24:23,826
+Scare them?
+That boy almost lost his arm.
+
+312
+00:24:24,168 --> 00:24:25,546
+But he's just a boy.
+
+313
+00:24:25,609 --> 00:24:27,383
+He will be a man sooner than you think.
+
+314
+00:24:27,414 --> 00:24:30,217
+And this is a lesson I do not want them
+ever to forget!
+
+315
+00:24:31,215 --> 00:24:32,157
+Selvan!
+
+316
+00:25:20,193 --> 00:25:23,224
+<i>.. and so has placed the country
+in a state of emergency</i>
+
+317
+00:25:23,309 --> 00:25:25,727
+<i>Under the directive,
+the states of cultural...</i>
+
+318
+00:25:40,474 --> 00:25:43,979
+Things changed after
+the day of Apa's lesson.
+
+319
+00:25:44,151 --> 00:25:46,503
+The world had lost
+some of its enchantment.
+
+320
+00:25:47,555 --> 00:25:51,436
+School was a bore, nothing
+but facts, fractions and french.
+
+321
+00:25:51,627 --> 00:25:55,419
+Words and patterns
+that went on and on without end,
+
+322
+00:25:55,835 --> 00:25:58,074
+just like my irrational nickname.
+
+323
+00:26:03,306 --> 00:26:04,426
+I grew restless,
+
+324
+00:26:04,448 --> 00:26:08,061
+searching for something that might
+bring meaning back into my life.
+
+325
+00:26:09,806 --> 00:26:11,780
+And then, I met Anandi.
+
+326
+00:26:20,878 --> 00:26:22,494
+Mother made me study music.
+
+327
+00:26:22,721 --> 00:26:24,740
+And one day, my teacher
+came down with the flew.
+
+328
+00:26:25,709 --> 00:26:29,540
+He asked if I could take his place,
+playing rythms for the dance class.
+
+329
+00:26:45,297 --> 00:26:46,411
+No!
+
+330
+00:26:47,012 --> 00:26:51,618
+If you do not concentrate, you cannot
+express your love of God through dance.
+
+331
+00:26:52,181 --> 00:26:54,304
+Feel the ground beneath your feet.
+
+332
+00:26:54,376 --> 00:26:56,774
+Open your 'Gisauthon' to the horizon.
+
+333
+00:26:57,154 --> 00:27:01,819
+Let that spiritual energy pass
+through you, and out into the world.
+
+334
+00:27:01,956 --> 00:27:03,081
+Troughout 'Bineia'.
+
+335
+00:27:04,385 --> 00:27:07,378
+Anandi, come to the front, lead them.
+
+336
+00:27:50,966 --> 00:27:52,575
+Why are you following me?
+
+337
+00:27:53,417 --> 00:27:54,114
+What?
+
+338
+00:27:54,854 --> 00:27:56,336
+You were following me.
+
+339
+00:27:59,807 --> 00:28:01,465
+What does this mean?
+
+340
+00:28:03,223 --> 00:28:05,500
+In the dance, you went from 'batanka',
+
+341
+00:28:06,312 --> 00:28:08,387
+which means the forest,
+
+342
+00:28:08,747 --> 00:28:11,665
+And then you did...
+and you did...
+
+343
+00:28:12,818 --> 00:28:16,526
+'Sanputa', which means
+something that is hidden.
+
+344
+00:28:17,015 --> 00:28:18,827
+Now for that you did this.
+
+345
+00:28:20,443 --> 00:28:22,211
+And then you did 'Chatura'.
+
+346
+00:28:22,631 --> 00:28:26,054
+But at the very end, you did... this.
+
+347
+00:28:27,250 --> 00:28:29,153
+None of the others dancers did that.
+
+348
+00:28:30,312 --> 00:28:32,782
+What did you mean,
+the God of love is hiding in the forest?
+
+349
+00:28:32,991 --> 00:28:35,453
+No, that also means 'the Lotus flower'.
+
+350
+00:28:36,457 --> 00:28:39,530
+Lotus flowers hiding in the forest?
+
+351
+00:28:39,921 --> 00:28:42,617
+Why would a Lotus flower
+hide in the forest?
+
+352
+00:28:50,686 --> 00:28:52,414
+This is Richard Parker.
+
+353
+00:28:53,110 --> 00:28:56,520
+He's the most magnificent creature
+we've ever had here.
+
+354
+00:28:57,385 --> 00:28:59,605
+Look at the way he's turning his head.
+
+355
+00:29:01,881 --> 00:29:04,724
+Showing off... like a dancer.
+
+356
+00:29:04,872 --> 00:29:07,559
+No. He heard something.
+
+357
+00:29:09,398 --> 00:29:12,262
+He is listening, you see?
+
+358
+00:29:21,492 --> 00:29:23,537
+We have talked about it for some time.
+
+359
+00:29:23,538 --> 00:29:25,474
+Do you understand what I'm saying?
+
+360
+00:29:25,964 --> 00:29:26,789
+Pi!
+
+361
+00:29:28,566 --> 00:29:29,969
+Uh sorry, you've been...
+
+362
+00:29:30,421 --> 00:29:31,480
+Worried.
+
+363
+00:29:32,233 --> 00:29:33,816
+For my family.
+
+364
+00:29:34,100 --> 00:29:37,201
+For animals are worth far more
+abroad than here in India.
+
+365
+00:29:37,418 --> 00:29:41,177
+And if the town council stops supporting
+us, I don't know where we will be.
+
+366
+00:29:41,510 --> 00:29:44,329
+So what is worth, we have to do.
+
+367
+00:29:44,810 --> 00:29:46,636
+Do you understand?
+
+368
+00:29:48,805 --> 00:29:50,554
+I'm sorry, what are you talking about?
+
+369
+00:29:50,984 --> 00:29:53,003
+We are leaving India.
+
+370
+00:29:54,543 --> 00:29:55,721
+What?
+
+371
+00:29:57,940 --> 00:29:59,430
+We are selling the zoo.
+
+372
+00:30:00,463 --> 00:30:03,579
+The zoo was never ours to sell,
+the land belongs to the town.
+
+373
+00:30:03,596 --> 00:30:04,857
+But the animals are ours.
+
+374
+00:30:04,974 --> 00:30:08,067
+and if we sell them, we will have
+enough to start a new life.
+
+375
+00:30:08,180 --> 00:30:09,218
+But where will we go?
+
+376
+00:30:09,803 --> 00:30:11,142
+Or life is here, Apa!
+
+377
+00:30:11,214 --> 00:30:12,334
+Canada.
+
+378
+00:30:12,478 --> 00:30:15,219
+I have some opportunities
+for work in Winnipeg.
+
+379
+00:30:15,332 --> 00:30:18,325
+I'll be shipping most of the animals
+for sale in North America,
+
+380
+00:30:18,429 --> 00:30:20,987
+we can get freighter passage
+for the whole family.
+
+381
+00:30:21,252 --> 00:30:24,075
+So... It's settled.
+
+382
+00:30:24,525 --> 00:30:27,107
+We will sail like Columbus.
+
+383
+00:30:27,720 --> 00:30:30,212
+But Columbus was looking for India!
+
+384
+00:30:39,091 --> 00:30:42,081
+It takes a lot of work to set a zoo.
+
+385
+00:30:42,606 --> 00:30:46,842
+Before we left, Anandi and I had time
+enough to break each other's heart.
+
+386
+00:30:47,815 --> 00:30:50,668
+Of course, I promised
+I would come back one day.
+
+387
+00:30:52,181 --> 00:30:52,930
+It's funny...
+
+388
+00:30:53,714 --> 00:30:57,013
+I remember everything else
+about our last day.
+
+389
+00:30:57,133 --> 00:30:59,532
+But I don't remember saying goodbye.
+
+390
+00:31:08,613 --> 00:31:09,563
+Pi?
+
+391
+00:31:09,830 --> 00:31:12,061
+They're serving diner below.
+
+392
+00:31:24,645 --> 00:31:25,765
+Piscine.
+
+393
+00:31:26,486 --> 00:31:28,625
+You have a whole life ahead of you.
+
+394
+00:31:29,911 --> 00:31:32,103
+We are doing this for you and Ravi.
+
+395
+00:31:34,646 --> 00:31:36,372
+Come inside and have some diner.
+
+396
+00:31:46,305 --> 00:31:47,580
+Vegetarian, please.
+
+397
+00:31:49,233 --> 00:31:51,485
+Oh, my sons and I are vegetarians.
+
+398
+00:31:51,554 --> 00:31:53,373
+Do you have anything-
+No no no no no!
+
+399
+00:31:53,781 --> 00:31:55,104
+Not for gravy.
+
+400
+00:31:55,607 --> 00:31:56,897
+You don't want gravy?
+
+401
+00:32:04,469 --> 00:32:05,723
+Pas de problème.
+
+402
+00:32:05,991 --> 00:32:07,111
+Pardon.
+
+403
+00:32:26,499 --> 00:32:27,830
+Pas de problème.
+
+404
+00:33:02,980 --> 00:33:04,100
+Hello.
+
+405
+00:33:04,511 --> 00:33:05,984
+I am happy Buddist.
+
+406
+00:33:06,472 --> 00:33:09,482
+So I eat rice next to gravy.
+
+407
+00:33:10,374 --> 00:33:13,047
+I'm sure, gravy is not meat.
+
+408
+00:33:13,944 --> 00:33:16,794
+Is taste. You try?
+
+409
+00:33:40,071 --> 00:33:41,100
+Don't worry.
+
+410
+00:33:42,010 --> 00:33:46,811
+We will have plenty of fresh supplies
+after we stop in Manila.
+
+411
+00:33:48,974 --> 00:33:51,458
+Why give Orange Juice tranquilizers?
+
+412
+00:33:52,739 --> 00:33:54,837
+He's not gonna cause any trouble.
+
+413
+00:33:55,347 --> 00:33:58,662
+The stress of traveling
+is not good for the animals,
+
+414
+00:33:58,676 --> 00:34:01,066
+and it helps with the sea sickness.
+
+415
+00:34:02,802 --> 00:34:05,778
+We don't want to be cleaning up,
+
+416
+00:34:06,083 --> 00:34:08,654
+after a sea sick orang utan.
+
+417
+00:34:09,659 --> 00:34:11,079
+Do we?
+
+418
+00:34:17,383 --> 00:34:18,936
+My father was a businessman.
+
+419
+00:34:19,484 --> 00:34:22,030
+He had never attended the animals himself.
+
+420
+00:34:23,010 --> 00:34:28,308
+I realized leaving India must have
+been harder for him than it was for me.
+
+421
+00:34:33,938 --> 00:34:34,961
+So?
+
+422
+00:34:36,029 --> 00:34:37,844
+Yeah, have I forgotten anything?
+
+423
+00:34:38,205 --> 00:34:39,574
+I think you set the stage,
+
+424
+00:34:39,575 --> 00:34:43,151
+So far, we have an Indian boy
+named after a French swimming pool,
+
+425
+00:34:43,178 --> 00:34:45,623
+and a Japanese ship full of animals,
+heading to Canada.
+
+426
+00:34:46,463 --> 00:34:47,667
+Yes!
+
+427
+00:34:47,965 --> 00:34:51,478
+Now we have to send our boy
+into the middle of the Pacific, and...
+
+428
+00:34:51,589 --> 00:34:53,549
+And make me believe in God.
+
+429
+00:34:56,217 --> 00:34:59,032
+Yeah.
+We'll get there.
+
+430
+00:35:05,071 --> 00:35:09,556
+It was four days out of Manila,
+above the Mariana trench,
+
+431
+00:35:09,670 --> 00:35:11,558
+the deepest part on earth.
+
+432
+00:35:14,328 --> 00:35:20,477
+Our ship, the Simsum, pushed on,
+polishly in different surroundings.
+
+433
+00:35:21,595 --> 00:35:26,694
+It moved with the slow massive
+confidence of a continent.
+
+434
+00:36:04,161 --> 00:36:05,398
+Did you hear that, Ravi?
+
+435
+00:36:05,399 --> 00:36:06,824
+Yes, what do you think?
+
+436
+00:36:06,945 --> 00:36:08,770
+It's a thunderstorm, let's go and watch.
+
+437
+00:36:09,062 --> 00:36:10,399
+Are you crazy?
+
+438
+00:36:10,925 --> 00:36:12,830
+We will get hit by lightning.
+
+439
+00:36:12,944 --> 00:36:15,475
+No, we won't, it'll hit the bridge first.
+
+440
+00:36:17,317 --> 00:36:19,601
+Don't tempt the storm, Pi.
+
+441
+00:37:15,633 --> 00:37:16,903
+Oyé!
+
+442
+00:37:17,415 --> 00:37:18,456
+Hurray!
+
+443
+00:37:21,992 --> 00:37:24,021
+God's storm!
+
+444
+00:38:08,229 --> 00:38:09,040
+Ma!
+
+445
+00:38:10,864 --> 00:38:11,671
+Apa!
+
+446
+00:38:13,469 --> 00:38:14,511
+Ravi!
+
+447
+00:38:15,292 --> 00:38:16,836
+Get out!
+Get out!
+
+448
+00:39:05,843 --> 00:39:07,717
+Please save my family!
+
+449
+00:39:07,858 --> 00:39:10,141
+Don't scare, okay?
+Stay here!
+
+450
+00:39:10,413 --> 00:39:12,372
+You have to help my family!
+
+451
+00:39:17,935 --> 00:39:19,038
+We have to help them!
+
+452
+00:39:19,666 --> 00:39:21,161
+My family is back there!
+
+453
+00:39:22,190 --> 00:39:23,019
+Leave now!
+
+454
+00:39:23,116 --> 00:39:24,491
+We have to go!
+
+455
+00:39:24,654 --> 00:39:26,039
+Who let all the animals out, uh?
+
+456
+00:39:26,040 --> 00:39:28,596
+– We have to go now!
+– No please, my father!
+
+457
+00:39:28,724 --> 00:39:30,306
+He's got to go!
+
+458
+00:39:53,141 --> 00:39:55,404
+There! Look there!
+
+459
+00:39:55,405 --> 00:39:57,980
+Zebra! Zebra!
+
+460
+00:40:57,290 --> 00:40:58,084
+Hey!
+
+461
+00:40:58,515 --> 00:41:01,482
+Over here!
+Over here!
+
+462
+00:41:36,597 --> 00:41:38,076
+Richard Parker?
+
+463
+00:41:38,348 --> 00:41:39,694
+No! No!
+
+464
+00:41:41,068 --> 00:41:43,810
+No! Go away! Go away!
+
+465
+00:43:51,447 --> 00:43:53,351
+Ama!
+
+466
+00:43:54,865 --> 00:43:56,412
+Apa!
+
+467
+00:43:57,361 --> 00:43:58,584
+Ravi!
+
+468
+00:44:00,951 --> 00:44:02,585
+I'm sorry.
+
+469
+00:44:05,458 --> 00:44:08,556
+I'm sorry!
+
+470
+00:47:29,730 --> 00:47:31,807
+Where is your buoy, Orange Juice?
+
+471
+00:47:41,962 --> 00:47:45,995
+Don't worry.
+I bet mother and father found it.
+
+472
+00:47:49,963 --> 00:47:51,516
+They'll all be here soon.
+
+473
+00:48:00,134 --> 00:48:02,958
+Hello!
+
+474
+00:48:06,000 --> 00:48:07,986
+Hello!
+
+475
+00:48:10,684 --> 00:48:13,082
+Anybody!
+
+476
+00:49:16,274 --> 00:49:17,217
+No!
+
+477
+00:49:18,153 --> 00:49:22,008
+Stop it! No!
+Stop it! Stop it!
+
+478
+00:49:26,269 --> 00:49:27,647
+No!
+
+479
+00:49:29,084 --> 00:49:30,204
+No!
+
+480
+00:49:32,115 --> 00:49:33,235
+No!
+
+481
+00:50:15,148 --> 00:50:16,638
+Sorry Orange Juice,
+
+482
+00:50:16,860 --> 00:50:19,461
+I don't have any sea sickness
+medecine for you.
+
+483
+00:50:21,255 --> 00:50:22,375
+Is it right?
+
+484
+00:50:23,451 --> 00:50:24,851
+Is it right?
+
+485
+00:51:43,627 --> 00:51:44,609
+No!
+
+486
+00:51:45,152 --> 00:51:46,069
+No!
+
+487
+00:51:46,468 --> 00:51:48,696
+No! No!
+
+488
+00:52:08,407 --> 00:52:09,527
+Com'on!
+
+489
+00:52:09,979 --> 00:52:11,099
+Com'on!
+
+490
+00:52:11,407 --> 00:52:12,715
+Com'on!
+
+491
+00:56:45,128 --> 00:56:47,108
+My name is Pi Patel.
+
+492
+00:56:48,070 --> 00:56:49,798
+I have been on a ship wreck.
+
+493
+00:56:51,145 --> 00:56:53,730
+I am on a lifeboat, alone...
+
+494
+00:56:56,076 --> 00:56:57,628
+with a tigre.
+
+495
+00:56:59,401 --> 00:57:00,851
+Please send help.
+
+496
+00:58:48,636 --> 00:58:49,785
+God...
+
+497
+00:58:50,809 --> 00:58:52,837
+I give myself to You.
+
+498
+00:58:53,751 --> 00:58:55,354
+I am your vassal.
+
+499
+00:58:57,958 --> 00:59:01,154
+Whatever comes, I want to know.
+
+500
+00:59:03,728 --> 00:59:04,954
+Show me.
+
+501
+00:59:14,951 --> 00:59:17,223
+There are no lines.
+
+502
+00:59:22,012 --> 00:59:25,980
+Set ​​your house in order,
+and dig in for the battle to survive.
+
+503
+00:59:26,687 --> 00:59:31,811
+Establish a strict schedule for eating,
+keeping watch, and getting rest.
+
+504
+00:59:32,473 --> 00:59:35,236
+Do not drink urine or seawater.
+
+505
+00:59:37,648 --> 00:59:41,203
+Keep busy, but avoid unnecessary exertion.
+
+506
+00:59:44,365 --> 00:59:47,482
+The mind can be kept get occupied
+by playing card games,
+
+507
+00:59:47,557 --> 00:59:49,896
+"Twenty Questions" or "Eye Spy".
+
+508
+00:59:53,215 --> 00:59:57,888
+Community singing is another
+sure fire way to lift the spirit.
+
+509
+00:59:59,990 --> 01:00:02,823
+Telling stories is highly recommended.
+
+510
+01:00:07,116 --> 01:00:09,761
+Above all, don't lose hope.
+
+511
+01:00:18,976 --> 01:00:22,614
+Few things can sap the spirit
+faster than sea sickness.
+
+512
+01:00:23,901 --> 01:00:27,987
+Waves are more strongly felt when
+the boat turns sideway to the current.
+
+513
+01:00:28,613 --> 01:00:32,761
+A sea anchor is used as a drag
+to keep the boats head to the wind.
+
+514
+01:00:33,416 --> 01:00:35,968
+Proper use of them can increase control,
+
+515
+01:00:35,969 --> 01:00:38,775
+and reduce sea sickness
+during rough seas.
+
+516
+01:00:40,120 --> 01:00:44,260
+For castaways who must share their
+lifeboats with large dangerous carnivals,
+
+517
+01:00:44,459 --> 01:00:47,669
+it's advisable to establish
+your territory as your own.
+
+518
+01:00:48,154 --> 01:00:50,440
+Try this method.
+Step 1:
+
+519
+01:00:50,724 --> 01:00:53,548
+Choose a day when waves
+are moderate, but regular.
+
+520
+01:00:54,371 --> 01:00:57,267
+Step 2: With the lifeboat
+facing into the waves,
+
+521
+01:00:57,492 --> 01:01:01,798
+making the ride as comfortable as
+possible, blow your whistle soothingly.
+
+522
+01:01:02,372 --> 01:01:05,902
+Step 3: Turn the lifeboat
+sideways to the waves,
+
+523
+01:01:05,905 --> 01:01:08,682
+accompanied by harsh,
+aggressive use of the whistle.
+
+524
+01:01:09,362 --> 01:01:13,310
+With sufficient repetition, the animal
+will associate the sound of the whistle
+
+525
+01:01:13,318 --> 01:01:15,148
+with the discomfort of sea sickness.
+
+526
+01:01:16,553 --> 01:01:19,297
+Similar methods have long
+been used by circus trainers,
+
+527
+01:01:19,816 --> 01:01:22,703
+tough they generally
+lack access to rough seas.
+
+528
+01:01:22,984 --> 01:01:25,512
+Let the trumpets blow!
+
+529
+01:01:25,786 --> 01:01:29,509
+Let the drummers begin!
+
+530
+01:01:30,074 --> 01:01:32,335
+Prepare to be amazed!
+
+531
+01:01:33,054 --> 01:01:37,667
+Organized for your enjoyment,
+and instruction.
+
+532
+01:01:37,940 --> 01:01:41,783
+The show you've been
+waiting for all you rlife,
+
+533
+01:01:42,169 --> 01:01:44,768
+will soon begin!
+
+534
+01:01:46,962 --> 01:01:49,403
+Are you ready for the miracle event?
+
+535
+01:01:50,180 --> 01:01:53,066
+Well done! I give to you,
+
+536
+01:01:53,338 --> 01:01:57,339
+the astounding Bengal tigre!
+
+537
+01:02:08,035 --> 01:02:09,238
+Hello, Richard Parker.
+
+538
+01:02:10,492 --> 01:02:12,242
+Sorry for the choppy ride.
+
+539
+01:02:46,768 --> 01:02:48,858
+Mine! You understand?
+
+540
+01:02:49,400 --> 01:02:50,970
+Yours! Mine!
+
+541
+01:02:54,844 --> 01:02:56,090
+You understand?
+
+542
+01:03:08,754 --> 01:03:12,679
+Step 4: Disregard steps 1 through 3.
+
+543
+01:03:41,529 --> 01:03:42,842
+Here, Richard Parker.
+
+544
+01:03:43,620 --> 01:03:45,848
+I got some water for you.
+
+545
+01:03:59,545 --> 01:04:04,034
+In the zoo, we fed the tigres
+in average of five kilos of meat a day.
+
+546
+01:04:04,223 --> 01:04:06,640
+Richard Paker will getting hungry soon.
+
+547
+01:04:09,610 --> 01:04:11,196
+Tigres are powerful swimmers,
+
+548
+01:04:11,577 --> 01:04:13,051
+and if he gets hungry enough,
+
+549
+01:04:13,113 --> 01:04:16,805
+I'm afraid the little bit of water
+between us won't be any protection.
+
+550
+01:04:17,422 --> 01:04:19,593
+I need to find a way to feed him.
+
+551
+01:04:20,123 --> 01:04:23,620
+I can eat the biscuits, but
+God made tigres carnivores,
+
+552
+01:04:23,837 --> 01:04:25,541
+So I must learn to catch fish.
+
+553
+01:04:26,011 --> 01:04:27,007
+If I don't,
+
+554
+01:04:27,280 --> 01:04:31,105
+I'm afraid his last meal
+will be a skinny vegetarian boy.
+
+555
+01:04:40,972 --> 01:04:42,623
+Patience!
+
+556
+01:07:07,347 --> 01:07:09,652
+Wait!
+Thinking.
+
+557
+01:08:39,982 --> 01:08:41,913
+Two cartons of biscuits...
+
+558
+01:08:44,075 --> 01:08:46,428
+93 cans of water...
+
+559
+01:09:58,485 --> 01:09:59,470
+I'm sorry.
+
+560
+01:10:02,648 --> 01:10:04,361
+I'm sorry.
+
+561
+01:10:06,864 --> 01:10:08,690
+Thank you, Lord Vishnu!
+
+562
+01:10:09,728 --> 01:10:13,801
+Thank you for coming in the form
+of a fish and saving our life!
+
+563
+01:10:14,784 --> 01:10:15,868
+Thank you!
+
+564
+01:12:24,542 --> 01:12:28,189
+Of course, I brought all the biscuits
+and water on the raft with me,
+
+565
+01:12:28,229 --> 01:12:30,049
+to keep them safe...
+
+566
+01:12:30,668 --> 01:12:31,788
+Eat it.
+
+567
+01:12:35,239 --> 01:12:38,969
+Hunger can change everything you
+ever thought you knew about yourself.
+
+568
+01:13:20,536 --> 01:13:21,921
+Here, it's yours!
+
+569
+01:15:14,922 --> 01:15:16,823
+It's time to settle this.
+
+570
+01:15:17,515 --> 01:15:20,935
+If we're going to live together,
+we have to learn to communicate.
+
+571
+01:15:22,280 --> 01:15:24,722
+Maybe but the Jutbaka can't be teamed.
+
+572
+01:15:24,921 --> 01:15:27,721
+But with God's will, it can be trimmed.
+
+573
+01:16:37,303 --> 01:16:38,276
+No!
+
+574
+01:16:46,881 --> 01:16:47,656
+Good.
+
+575
+01:18:07,113 --> 01:18:09,602
+Go, Richard Parker.
+Go!
+
+576
+01:18:10,551 --> 01:18:12,612
+Go on home, I'll leave you alone.
+
+577
+01:18:13,206 --> 01:18:15,454
+I'll respect that, promise.
+
+578
+01:18:20,382 --> 01:18:22,056
+Go! Come on!
+
+579
+01:18:31,079 --> 01:18:32,220
+Yes!
+
+580
+01:19:06,840 --> 01:19:11,017
+I never thought a small piece of shit
+could bring me so much happiness.
+
+581
+01:19:12,245 --> 01:19:17,163
+That a pile of tools, a bucket,
+a knife, a pencil,
+
+582
+01:19:17,235 --> 01:19:19,615
+might become my greatest treasures,
+
+583
+01:19:20,065 --> 01:19:24,339
+without knowing Richard Parker was here
+might ever bring me peace.
+
+584
+01:19:24,846 --> 01:19:26,299
+In times like these,
+
+585
+01:19:26,304 --> 01:19:30,715
+I remember that he has as little
+experience of the real world as I do.
+
+586
+01:19:31,408 --> 01:19:34,401
+We were both raised in a zoo
+by the same master.
+
+587
+01:19:34,829 --> 01:19:36,427
+Now we've been orphaned,
+
+588
+01:19:36,807 --> 01:19:39,148
+left to face our ultimate master together.
+
+589
+01:19:40,116 --> 01:19:43,432
+Without Richard Parker,
+I would have died by now.
+
+590
+01:19:43,809 --> 01:19:45,890
+My fear of him keeps me alert.
+
+591
+01:19:46,280 --> 01:19:49,427
+Tending to his needs gives my life focus.
+
+592
+01:19:54,318 --> 01:19:55,579
+Dolphins.
+
+593
+01:19:56,090 --> 01:19:57,790
+Hey, Richard Parker!
+
+594
+01:20:15,427 --> 01:20:16,823
+Hey!
+
+595
+01:24:26,323 --> 01:24:29,934
+Mortal, all I have left and hang on to.
+
+596
+01:24:30,003 --> 01:24:33,175
+Everything make stopped, fragmented.
+
+597
+01:24:34,096 --> 01:24:38,580
+Can't tell day dreams, night dreams
+from reality anymore.
+
+598
+01:24:57,262 --> 01:24:59,328
+A storm, Richard Parker!
+
+599
+01:25:59,962 --> 01:26:02,404
+Christ needs you, God!
+
+600
+01:26:02,792 --> 01:26:04,952
+Longing for his words!
+
+601
+01:26:05,106 --> 01:26:08,742
+The compassionate!
+The mercyful!
+
+602
+01:26:14,648 --> 01:26:15,900
+Come out!
+
+603
+01:26:17,643 --> 01:26:21,790
+Richard Parker! Come out,
+you have to see this!
+
+604
+01:26:23,476 --> 01:26:25,164
+It's beautiful!
+
+605
+01:26:36,461 --> 01:26:39,878
+Relieve yourself!
+He's come to us!
+
+606
+01:26:40,759 --> 01:26:42,709
+It's a vision!
+
+607
+01:26:55,891 --> 01:26:59,466
+Come on, this is God, Richard Parker!
+
+608
+01:27:12,573 --> 01:27:15,247
+Why are you scaring him?
+
+609
+01:27:17,012 --> 01:27:18,985
+I've lost my family,
+
+610
+01:27:19,326 --> 01:27:21,359
+I've lost everything!
+
+611
+01:27:21,694 --> 01:27:26,152
+I surrender!
+What else do you want?
+
+612
+01:27:49,180 --> 01:27:51,054
+I'm sorry, Richard Parker.
+
+613
+01:30:21,617 --> 01:30:23,951
+We're dying, Richard Parker.
+
+614
+01:30:28,311 --> 01:30:29,635
+I'm sorry.
+
+615
+01:31:02,142 --> 01:31:03,631
+Amma...
+
+616
+01:31:05,340 --> 01:31:07,195
+Apa, Ravi.
+
+617
+01:31:09,062 --> 01:31:12,032
+Apa, Ravi, I'm going to see you soon.
+
+618
+01:31:20,733 --> 01:31:23,697
+Can you feel the rain?
+
+619
+01:31:42,804 --> 01:31:44,087
+God...
+
+620
+01:31:45,095 --> 01:31:47,838
+Thank you for giving me my life.
+
+621
+01:31:49,725 --> 01:31:51,309
+I'm ready now.
+
+622
+01:32:22,943 --> 01:32:24,763
+Richard Parker.
+
+623
+01:36:31,231 --> 01:36:32,978
+Hey. Get rid of me!
+
+624
+01:36:33,116 --> 01:36:34,478
+It's my bed.
+
+625
+01:38:42,733 --> 01:38:44,546
+It was a human tooth.
+
+626
+01:38:45,410 --> 01:38:47,654
+Don't you see the island was carnivorous?
+
+627
+01:38:48,400 --> 01:38:51,597
+Canívorous?
+Like a Venus fly trap?
+
+628
+01:38:51,676 --> 01:38:54,016
+Yes. The whole island.
+
+629
+01:38:54,697 --> 01:38:58,619
+The plants, the water and those pools,
+the very ground itself.
+
+630
+01:38:59,806 --> 01:39:02,465
+During the day, those pools
+held fresh water.
+
+631
+01:39:02,849 --> 01:39:07,712
+But at night, some chemical process
+turned the water in those pools into acid.
+
+632
+01:39:08,554 --> 01:39:10,724
+Acid that disolved those fish.
+
+633
+01:39:11,082 --> 01:39:13,512
+The sound of meerkats
+scaring to the trees,
+
+634
+01:39:13,513 --> 01:39:15,722
+and Richard Parker running to the boat.
+
+635
+01:39:16,059 --> 01:39:17,549
+But where'd the tooth come from?
+
+636
+01:39:18,075 --> 01:39:21,012
+Years ago, some poor fellow just like me
+
+637
+01:39:21,013 --> 01:39:23,822
+must have found himself
+stranded on that island.
+
+638
+01:39:24,171 --> 01:39:26,598
+And like me, he thought
+he might there forever.
+
+639
+01:39:27,637 --> 01:39:32,106
+But all that the island gave him by day,
+it took away again by night.
+
+640
+01:39:34,057 --> 01:39:38,531
+To think how many hours he spent,
+with only meerkats for company.
+
+641
+01:39:38,870 --> 01:39:41,556
+How much loneliness taken on him.
+
+642
+01:39:41,591 --> 01:39:44,160
+All I know is that eventually he died,
+
+643
+01:39:44,545 --> 01:39:45,796
+and the island digested him,
+
+644
+01:39:46,595 --> 01:39:48,714
+leaving behind only his teeth.
+
+645
+01:39:50,841 --> 01:39:53,615
+I saw how my life would end,
+if I stayed on that island.
+
+646
+01:39:54,320 --> 01:39:55,722
+Alone, forgotten.
+
+647
+01:39:56,815 --> 01:40:00,503
+I had to get back to the world,
+or die trying.
+
+648
+01:40:04,964 --> 01:40:07,352
+I spent the next day preparing the boat.
+
+649
+01:40:07,974 --> 01:40:10,039
+I filled my stores with fresh water,
+
+650
+01:40:10,150 --> 01:40:12,854
+ate sea weed until my stomach
+could take no more,
+
+651
+01:40:12,935 --> 01:40:15,303
+and brought as many
+meerkats as I could fit
+
+652
+01:40:15,304 --> 01:40:17,671
+into the storey's locker
+for Richard Parker.
+
+653
+01:40:19,733 --> 01:40:21,835
+I couldn't leave without him, of course.
+
+654
+01:40:21,836 --> 01:40:23,201
+It would be killing him.
+
+655
+01:40:25,600 --> 01:40:30,310
+And so I waited for his return.
+
+656
+01:40:30,656 --> 01:40:32,085
+I knew he wouldn't be late.
+
+657
+01:40:32,747 --> 01:40:35,535
+Richard Parker!
+
+658
+01:40:48,533 --> 01:40:50,642
+No one has seen
+that floating island since.
+
+659
+01:40:51,212 --> 01:40:54,339
+And you won't read about
+those trees in any nature book.
+
+660
+01:40:54,588 --> 01:40:57,902
+And yet, if I hadn't found
+those shores, I would have died.
+
+661
+01:40:58,564 --> 01:41:04,012
+And if I hadn't discovered that tooth,
+I would have been lost, alone forever.
+
+662
+01:41:04,640 --> 01:41:08,423
+Even when God seemed to have
+abandoned me, he was watching.
+
+663
+01:41:08,998 --> 01:41:12,964
+Even when he seemed indifferent
+to my suffering, he was watching.
+
+664
+01:41:13,376 --> 01:41:17,326
+And when I was beyond all hope
+of saving, he gave me rest.
+
+665
+01:41:17,703 --> 01:41:20,987
+And gave me a sign to continue my journey.
+
+666
+01:41:33,379 --> 01:41:35,606
+By the time we reached the Mexican shore,
+
+667
+01:41:35,947 --> 01:41:38,079
+I was afraid to let go off the boat.
+
+668
+01:41:39,280 --> 01:41:42,280
+My strength was gone, I was so weak.
+
+669
+01:41:42,809 --> 01:41:48,065
+I was afraid that in two feet of water,
+so close to deliverance, I would drown.
+
+670
+01:41:58,138 --> 01:42:02,042
+I struggled to shore,
+and fell upon the sand.
+
+671
+01:42:02,353 --> 01:42:07,191
+It was warm and soft, like pressing
+my face against the cheek of God.
+
+672
+01:42:08,520 --> 01:42:12,089
+And somewhere, two eyes were smiling,
+that having me there.
+
+673
+01:42:17,025 --> 01:42:19,769
+I was so spent, I could hardly move.
+
+674
+01:42:26,538 --> 01:42:28,935
+And so Richard Parker went ahead of me.
+
+675
+01:42:31,311 --> 01:42:34,951
+He stretched his legs,
+and walked along the shore.
+
+676
+01:42:38,617 --> 01:42:41,207
+At the edge of the jungle, he stopped.
+
+677
+01:42:42,436 --> 01:42:44,638
+I was certain he was going
+to look back to me.
+
+678
+01:42:45,294 --> 01:42:47,909
+Flatten his ears to his head, proud,
+
+679
+01:42:48,316 --> 01:42:52,055
+that he would bring our relationship
+to an end in some way.
+
+680
+01:42:53,720 --> 01:42:56,840
+But he just teared ahead into the jungle.
+
+681
+01:43:00,529 --> 01:43:03,051
+And then, Richard Parker,
+my fierce compagnon,
+
+682
+01:43:03,052 --> 01:43:05,144
+the terrible one who kept me alive...
+
+683
+01:43:08,163 --> 01:43:11,496
+disappeared forever from my life.
+
+684
+01:43:18,113 --> 01:43:21,985
+After a few hours, a member
+of my own species found me.
+
+685
+01:43:22,229 --> 01:43:25,268
+He left and returned with a group
+who carried me away.
+
+686
+01:43:27,609 --> 01:43:29,781
+And I wept like a child,
+
+687
+01:43:29,884 --> 01:43:33,207
+not because I was overwhelmed
+of having survived, altough I was.
+
+688
+01:43:35,192 --> 01:43:38,404
+I was whiping because
+Richard Parker left me...
+
+689
+01:43:38,816 --> 01:43:40,994
+so unceremoniously.
+
+690
+01:43:42,944 --> 01:43:44,575
+It broke my heart.
+
+691
+01:43:50,736 --> 01:43:52,520
+You know, my father was right.
+
+692
+01:43:53,521 --> 01:43:56,121
+Richard Parker never saw me
+as his friend.
+
+693
+01:43:57,109 --> 01:44:00,266
+After all we had been through,
+he didn't even look back.
+
+694
+01:44:01,781 --> 01:44:03,850
+But I have to believe
+there was more in these eyes
+
+695
+01:44:03,866 --> 01:44:06,602
+than my own reflection
+staring back at me.
+
+696
+01:44:07,396 --> 01:44:09,073
+I know it, I felt it.
+
+697
+01:44:10,401 --> 01:44:11,996
+Even if I can't prove it.
+
+698
+01:44:17,846 --> 01:44:22,485
+You know, I've left so much behind,
+my family, the zoo, India, Anandi...
+
+699
+01:44:23,316 --> 01:44:27,523
+I suppose India and the whole of life
+becomes an act of letting go.
+
+700
+01:44:27,955 --> 01:44:30,365
+But what will always hurt the most,
+
+701
+01:44:31,070 --> 01:44:34,334
+is not taking a moment to say goodbye.
+
+702
+01:44:36,370 --> 01:44:40,246
+I was never able to thank my father,
+for all I know from him.
+
+703
+01:44:40,822 --> 01:44:43,312
+To tell him without his lessons...
+
+704
+01:44:44,242 --> 01:44:46,705
+I would never have survived!
+
+705
+01:44:48,794 --> 01:44:50,696
+I know Richard Parker's a tigre, but...
+
+706
+01:44:50,766 --> 01:44:54,367
+I wish I had said:
+"It's over, we survived...
+
+707
+01:44:55,273 --> 01:44:59,127
+thank you for saving my life.
+I love you, Richard Parker.
+
+708
+01:44:59,550 --> 01:45:01,925
+You'll always be with me".
+
+709
+01:45:03,356 --> 01:45:04,865
+But I can't be with you.
+
+710
+01:45:12,794 --> 01:45:14,460
+I don't know what to say.
+
+711
+01:45:21,268 --> 01:45:23,941
+It's hard to believe, isn't it?
+
+712
+01:45:27,246 --> 01:45:28,551
+It is a lot to take in...
+
+713
+01:45:29,853 --> 01:45:31,720
+to figure out what that all means.
+
+714
+01:45:32,355 --> 01:45:35,860
+No, if it happened, it happened.
+Why should it have to mean anything?
+
+715
+01:45:38,010 --> 01:45:40,320
+But some of it is pretty incredible.
+
+716
+01:45:41,095 --> 01:45:43,507
+See, I was the only one
+who survived the ship wreck.
+
+717
+01:45:44,092 --> 01:45:47,268
+The Japanese shipping company
+sent two men to talk to me,
+
+718
+01:45:47,548 --> 01:45:49,922
+in the Mexican hospital
+where I was recovering.
+
+719
+01:45:52,454 --> 01:45:54,065
+I still have a copy of the report.
+
+720
+01:45:56,298 --> 01:45:58,434
+There are insurance claims to settle.
+
+721
+01:45:59,607 --> 01:46:01,835
+They wanted to find out why the ship sank.
+
+722
+01:46:03,453 --> 01:46:05,333
+They didn't believe me, either.
+
+723
+01:46:08,255 --> 01:46:09,874
+Thousands of meerkats,
+
+724
+01:46:09,961 --> 01:46:13,771
+on an floating carnivorous island,
+and no one has ever seen it.
+
+725
+01:46:13,882 --> 01:46:16,427
+Yes. Just like I told you.
+
+726
+01:46:16,691 --> 01:46:18,069
+Bananas don't float.
+
+727
+01:46:19,699 --> 01:46:23,046
+You said the orang utan floated
+to you on a bundle of bananas,
+
+728
+01:46:23,078 --> 01:46:24,546
+but bananas don't float.
+
+729
+01:46:26,475 --> 01:46:28,505
+Of course they do,
+you try it for yourself!
+
+730
+01:46:30,126 --> 01:46:34,425
+In any case, we are not here
+to talk about bananas or meerkats.
+
+731
+01:46:34,494 --> 01:46:37,129
+Look, I just told a long story,
+and I'm very tired.
+
+732
+01:46:37,970 --> 01:46:42,810
+We are here because a Japanese
+cargo ship sank in the Pacific!
+
+733
+01:46:43,179 --> 01:46:44,961
+Something I'll never forget.
+
+734
+01:46:46,686 --> 01:46:48,594
+I lost my whole family.
+
+735
+01:46:58,062 --> 01:46:59,890
+We don't mean to push you.
+
+736
+01:47:01,296 --> 01:47:03,329
+And you have our deepest sympathies.
+
+737
+01:47:04,409 --> 01:47:06,486
+But we have come a long way,
+
+738
+01:47:06,645 --> 01:47:09,793
+and we are not closer to
+understanding why the ship sank.
+
+739
+01:47:09,833 --> 01:47:11,653
+Because I don't know!
+
+740
+01:47:12,031 --> 01:47:13,777
+I was asleep, something woke me up,
+
+741
+01:47:13,778 --> 01:47:16,321
+it could have been an explosion,
+I can't be sure.
+
+742
+01:47:16,653 --> 01:47:18,064
+And then the ship sank.
+
+743
+01:47:18,852 --> 01:47:20,316
+What else do you want from me?
+
+744
+01:47:20,789 --> 01:47:22,757
+A story that won't
+make us look like fools.
+
+745
+01:47:23,147 --> 01:47:25,853
+We need a simpler story for our report.
+
+746
+01:47:26,420 --> 01:47:28,599
+One our company can understand.
+
+747
+01:47:28,600 --> 01:47:30,637
+A story we can all believe.
+
+748
+01:47:34,390 --> 01:47:36,976
+So a story without things
+you've never seen before.
+
+749
+01:47:37,476 --> 01:47:38,550
+That's right.
+
+750
+01:47:39,255 --> 01:47:42,767
+Without surprises, without...
+animals or islands.
+
+751
+01:47:43,489 --> 01:47:46,157
+Yes. The truth.
+
+752
+01:47:47,888 --> 01:47:50,614
+So... what did you do?
+
+753
+01:47:55,170 --> 01:47:56,618
+I told them another story.
+
+754
+01:47:58,280 --> 01:48:00,189
+Four of us survived,
+
+755
+01:48:00,377 --> 01:48:02,385
+the cook and the sailor
+were already aboard.
+
+756
+01:48:03,024 --> 01:48:04,982
+The cook threw me a life buoy
+and pull me aboard,
+
+757
+01:48:04,996 --> 01:48:08,142
+and Mother held on on some bananas
+and made it to the life boat.
+
+758
+01:48:10,235 --> 01:48:13,362
+The cook... was a disgusting man.
+
+759
+01:48:13,415 --> 01:48:14,946
+He ate a rat!
+
+760
+01:48:15,994 --> 01:48:17,289
+We had food enough for weeks,
+
+761
+01:48:17,313 --> 01:48:19,728
+but he found the rat in the
+first few days and he killed it,
+
+762
+01:48:20,109 --> 01:48:22,068
+he dried it in the sun and ate it.
+
+763
+01:48:23,243 --> 01:48:24,828
+Just a brute bad man.
+
+764
+01:48:27,049 --> 01:48:29,331
+But he was ressourcefull.
+
+765
+01:48:30,100 --> 01:48:33,115
+It was his idea to build
+the raft to catch fish,
+
+766
+01:48:33,940 --> 01:48:36,724
+we would have died in those
+first few days without him.
+
+767
+01:48:39,369 --> 01:48:43,292
+The sailor was the same man who
+brought rice and gravy, the buddhist.
+
+768
+01:48:44,007 --> 01:48:47,514
+He didn't understand much what he said,
+only that he was suffering.
+
+769
+01:48:47,823 --> 01:48:50,057
+He'd broken his leg horribly in the fall.
+
+770
+01:48:50,374 --> 01:48:53,377
+We tried to set it best we could,
+but the leg became infected.
+
+771
+01:48:53,710 --> 01:48:57,633
+And the cook said that we had
+to do something, but he... died.
+
+772
+01:48:58,788 --> 01:49:02,001
+The cook said he'd do it, but mother
+and I had to hold the man down.
+
+773
+01:49:02,126 --> 01:49:04,812
+And I believed him, we needed to do it.
+
+774
+01:49:05,482 --> 01:49:06,602
+So...
+
+775
+01:49:09,538 --> 01:49:11,875
+I kept saying "I'm sorry, I'm sorry".
+
+776
+01:49:12,440 --> 01:49:16,039
+He just kept looking at me,
+his eyes were so...
+
+777
+01:49:19,558 --> 01:49:22,128
+I'll never understand the point
+of that man suffering.
+
+778
+01:49:24,057 --> 01:49:25,788
+I can still hear him:
+
+779
+01:49:26,312 --> 01:49:29,619
+"I happy with this,
+you need rice and gravy."
+
+780
+01:49:35,291 --> 01:49:38,575
+We didn't save him, of course.
+He died.
+
+781
+01:49:40,358 --> 01:49:42,347
+The morning after the cook
+caught his first Dorado
+
+782
+01:49:42,348 --> 01:49:44,712
+and I didn't understand
+what he'd done at first,
+
+783
+01:49:44,848 --> 01:49:47,657
+but Mother did, and I had never
+seen Mother so angry.
+
+784
+01:49:49,553 --> 01:49:51,462
+"Stop whining and be happy", he said.
+
+785
+01:49:51,463 --> 01:49:54,454
+"We need more food or we'll die,
+thas was the whole point!"
+
+786
+01:49:54,489 --> 01:49:56,062
+What was the whole point, Madrast?
+
+787
+01:49:56,419 --> 01:49:59,945
+You let that poor boy dying
+only to get bait, you monster!
+
+788
+01:50:02,267 --> 01:50:05,303
+He's got furious, he started
+towards her with his fists raised,
+
+789
+01:50:05,386 --> 01:50:08,186
+And Mother slapped him hard
+right across the face!
+
+790
+01:50:08,522 --> 01:50:09,821
+I was stunned!
+
+791
+01:50:10,494 --> 01:50:14,020
+I thought he was gonna
+kill her right then.
+
+792
+01:50:14,426 --> 01:50:15,884
+It would end...
+
+793
+01:50:17,927 --> 01:50:20,765
+The cook didn't stop
+with bait either, no...
+
+794
+01:50:22,342 --> 01:50:23,823
+The sailor...
+
+795
+01:50:25,555 --> 01:50:28,061
+he went the same way as the rat went.
+
+796
+01:50:30,391 --> 01:50:33,055
+The cook was a resourceful man.
+
+797
+01:50:37,201 --> 01:50:39,128
+It was a week later that he...
+
+798
+01:50:41,023 --> 01:50:42,447
+because of me.
+
+799
+01:50:43,333 --> 01:50:45,845
+Because I couldn't hold on
+this stupid turtle.
+
+800
+01:50:46,984 --> 01:50:49,010
+It slipped out of my hand and swam away,
+
+801
+01:50:49,584 --> 01:50:51,926
+and the cook came up, and he punched me
+on the side of my head,
+
+802
+01:50:51,927 --> 01:50:54,160
+and my teeth clacked and I saw stars,
+
+803
+01:50:54,418 --> 01:50:57,149
+I thought he was gonna hit me again,
+but Mother started pounding on him,
+
+804
+01:50:57,243 --> 01:50:59,406
+with her face screaming
+"monster, monster!"
+
+805
+01:50:59,552 --> 01:51:01,076
+She held with me go to the raft.
+
+806
+01:51:01,130 --> 01:51:02,682
+'Nipola!"
+
+807
+01:51:02,969 --> 01:51:05,330
+I thought she was coming with me,
+or I'd never have!
+
+808
+01:51:08,994 --> 01:51:11,144
+I don't know why
+I didn't make her go first.
+
+809
+01:51:13,511 --> 01:51:15,333
+I think about that every day.
+
+810
+01:51:21,773 --> 01:51:24,980
+I jumped over and turned back
+just as the knife came out.
+
+811
+01:51:29,594 --> 01:51:31,284
+There wasn't anything I could do.
+
+812
+01:51:33,889 --> 01:51:35,469
+Couldn't look away...
+
+813
+01:51:40,143 --> 01:51:42,135
+He threw her body overboard,
+
+814
+01:51:44,113 --> 01:51:45,646
+and then the sharks came.
+
+815
+01:51:46,180 --> 01:51:47,824
+And I saw her, they...
+
+816
+01:51:52,405 --> 01:51:53,431
+saw...
+
+817
+01:51:59,945 --> 01:52:01,623
+Next day, I killed him.
+
+818
+01:52:03,691 --> 01:52:06,508
+He didn't even fight back,
+he knew he'd gone too far.
+
+819
+01:52:06,697 --> 01:52:08,128
+Even by his own standards.
+
+820
+01:52:10,737 --> 01:52:14,355
+He left the knife out of the bench, and
+I did to him what he did to the sailor.
+
+821
+01:52:18,270 --> 01:52:21,011
+He was such an evil man,
+but was still hum...
+
+822
+01:52:23,412 --> 01:52:25,131
+He brought the evil out of me!
+
+823
+01:52:27,648 --> 01:52:28,973
+And I have to live with that.
+
+824
+01:52:36,624 --> 01:52:38,844
+I was alone in the lifeboat...
+
+825
+01:52:40,376 --> 01:52:42,722
+drifting across the Pacific ocean...
+
+826
+01:52:43,915 --> 01:52:45,201
+and I survived.
+
+827
+01:52:50,841 --> 01:52:53,034
+After that, there had no more questions.
+
+828
+01:52:54,435 --> 01:52:57,587
+The investigators didn't seem
+to like the story, exactly.
+
+829
+01:52:58,265 --> 01:53:01,558
+They thanked me.
+They wished me well...
+
+830
+01:53:01,844 --> 01:53:03,010
+and they left.
+
+831
+01:53:09,938 --> 01:53:11,816
+So the story is...
+
+832
+01:53:14,455 --> 01:53:16,316
+Both the zebra and the sailor...
+
+833
+01:53:17,175 --> 01:53:18,295
+broke their leg.
+
+834
+01:53:19,592 --> 01:53:22,074
+And a hyena killed the zebra
+and the orang utan.
+
+835
+01:53:23,163 --> 01:53:24,766
+So...
+
+836
+01:53:25,105 --> 01:53:26,669
+The hyena is the cook...
+
+837
+01:53:27,682 --> 01:53:29,600
+the sailor is the zebra...
+
+838
+01:53:30,270 --> 01:53:32,231
+your mother is the orang utan.
+
+839
+01:53:33,355 --> 01:53:34,149
+and...
+
+840
+01:53:34,797 --> 01:53:35,897
+you're...
+
+841
+01:53:37,217 --> 01:53:38,473
+the tigre.
+
+842
+01:53:43,422 --> 01:53:44,880
+Can I ask you something?
+
+843
+01:53:46,822 --> 01:53:47,915
+Of course.
+
+844
+01:53:48,685 --> 01:53:52,091
+I told you two stories about
+what happened out in the ocean...
+
+845
+01:53:52,705 --> 01:53:55,435
+Neither explains what cause
+the sinking of the ship.
+
+846
+01:53:56,205 --> 01:53:59,461
+And no one can prove
+which story is true and which is not.
+
+847
+01:54:00,427 --> 01:54:06,243
+In both stories, the ship sinks,
+my family dies, and I suffer.
+
+848
+01:54:06,973 --> 01:54:07,883
+True.
+
+849
+01:54:11,233 --> 01:54:12,974
+So which story do you prefer?
+
+850
+01:54:20,674 --> 01:54:22,435
+The one with the tigre.
+
+851
+01:54:23,906 --> 01:54:25,413
+That's the better story.
+
+852
+01:54:29,519 --> 01:54:31,106
+Thank you.
+
+853
+01:54:31,840 --> 01:54:33,945
+And so it goes with God.
+
+854
+01:54:46,082 --> 01:54:47,661
+Mamaji was right.
+
+855
+01:54:48,970 --> 01:54:50,969
+It's an amazing story.
+
+856
+01:54:52,672 --> 01:54:54,549
+Will you really let me write it?
+
+857
+01:54:54,788 --> 01:54:55,822
+Of course.
+
+858
+01:54:56,203 --> 01:54:59,160
+Isn't that why Mamaji
+sent you here, after all?
+
+859
+01:55:03,377 --> 01:55:04,849
+My wife is here.
+
+860
+01:55:05,024 --> 01:55:07,450
+Do you want to stay for diner?
+She's an incredible cook!
+
+861
+01:55:07,589 --> 01:55:08,711
+I didn't know you had a wife.
+
+862
+01:55:08,783 --> 01:55:10,468
+And a cat and and two children.
+
+863
+01:55:11,581 --> 01:55:13,615
+So your story does have an happy ending.
+
+864
+01:55:14,545 --> 01:55:17,039
+Well... that's up on you.
+
+865
+01:55:17,527 --> 01:55:19,826
+The story is yours now.
+
+866
+01:55:37,011 --> 01:55:39,775
+"Mr. Patel's is an astounding story.
+
+867
+01:55:40,276 --> 01:55:44,404
+Of courage and endurance,
+unparalleled in the history of shippings.
+
+868
+01:55:44,597 --> 01:55:48,335
+Very few can claim to have
+survived so long at sea.
+
+869
+01:55:48,974 --> 01:55:51,012
+And none in the company...
+
+870
+01:55:51,752 --> 01:55:54,694
+of an adult Bengal tigre.
+
+871
+01:55:57,151 --> 01:55:58,419
+– Hi, Dad.
+– Get home.
+
+872
+01:55:58,604 --> 01:56:00,852
+We have a guest, let me introduce you.
+
+873
+01:56:02,717 --> 01:56:04,782
+Hi.
+Very nice to meet you.
+
+874
+01:56:04,925 --> 01:56:06,045
+Adika.
+
+875
+01:56:07,193 --> 01:56:08,223
+Ravi.
+
+876
+01:56:40,179 --> 01:56:44,179
+Transcript and sync: jcdr
+
+877
+01:56:45,000 --> 01:56:48,063
+Download Movie Subtitles Searcher from www.OpenSubtitles.org
