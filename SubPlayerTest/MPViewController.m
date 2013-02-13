@@ -64,8 +64,8 @@
     NSArray* subTracks =
     [SFSubtitleParserService
      subtitleTracksFromContentURL:[NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                                          pathForResource:@"subtest"
-                                                          ofType:@"srt"]]
+                                                          pathForResource:@"dexter"
+                                                          ofType:@"smi"]]
      languageHint:@"en"];
     
     NSLog(@"%@", [subTracks objectAtIndex:0]);
@@ -73,8 +73,12 @@
 
 //------------------------------------------------------------------------------
 - (IBAction)playMovie:(id)sender {
-    NSString* moviePath = @"/Users/jack/clunet/vicloud/0.tmp/howimet.mp4";
-    NSString* subPath = @"/Users/jack/clunet/vicloud/0.tmp/howimet.srt";
+    NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"howimet"
+                                                          ofType:@"mp4"];
+    
+    NSString* subPath = [[NSBundle mainBundle] pathForResource:@"howimet"
+                                                        ofType:@"srt"];
+    
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     
     subPlayer = [[MPSubMoviePlayerController alloc] initWithContentURL:movieURL];

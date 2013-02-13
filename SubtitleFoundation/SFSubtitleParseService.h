@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SFSubtitleTrack.h"
 
 //------------------------------------------------------------------------------
 @interface SFSubtitleParserService: NSObject
@@ -31,18 +30,15 @@
 //------------------------------------------------------------------------------
 @protocol SFSubtitleParser <NSObject>
 @required
+/**
+ Parse the subtitle content from `content` and return subtitle tracks
+ @param content a string contains content of subtitle file.
+ @param lang ISO language code, used as reference if there is no information
+ about what language the subtitle is of (Subrip subtitle case)
+ */
 - (NSArray*) tracksFromContentString: (NSString*) content
                       preferLanguage: (NSString*) lang;
 @optional
 - (NSArray*) tracksFromContentURL: (NSURL*) url;
-
-@end
-
-//------------------------------------------------------------------------------
-@interface SFSrtParser : NSObject <SFSubtitleParser>
-
-@end
-//------------------------------------------------------------------------------
-@interface SFSmiParser : NSObject <SFSubtitleParser>
 
 @end

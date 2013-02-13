@@ -32,6 +32,8 @@
 		043E45EB16A3D9B90086F41D /* MPPlaybackControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043E45EA16A3D9B90086F41D /* MPPlaybackControlsViewController.m */; };
 		044C397816C33D8800ED91DC /* NSAttributedString+CLNUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C397716C33D8800ED91DC /* NSAttributedString+CLNUtilities.m */; };
 		044C397A16C33DDF00ED91DC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044C397916C33DDF00ED91DC /* CoreText.framework */; };
+		044C397D16C3974400ED91DC /* howimet.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 044C397B16C3974400ED91DC /* howimet.mp4 */; };
+		044C397E16C3974400ED91DC /* howimet.srt in Resources */ = {isa = PBXBuildFile; fileRef = 044C397C16C3974400ED91DC /* howimet.srt */; };
 		045ABBEE1693C97900AA54CC /* SFMovieSubtitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 045ABBED1693C97900AA54CC /* SFMovieSubtitle.m */; };
 		045ABC2F1693D13100AA54CC /* Big5Freq.tab in Resources */ = {isa = PBXBuildFile; fileRef = 045ABBF21693D13100AA54CC /* Big5Freq.tab */; };
 		045ABC301693D13100AA54CC /* CharDistribution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 045ABBF31693D13100AA54CC /* CharDistribution.cpp */; };
@@ -71,6 +73,9 @@
 		046AAF0D16883DD9002998D3 /* SFSubtitleTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AAF0C16883DD9002998D3 /* SFSubtitleTrack.m */; };
 		048012BB16B0EA7B00FC2DD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048012BA16B0EA7A00FC2DD2 /* QuartzCore.framework */; };
 		048B182516C21E9800F81ABA /* SFFrameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B182416C21E9700F81ABA /* SFFrameData.m */; };
+		049A51CA16CB4CDC00BF43A1 /* SFSrtParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A51C916CB4CDC00BF43A1 /* SFSrtParser.m */; };
+		049A51D216CB63E200BF43A1 /* SFSamiParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A51D116CB63E200BF43A1 /* SFSamiParser.m */; };
+		049A51D416CB795900BF43A1 /* dexter.smi in Resources */ = {isa = PBXBuildFile; fileRef = 049A51D316CB795900BF43A1 /* dexter.smi */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +126,8 @@
 		044C397616C33D8800ED91DC /* NSAttributedString+CLNUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+CLNUtilities.h"; path = "external/NSAttributedString+CLNUtilities.h"; sourceTree = "<group>"; };
 		044C397716C33D8800ED91DC /* NSAttributedString+CLNUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+CLNUtilities.m"; path = "external/NSAttributedString+CLNUtilities.m"; sourceTree = "<group>"; };
 		044C397916C33DDF00ED91DC /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		044C397B16C3974400ED91DC /* howimet.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = howimet.mp4; path = ../../../../../0.tmp/howimet.mp4; sourceTree = "<group>"; };
+		044C397C16C3974400ED91DC /* howimet.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = howimet.srt; path = ../../../../../0.tmp/howimet.srt; sourceTree = "<group>"; };
 		045ABBEC1693C97900AA54CC /* SFMovieSubtitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFMovieSubtitle.h; path = SubtitleFoundation/SFMovieSubtitle.h; sourceTree = "<group>"; };
 		045ABBED1693C97900AA54CC /* SFMovieSubtitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFMovieSubtitle.m; path = SubtitleFoundation/SFMovieSubtitle.m; sourceTree = "<group>"; };
 		045ABBF21693D13100AA54CC /* Big5Freq.tab */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Big5Freq.tab; sourceTree = "<group>"; };
@@ -192,6 +199,11 @@
 		048012BA16B0EA7A00FC2DD2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		048B182316C21E9700F81ABA /* SFFrameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFFrameData.h; path = SubtitleFoundation/SFFrameData.h; sourceTree = "<group>"; };
 		048B182416C21E9700F81ABA /* SFFrameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFFrameData.m; path = SubtitleFoundation/SFFrameData.m; sourceTree = "<group>"; };
+		049A51C816CB4CDC00BF43A1 /* SFSrtParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFSrtParser.h; path = SubtitleFoundation/SFSrtParser.h; sourceTree = "<group>"; };
+		049A51C916CB4CDC00BF43A1 /* SFSrtParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFSrtParser.m; path = SubtitleFoundation/SFSrtParser.m; sourceTree = "<group>"; };
+		049A51D016CB63E200BF43A1 /* SFSamiParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFSamiParser.h; path = SubtitleFoundation/SFSamiParser.h; sourceTree = "<group>"; };
+		049A51D116CB63E200BF43A1 /* SFSamiParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFSamiParser.m; path = SubtitleFoundation/SFSamiParser.m; sourceTree = "<group>"; };
+		049A51D316CB795900BF43A1 /* dexter.smi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dexter.smi; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +285,9 @@
 		0437FD9C16842E3E00A407F5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				049A51D316CB795900BF43A1 /* dexter.smi */,
+				044C397B16C3974400ED91DC /* howimet.mp4 */,
+				044C397C16C3974400ED91DC /* howimet.srt */,
 				043E45D3169D5D370086F41D /* folder.png */,
 				043E45AF169AB5B70086F41D /* subtest.srt */,
 				0437FD9D16842E3E00A407F5 /* SubPlayerTest-Info.plist */,
@@ -413,6 +428,33 @@
 		046AAEFA1687D9E4002998D3 /* SubtitleFoundationClasses */ = {
 			isa = PBXGroup;
 			children = (
+				043E45D2169D387E0086F41D /* SubtitleFoundation.h */,
+				049A51CC16CB4D0200BF43A1 /* Models */,
+				049A51CB16CB4CE400BF43A1 /* ParseService */,
+				043E45D6169FA5380086F41D /* SFSubtitleView.h */,
+				043E45D7169FA5390086F41D /* SFSubtitleView.m */,
+				043E45DC16A3C7190086F41D /* SFSubtitleController.h */,
+				043E45DD16A3C71B0086F41D /* SFSubtitleController.m */,
+			);
+			name = SubtitleFoundationClasses;
+			sourceTree = "<group>";
+		};
+		049A51CB16CB4CE400BF43A1 /* ParseService */ = {
+			isa = PBXGroup;
+			children = (
+				049A51D016CB63E200BF43A1 /* SFSamiParser.h */,
+				049A51D116CB63E200BF43A1 /* SFSamiParser.m */,
+				045ABC511693E2F300AA54CC /* SFSubtitleParseService.h */,
+				045ABC521693E2F300AA54CC /* SFSubtitleParseService.m */,
+				049A51C816CB4CDC00BF43A1 /* SFSrtParser.h */,
+				049A51C916CB4CDC00BF43A1 /* SFSrtParser.m */,
+			);
+			name = ParseService;
+			sourceTree = "<group>";
+		};
+		049A51CC16CB4D0200BF43A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				048B182316C21E9700F81ABA /* SFFrameData.h */,
 				048B182416C21E9700F81ABA /* SFFrameData.m */,
 				046AAF0416882E02002998D3 /* SFSubtitleFrame.h */,
@@ -421,15 +463,8 @@
 				046AAF0C16883DD9002998D3 /* SFSubtitleTrack.m */,
 				045ABBEC1693C97900AA54CC /* SFMovieSubtitle.h */,
 				045ABBED1693C97900AA54CC /* SFMovieSubtitle.m */,
-				045ABC511693E2F300AA54CC /* SFSubtitleParseService.h */,
-				045ABC521693E2F300AA54CC /* SFSubtitleParseService.m */,
-				043E45D2169D387E0086F41D /* SubtitleFoundation.h */,
-				043E45D6169FA5380086F41D /* SFSubtitleView.h */,
-				043E45D7169FA5390086F41D /* SFSubtitleView.m */,
-				043E45DC16A3C7190086F41D /* SFSubtitleController.h */,
-				043E45DD16A3C71B0086F41D /* SFSubtitleController.m */,
 			);
-			name = SubtitleFoundationClasses;
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -516,6 +551,9 @@
 				045ABC341693D13100AA54CC /* JISFreq.tab in Resources */,
 				043E45B0169AB5B70086F41D /* subtest.srt in Resources */,
 				043E45D4169D5D370086F41D /* folder.png in Resources */,
+				044C397D16C3974400ED91DC /* howimet.mp4 in Resources */,
+				044C397E16C3974400ED91DC /* howimet.srt in Resources */,
+				049A51D416CB795900BF43A1 /* dexter.smi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +629,8 @@
 				043E45EB16A3D9B90086F41D /* MPPlaybackControlsViewController.m in Sources */,
 				048B182516C21E9800F81ABA /* SFFrameData.m in Sources */,
 				044C397816C33D8800ED91DC /* NSAttributedString+CLNUtilities.m in Sources */,
+				049A51CA16CB4CDC00BF43A1 /* SFSrtParser.m in Sources */,
+				049A51D216CB63E200BF43A1 /* SFSamiParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,7 +689,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jack Pham (47MZ7622XD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jack Pham (47MZ7622XD)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -664,6 +705,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "43A5A830-9736-44FA-9093-7BDF86783B2F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "43A5A830-9736-44FA-9093-7BDF86783B2F";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -677,7 +720,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jack Pham (47MZ7622XD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jack Pham (47MZ7622XD)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -685,6 +729,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "43A5A830-9736-44FA-9093-7BDF86783B2F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "43A5A830-9736-44FA-9093-7BDF86783B2F";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -700,7 +746,7 @@
 				INFOPLIST_FILE = "SubPlayerTest/SubPlayerTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "59B04983-4E3C-4C0A-8B0F-76382E00654A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "75DA8711-1990-4BFF-99C4-6977FE5DA8D6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -715,7 +761,7 @@
 				INFOPLIST_FILE = "SubPlayerTest/SubPlayerTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "59B04983-4E3C-4C0A-8B0F-76382E00654A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "75DA8711-1990-4BFF-99C4-6977FE5DA8D6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
