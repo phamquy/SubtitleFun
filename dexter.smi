@@ -2,7 +2,7 @@
 <HEAD>
 <Title>Subtitle file created with Subtitle Converter v2.0</Title>
 <STYLE TYPE="text/css">
-<!--
+
 P {	margin-left:2pt; 
 	margin-right:2pt; 
 	margin-bottom:1pt; 
@@ -12,7 +12,8 @@ P {	margin-left:2pt;
    	font-family:Arial, Sans-serif;
    	font-weight:bold; 
    	color:white;}
-   	
+
+.VN {Name:Vietnamese; lang:vi-VI; SAMIType:CC;}
 .KR {Name:Korean; lang:ko-KR; SAMIType:CC;}
 .EN {Name:English; Lang:en-US; SAMIType:CC;}
 
@@ -21,7 +22,7 @@ P {	margin-left:2pt;
 #LargePrn {Name:Large Print; font-size:20pt;}
 #SmallPrn {Name:Small Print; font-size:10pt;}
 
--->
+
 </STYLE>
 </HEAD>
 <BODY>

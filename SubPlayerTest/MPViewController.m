@@ -152,6 +152,12 @@
     
     NSLog(@"%@", [url parameterString]);
 }
+//------------------------------------------------------------------------------
+- (IBAction)htmlparse:(id)sender {
+
+    
+    //[parser release];
+}
 
 //------------------------------------------------------------------------------
 // When the movie is done, release the controller.
