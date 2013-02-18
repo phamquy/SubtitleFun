@@ -63,9 +63,7 @@
 - (IBAction)parseSRT:(id)sender {
     NSArray* subTracks =
     [SFSubtitleParserService
-     subtitleTracksFromContentURL:[NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                                          pathForResource:@"dexter"
-                                                          ofType:@"smi"]]
+     subtitleTracksFromContentURL:[NSURL fileURLWithPath:@"/Users/jack/clunet/vicloud/0.tmp/dexter.smi"]
      languageHint:@"en"];
     
     NSLog(@"%@", [subTracks objectAtIndex:0]);
@@ -73,11 +71,8 @@
 
 //------------------------------------------------------------------------------
 - (IBAction)playMovie:(id)sender {
-    NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"dexter"
-                                                          ofType:@"mp4"];
-    
-    NSString* subPath = [[NSBundle mainBundle] pathForResource:@"dexter"
-                                                        ofType:@"smi"];
+    NSString* moviePath = @"/Users/jack/clunet/vicloud/0.tmp/howimet.mp4";
+    NSString* subPath = @"/Users/jack/clunet/vicloud/0.tmp/howimet.srt";
     
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     
