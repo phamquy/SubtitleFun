@@ -71,6 +71,7 @@
 		045ABC531693E2F300AA54CC /* SFSubtitleParseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 045ABC521693E2F300AA54CC /* SFSubtitleParseService.m */; };
 		046AAF0616882E02002998D3 /* SFSubtitleFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AAF0516882E02002998D3 /* SFSubtitleFrame.m */; };
 		046AAF0D16883DD9002998D3 /* SFSubtitleTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AAF0C16883DD9002998D3 /* SFSubtitleTrack.m */; };
+		0473B4EC16D1F0CE00098960 /* dexter.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0473B4EB16D1F0CE00098960 /* dexter.mp4 */; };
 		048012BB16B0EA7B00FC2DD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048012BA16B0EA7A00FC2DD2 /* QuartzCore.framework */; };
 		048B182516C21E9800F81ABA /* SFFrameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B182416C21E9700F81ABA /* SFFrameData.m */; };
 		049A51CA16CB4CDC00BF43A1 /* SFSrtParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A51C916CB4CDC00BF43A1 /* SFSrtParser.m */; };
@@ -197,6 +198,7 @@
 		046AAF0516882E02002998D3 /* SFSubtitleFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFSubtitleFrame.m; path = SubtitleFoundation/SFSubtitleFrame.m; sourceTree = "<group>"; };
 		046AAF0B16883DD9002998D3 /* SFSubtitleTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFSubtitleTrack.h; path = SubtitleFoundation/SFSubtitleTrack.h; sourceTree = "<group>"; };
 		046AAF0C16883DD9002998D3 /* SFSubtitleTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFSubtitleTrack.m; path = SubtitleFoundation/SFSubtitleTrack.m; sourceTree = "<group>"; };
+		0473B4EB16D1F0CE00098960 /* dexter.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = dexter.mp4; path = ../../../../../0.tmp/dexter.mp4; sourceTree = "<group>"; };
 		048012BA16B0EA7A00FC2DD2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		048B182316C21E9700F81ABA /* SFFrameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFFrameData.h; path = SubtitleFoundation/SFFrameData.h; sourceTree = "<group>"; };
 		048B182416C21E9700F81ABA /* SFFrameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFFrameData.m; path = SubtitleFoundation/SFFrameData.m; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 		0437FD9C16842E3E00A407F5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0473B4EB16D1F0CE00098960 /* dexter.mp4 */,
 				049A51D316CB795900BF43A1 /* dexter.smi */,
 				044C397B16C3974400ED91DC /* howimet.mp4 */,
 				044C397C16C3974400ED91DC /* howimet.srt */,
@@ -558,6 +561,7 @@
 				044C397D16C3974400ED91DC /* howimet.mp4 in Resources */,
 				044C397E16C3974400ED91DC /* howimet.srt in Resources */,
 				049A51D416CB795900BF43A1 /* dexter.smi in Resources */,
+				0473B4EC16D1F0CE00098960 /* dexter.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

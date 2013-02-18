@@ -73,11 +73,11 @@
 
 //------------------------------------------------------------------------------
 - (IBAction)playMovie:(id)sender {
-    NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"howimet"
+    NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"dexter"
                                                           ofType:@"mp4"];
     
-    NSString* subPath = [[NSBundle mainBundle] pathForResource:@"howimet"
-                                                        ofType:@"srt"];
+    NSString* subPath = [[NSBundle mainBundle] pathForResource:@"dexter"
+                                                        ofType:@"smi"];
     
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     

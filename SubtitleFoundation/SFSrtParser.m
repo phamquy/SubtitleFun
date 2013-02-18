@@ -44,12 +44,12 @@
     
     NSArray* subStrings = [nixContent componentsSeparatedByString:@"\n\n"];
     
-    NSLog(@"%d", [subStrings count]);
+    //NSLog(@"%d", [subStrings count]);
     
     NSMutableArray* subFrames = [[NSMutableArray alloc] init];
     
     for(NSString *subString in subStrings){
-        NSLog(@"%@", subString);
+        //NSLog(@"%@", subString);
         SFSubtitleFrame* subFrame =
         [self makeSubtitleFrameFromSRTString:subString];
         if (subFrame) {

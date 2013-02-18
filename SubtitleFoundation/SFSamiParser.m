@@ -6,8 +6,13 @@
 //  Copyright (c) 2013 Clunet. All rights reserved.
 //
 
+
+#import <stdio.h>
+
 #import "SFSamiParser.h"
 #import "SFSubtitleTrack.h"
+#import "SFSubtitleFrame.h"
+#import "SFFrameData.h"
 #import <libxml/tree.h>
 #import <libxml/parser.h>
 #import <libxml/HTMLtree.h>
@@ -69,13 +74,22 @@ getNodeSet (xmlDocPtr doc, xmlChar *xpath){
 	return result;
 }
 //------------------------------------------------------------------------------
+/*
+ Example of a node:
+ <P Class=KR>
+    <font color="#ec14bd">Honey bunny cookie</font><br>
+    <font color="#ec14bd">Sandy, Rickie, cupcake</font>
+ */
+
 xmlChar*
 getTextOfNode(xmlNodePtr pnode)
 {
-    
+    // TODO: xmlNodeGetContent return low case --> need fix
+    xmlChar* textForNode =  xmlNodeGetContent(pnode);
+    return textForNode;
 }
 
-////==============================================================================
+//==============================================================================
 #pragma mark - SFSamiFrameData
 @interface SFSamiFrameData : NSObject
 @property (nonatomic, strong) NSString* text;
@@ -86,7 +100,10 @@ getTextOfNode(xmlNodePtr pnode)
 @implementation SFSamiFrameData
 
 @synthesize text, timePos;
-
+- (NSString*) description
+{
+    return [NSString stringWithFormat:@"{%d, %@}", timePos, text];
+}
 @end
 //==============================================================================
 #pragma mark - SFSamiClass
@@ -99,6 +116,8 @@ getTextOfNode(xmlNodePtr pnode)
 @property (nonatomic, strong) NSString* type;
 @property (nonatomic, strong) NSMutableArray* cues;
 //- (void) addFrameData: (SFSamiFrameData*) data;
+- (void)  addText:(NSString*) text
+           atTime:(NSInteger) timePos /*in miliseconds*/;
 @end
 
 @implementation SFSamiClass
@@ -135,7 +154,7 @@ cues=_cues;
 //------------------------------------------------------------------------------
 - (BOOL) populateContentFromCssString: (NSString*) cssString
 {
-    NSLog(@"Class CSS string: %@", cssString);
+//    NSLog(@"Class CSS string: %@", cssString);
     
     NSError* error=nil;
     NSRegularExpression *clsIdReg = [NSRegularExpression
@@ -197,11 +216,67 @@ cues=_cues;
     return YES;
 }
 
+//------------------------------------------------------------------------------
+- (SFSubtitleTrack*) subtitleTrack
+{
+// ???: sort array??
+//    [_cues sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+//        //
+//    }];
+    NSMutableArray* subFrames = [NSMutableArray arrayWithCapacity:[_cues count]];
+    int seqId = 0;
+    SFSubtitleFrame* lastFrame = nil;
+    for (SFSamiFrameData* cueData in _cues) {
+        if ([[cueData text]length] > 0) {
+            seqId++;
+            SFSubtitleFrame* subFrame = [[SFSubtitleFrame alloc] init];
+            subFrame.seqId = seqId;
+            subFrame.startTime = (NSTimeInterval) cueData.timePos / 1000.0f;
+            subFrame.endTime = (NSTimeInterval) cueData.timePos / 1000.0f + 5.0f; // make it last 5s by default
+            subFrame.data = [self frameDataWithString:[cueData text]];
+            lastFrame = subFrame;
+            [subFrames addObject:subFrame];
+        }else{
+            // Update endtime
+            if (lastFrame) {
+                lastFrame.endTime = (NSTimeInterval) cueData.timePos / 1000.0f;
+            }
+        }
+    }
+    
+    return [[SFSubtitleTrack alloc]  initWithFrames:subFrames
+                                           language:[self lang]];
+}
 
+//------------------------------------------------------------------------------
+- (SFFrameData*) frameDataWithString: (NSString*) srtText
+{
+    SFFrameData* fdata = [[SFFrameData alloc] init];
+    
+    NSMutableAttributedString *attString=
+    [[NSMutableAttributedString alloc] initWithString:srtText];
+    
+    fdata.attText = attString;
+    return fdata;
+}
+//------------------------------------------------------------------------------
 - (NSString*) description
 {
-    return [NSString stringWithFormat:@"SFSamiClass: {classId: %@, name: %@, lang: %@, type: %@}", _classId, _name, _lang, _type];
+    return [NSString stringWithFormat:@"SFSamiClass: {classId: %@, name: %@,"
+                        "lang: %@, type: %@}", _classId, _name, _lang, _type];
 }
+
+//------------------------------------------------------------------------------
+// TODO: improve way to add samiframe data to reduce memory footprint
+- (void)  addText:(NSString*) text
+           atTime:(NSInteger) timePos /*in miliseconds*/
+{
+    SFSamiFrameData* smiFrameData = [[SFSamiFrameData alloc] init];
+    smiFrameData.timePos = timePos;
+    smiFrameData.text = text;
+    [_cues addObject:smiFrameData];
+}
+
 @end
 
 
@@ -210,8 +285,7 @@ cues=_cues;
 @interface SFSamiParser ()
 {
     NSDictionary* samiHeader;
-//    NSMutableArray* subtitleClasses;
-//    NSMutableArray* tempSubtitleTrack;
+
 }
 @end
 
@@ -229,20 +303,30 @@ cues=_cues;
                       preferLanguage:(NSString *)lang
 {
     samiHeader = [self samiHeaderFromContent: subContent];
-    NSLog(@"HEADER: %@", samiHeader);
+    //NSLog(@"HEADER: %@", samiHeader);
     
-   
+    // Parse subtitle content and save it to SFSamiClass
     [self parseContent: subContent defaultLanguage: lang];
+
+    
     
     // Return only non-empty track
-    NSMutableArray* returnTracks;
-//    = [NSMutableArray
-//                                    arrayWithCapacity:[tempSubtitleTrack count]];
-//    for (SFSubtitleTrack* track in tempSubtitleTrack) {
-//        if ([[track subtitleFrames] count] > 0) {
-//            [returnTracks addObject:track];
-//        }
-//    }
+    NSMutableArray* returnTracks = [NSMutableArray
+                                    arrayWithCapacity:[[samiHeader allKeys] count]];
+
+    for (id key  in [samiHeader allKeys]) {
+        SFSamiClass* smClass = (SFSamiClass*) [samiHeader objectForKey:key];
+        if ([[smClass cues] count] > 0) {
+            SFSubtitleTrack* subTrack = [smClass subtitleTrack];
+            if (subTrack) {
+                [returnTracks addObject:subTrack];
+            }
+            
+//            for (SFSubtitleFrame* frame in [subTrack subtitleFrames]) {
+//                NSLog(@"%@", frame);
+//            }
+        }
+    }
 
     // Return nil if there is no track found
     if ([returnTracks count] > 0) {
@@ -262,8 +346,48 @@ cues=_cues;
 
 //------------------------------------------------------------------------------
 #pragma mark Private SAMI parsing utilities
+/*
+ This function convert:
+ <br> --> \n
+ &nbsp --> <space>
+ */
+- (NSString*) deHtmlize: (NSString*) samiCue
+{
+    NSMutableString* escapseFromHtml = [NSMutableString
+                                        stringWithString:samiCue];
+    [escapseFromHtml
+     replaceOccurrencesOfString:@"\n"
+     withString:@""
+     options:NSCaseInsensitiveSearch
+     range:NSMakeRange(0, [escapseFromHtml length])];
 
+    [escapseFromHtml
+     replaceOccurrencesOfString:@"\r"
+     withString:@""
+     options:NSCaseInsensitiveSearch
+     range:NSMakeRange(0, [escapseFromHtml length])];
 
+    
+    [escapseFromHtml
+     replaceOccurrencesOfString:@"&nbsp;"
+     withString:@" "
+     options:NSCaseInsensitiveSearch
+     range:NSMakeRange(0, [escapseFromHtml length])];
+    
+    [escapseFromHtml
+     replaceOccurrencesOfString:@"<br>"
+     withString:@"\n"
+     options:NSCaseInsensitiveSearch
+     range:NSMakeRange(0, [escapseFromHtml length])];
+        
+    NSString* retStr = [escapseFromHtml
+                  stringByTrimmingCharactersInSet:[NSCharacterSet
+                                                   whitespaceAndNewlineCharacterSet]];
+    //NSLog(@"%@", retStr);
+    return retStr;
+}
+
+//------------------------------------------------------------------------------
 - (NSDictionary*) samiHeaderFromContent: (NSString*) content
 {
     
@@ -308,11 +432,6 @@ cues=_cues;
         return smiHeader;
     }
     
-    
-    // Create array of classes
-    NSMutableArray* langClasses = [NSMutableArray
-                                   arrayWithCapacity:[clsMatches count]];
-
     for (NSTextCheckingResult* clsMatch in clsMatches)
     {
         SFSamiClass* smiClass =
@@ -320,30 +439,12 @@ cues=_cues;
                                              substringWithRange:clsMatch.range]];
 
         if (smiClass) {
-            [langClasses addObject:smiClass];
+            [smiHeader setObject:smiClass
+                          forKey:[smiClass.classId lowercaseString]];
         }
     }
     
-    // Add array of language class as a key/value in header dict
-    if ([langClasses count]) {
-        // TODO: create array of empty subtitle track
-//        tempSubtitleTrack = [NSMutableArray
-//                             arrayWithCapacity:[langClasses count]];
-//        
-//        for (int i = 0; i<[langClasses count]; i++) {
-//            SFSubtitleTrack* track = [[SFSubtitleTrack alloc] init];
-//            SFSamiClass* smClass = [langClasses objectAtIndex:i];
-//            [track setLanguageCode:smClass.lang];
-//            
-//            [tempSubtitleTrack addObject:track];
-//        }
-        
-        [smiHeader setObject:langClasses
-                      forKey:kSFSamiHeaderKeyClasses];
-        return smiHeader;
-    }
-    
-    return nil;
+    return smiHeader;
 }
 
 //------------------------------------------------------------------------------
@@ -397,11 +498,6 @@ cues=_cues;
     
     if (!err) {
         
-        NSMutableDictionary* classTexts =
-        [NSMutableDictionary
-         dictionaryWithCapacity:[[samiHeader
-                                  objectForKey:kSFSamiHeaderKeyClasses] count]];
-        
         // Query all the <p> node from input
         xPathResult = getNodeSet(cueXmlDoc, xPath);
         if (xPathResult) {
@@ -409,33 +505,25 @@ cues=_cues;
             for (int i = 0; i< nodeSet->nodeNr; i++) {
                 
                 xmlNodePtr pNode = nodeSet->nodeTab[i];
-                xmlChar* classId;
+                xmlChar* classId = NULL;
                 xmlChar* nodeText = NULL;
                 
                 classId = xmlGetProp(pNode, (const xmlChar *) "class");
-                
-                if (!classId)
-                    err = YES;
-                else{
+                //fprintf(stdout, "ClassID: %s", classId);
+                if (classId)
+                {
                     NSString* classIdKey = [NSString stringWithUTF8String:(const char*)classId];
                     
                     // Get text from <p> node
                     nodeText = getTextOfNode(pNode); //TODO: check return pointer
+                    //fprintf(stdout, "\nText for node: %s", nodeText);
+                    
+                    // Add obtained text to
                     if (nodeText) {
                         // Get current text of the same class
-                        NSString* textOfClass = [classTexts objectForKey:classIdKey];
-                        if (textOfClass) {
-                            textOfClass = [NSString
-                                           stringWithFormat:@"%@ %@",
-                                           textOfClass,
-                                           [NSString stringWithUTF8String:(const char*)nodeText]];
-                            
-                            [classTexts setObject:textOfClass forKey:classIdKey];
-                        }else{
-                            [classTexts setObject:[NSString
-                                                   stringWithUTF8String:(const char *)nodeText]
-                                           forKey:classIdKey];
-                        }
+                        SFSamiClass* samiClass = [samiHeader objectForKey:[classIdKey lowercaseString]];
+                        [samiClass addText:[NSString stringWithUTF8String:(const char*)nodeText]
+                                    atTime:timePos];
                     }
                 }
                 
@@ -445,36 +533,7 @@ cues=_cues;
         }else{
             err = YES;
         }
-        
-        
-        if (!err) {
-            // Make subtitle frame from obtained text and add to
-            // corresponding subtitle tracks
-            NSArray* classArray = (NSArray*)[samiHeader
-                                             objectForKey:kSFSamiHeaderKeyClasses];
-            
-            for (NSString* key in [classTexts allKeys]) {
-                for (SFSamiClass* smClass in classArray)
-                {
-                    if ([smClass.classId
-                         compare:key
-                         options:NSCaseInsensitiveSearch] == NSOrderedSame)
-                    {
-                        NSString* text = [classTexts objectForKey:key];
-                        SFSamiFrameData* data = [[SFSamiFrameData alloc] init];
-                        data.timePos = timePos;
-                        data.text = text;
-                        [smClass.cues addObject:data];
-                        //[smClass addFrameData: data];
-                    }
-                }
-            }
-        }
     }
-    // Create dictionary that will hold the text for current cue,
-    // key : classId, value: text of this cue for the class
-    
-    
     xmlFreeDoc(cueXmlDoc);
 }
 
@@ -548,12 +607,20 @@ cues=_cues;
         
         // Extracted a subtitle cue
         if (currentSubCue) {
-            [self addFrameFromString: currentSubCue];
+            [self addFrameFromString: [self deHtmlize:currentSubCue] ];
         }
         
         curSyncTag = nextSyncTag;
     }
     xmlCleanupParser();
+    
+//    for (id key in [samiHeader allKeys]) {
+//        SFSamiClass* smClass = (SFSamiClass*) [samiHeader objectForKey:key];
+//        NSLog(@"Parse subtitle:\n%@",smClass);
+//        for (SFSamiFrameData* data in [smClass cues]) {
+//            NSLog(@"%@", data);
+//        }
+//    }
 }
 
 

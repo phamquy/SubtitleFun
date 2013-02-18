@@ -10,4 +10,7 @@
 
 @implementation SFFrameData
 @synthesize attText=_attText;
+- (NSString*)description{
+    return [_attText string];
+}
 @end

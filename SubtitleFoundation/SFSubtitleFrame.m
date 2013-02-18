@@ -7,7 +7,7 @@
 //
 
 #import "SFSubtitleFrame.h"
-
+#import "SFFrameData.h"
 @implementation SFSubtitleFrame
 
 @synthesize seqId=_seqId,
@@ -25,5 +25,11 @@ data=_data;
         // Init
     }
     return self;
+}
+
+- (NSString*) description
+{
+    return [NSString stringWithFormat:@"{%d, (%.3f, %.3f), %@}",
+            _seqId, _startTime, _endTime, [_data.attText string]];
 }
 @end
