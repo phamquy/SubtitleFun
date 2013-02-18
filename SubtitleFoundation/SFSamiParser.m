@@ -27,8 +27,8 @@
 #define kSFSamiRegExClassProp   @"([a-zA-Z]+):([a-zA-Z-]+);"
 #define kSFSamiRegExClassId     @"\\.([a-zA-Z0-9]+)"
 
-
-#pragma mark xml Utilities
+//------------------------------------------------------------------------------
+#pragma mark - Xml Utilities
 xmlDocPtr
 getHtmlDoc (xmlChar* data) {
 	xmlDocPtr doc;
@@ -43,7 +43,7 @@ getHtmlDoc (xmlChar* data) {
     doc = htmlReadDoc(data, NULL, enc, optionsHtml);
     return doc;
 }
-
+//------------------------------------------------------------------------------
 xmlXPathObjectPtr
 getNodeSet (xmlDocPtr doc, xmlChar *xpath){
 	
@@ -68,9 +68,28 @@ getNodeSet (xmlDocPtr doc, xmlChar *xpath){
 	}
 	return result;
 }
+//------------------------------------------------------------------------------
+xmlChar*
+getTextOfNode(xmlNodePtr pnode)
+{
+    
+}
 
+////==============================================================================
+#pragma mark - SFSamiFrameData
+@interface SFSamiFrameData : NSObject
+@property (nonatomic, strong) NSString* text;
+@property (nonatomic) NSInteger timePos;
+@end
+
+
+@implementation SFSamiFrameData
+
+@synthesize text, timePos;
+
+@end
 //==============================================================================
-#pragma mark -
+#pragma mark - SFSamiClass
 @interface SFSamiClass : NSObject
 + (id) samiClassFromCssString: (NSString*) cssString;
 - (id) initWithCssString:(NSString*) cssString;
@@ -78,6 +97,8 @@ getNodeSet (xmlDocPtr doc, xmlChar *xpath){
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, strong) NSString* lang;
 @property (nonatomic, strong) NSString* type;
+@property (nonatomic, strong) NSMutableArray* cues;
+//- (void) addFrameData: (SFSamiFrameData*) data;
 @end
 
 @implementation SFSamiClass
@@ -85,7 +106,8 @@ getNodeSet (xmlDocPtr doc, xmlChar *xpath){
 classId=_classId,
 name=_name,
 lang=_lang,
-type=_type;
+type=_type,
+cues=_cues;
 
 
 //------------------------------------------------------------------------------
@@ -102,6 +124,7 @@ type=_type;
 {
     self = [super init];
     if (self) {
+        _cues = [NSMutableArray array];
         if (![self populateContentFromCssString: cssString]) {
             return nil;
         }
@@ -182,13 +205,13 @@ type=_type;
 @end
 
 
-#pragma mark -
+#pragma mark - SFSamiParser
 //==============================================================================
 @interface SFSamiParser ()
 {
     NSDictionary* samiHeader;
-    NSMutableArray* subtitleClasses;
-    NSMutableArray* tempSubtitleTrack;
+//    NSMutableArray* subtitleClasses;
+//    NSMutableArray* tempSubtitleTrack;
 }
 @end
 
@@ -198,7 +221,6 @@ type=_type;
 {
     self = [super init];
     if (self) {
-        tempSubtitleTrack = [NSMutableArray array];
     }
     return self;
 }
@@ -213,13 +235,14 @@ type=_type;
     [self parseContent: subContent defaultLanguage: lang];
     
     // Return only non-empty track
-    NSMutableArray* returnTracks = [NSMutableArray
-                                    arrayWithCapacity:[tempSubtitleTrack count]];
-    for (SFSubtitleTrack* track in tempSubtitleTrack) {
-        if ([[track subtitleFrames] count] > 0) {
-            [returnTracks addObject:track];
-        }
-    }
+    NSMutableArray* returnTracks;
+//    = [NSMutableArray
+//                                    arrayWithCapacity:[tempSubtitleTrack count]];
+//    for (SFSubtitleTrack* track in tempSubtitleTrack) {
+//        if ([[track subtitleFrames] count] > 0) {
+//            [returnTracks addObject:track];
+//        }
+//    }
 
     // Return nil if there is no track found
     if ([returnTracks count] > 0) {
@@ -304,6 +327,17 @@ type=_type;
     // Add array of language class as a key/value in header dict
     if ([langClasses count]) {
         // TODO: create array of empty subtitle track
+//        tempSubtitleTrack = [NSMutableArray
+//                             arrayWithCapacity:[langClasses count]];
+//        
+//        for (int i = 0; i<[langClasses count]; i++) {
+//            SFSubtitleTrack* track = [[SFSubtitleTrack alloc] init];
+//            SFSamiClass* smClass = [langClasses objectAtIndex:i];
+//            [track setLanguageCode:smClass.lang];
+//            
+//            [tempSubtitleTrack addObject:track];
+//        }
+        
         [smiHeader setObject:langClasses
                       forKey:kSFSamiHeaderKeyClasses];
         return smiHeader;
@@ -318,34 +352,129 @@ type=_type;
  subtitle track in tempSubtitleTrack.
  @param cueString string that contain data of a <sync ...> section. For example:
  
- <SYNC Start=3195906><P Class=KR>
- <font color="#ec14bd">Honey bunny cookie</font><br>
- <font color="#ec14bd">Sandy, Rickie, cupcake</font>
+ <SYNC Start=3195906>
+    <P Class=KR>
+        <font color="#ec14bd">Honey bunny cookie</font><br>
+        <font color="#ec14bd">Sandy, Rickie, cupcake</font>
+    <P Class=EN>
+        <font color="#ec14bd">Honey bunny cookie</font><br>
+        <font color="#ec14bd">Sandy, Rickie, cupcake</font>
+ 
  */
 - (void) addFrameFromString: (NSString*) cueString
 {
+    BOOL err = NO;
     NSString* lowcaseString = [cueString lowercaseString];
     xmlDocPtr cueXmlDoc = getHtmlDoc((xmlChar*)[lowcaseString UTF8String]);
     xmlChar* xPath = (xmlChar*) "/html/body/sync/p";
+    xmlChar* xPathSync = (xmlChar*) "/html/body/sync";
     xmlNodeSetPtr nodeSet;
-    xmlXPathObjectPtr xPathResult;
+    xmlXPathObjectPtr xPathResult, xPathResultSync;
+    int timePos = 0;
     
-    NSMutableDictionary* classText =
-    [NSMutableDictionary
-     dictionaryWithCapacity:[[samiHeader
-                              objectForKey:kSFSamiHeaderKeyClasses] count]];
-    
-    // Query all the <p> node from cue text
-    xPathResult = getNodeSet(cueXmlDoc, xPath);
-    if (xPathResult) {
-        nodeSet = xPathResult->nodesetval;
-        for (int i = 0; i< nodeSet->nodeNr; i++) {
-            xmlNodePtr pNode = nodeSet->nodeTab[i];
-            xmlChar* classId;
-            classId = xmlGetProp(pNode, (const xmlChar *) "class");
-            xmlFree(classId);
+    // Workout time information
+    xPathResultSync = getNodeSet(cueXmlDoc, xPathSync);
+    if (xPathResultSync) {
+        err = NO;
+        nodeSet= xPathResultSync->nodesetval;
+        xmlNodePtr syncNode = nodeSet->nodeTab[0];
+        xmlChar* start = xmlGetProp(syncNode, (const xmlChar *) "start");
+        if (!start) {
+            err = YES;
+        }
+        
+        if (!err) {
+            timePos = atoi((const char*)start);
+            if (timePos < 0) {
+                err = YES;
+            }
+        }
+        
+        if (start) {
+            xmlFree(start);
         }
     }
+    
+    if (!err) {
+        
+        NSMutableDictionary* classTexts =
+        [NSMutableDictionary
+         dictionaryWithCapacity:[[samiHeader
+                                  objectForKey:kSFSamiHeaderKeyClasses] count]];
+        
+        // Query all the <p> node from input
+        xPathResult = getNodeSet(cueXmlDoc, xPath);
+        if (xPathResult) {
+            nodeSet = xPathResult->nodesetval;
+            for (int i = 0; i< nodeSet->nodeNr; i++) {
+                
+                xmlNodePtr pNode = nodeSet->nodeTab[i];
+                xmlChar* classId;
+                xmlChar* nodeText = NULL;
+                
+                classId = xmlGetProp(pNode, (const xmlChar *) "class");
+                
+                if (!classId)
+                    err = YES;
+                else{
+                    NSString* classIdKey = [NSString stringWithUTF8String:(const char*)classId];
+                    
+                    // Get text from <p> node
+                    nodeText = getTextOfNode(pNode); //TODO: check return pointer
+                    if (nodeText) {
+                        // Get current text of the same class
+                        NSString* textOfClass = [classTexts objectForKey:classIdKey];
+                        if (textOfClass) {
+                            textOfClass = [NSString
+                                           stringWithFormat:@"%@ %@",
+                                           textOfClass,
+                                           [NSString stringWithUTF8String:(const char*)nodeText]];
+                            
+                            [classTexts setObject:textOfClass forKey:classIdKey];
+                        }else{
+                            [classTexts setObject:[NSString
+                                                   stringWithUTF8String:(const char *)nodeText]
+                                           forKey:classIdKey];
+                        }
+                    }
+                }
+                
+                if(nodeText) xmlFree(nodeText);
+                if(classId) xmlFree(classId);
+            }
+        }else{
+            err = YES;
+        }
+        
+        
+        if (!err) {
+            // Make subtitle frame from obtained text and add to
+            // corresponding subtitle tracks
+            NSArray* classArray = (NSArray*)[samiHeader
+                                             objectForKey:kSFSamiHeaderKeyClasses];
+            
+            for (NSString* key in [classTexts allKeys]) {
+                for (SFSamiClass* smClass in classArray)
+                {
+                    if ([smClass.classId
+                         compare:key
+                         options:NSCaseInsensitiveSearch] == NSOrderedSame)
+                    {
+                        NSString* text = [classTexts objectForKey:key];
+                        SFSamiFrameData* data = [[SFSamiFrameData alloc] init];
+                        data.timePos = timePos;
+                        data.text = text;
+                        [smClass.cues addObject:data];
+                        //[smClass addFrameData: data];
+                    }
+                }
+            }
+        }
+    }
+    // Create dictionary that will hold the text for current cue,
+    // key : classId, value: text of this cue for the class
+    
+    
     xmlFreeDoc(cueXmlDoc);
 }
 
