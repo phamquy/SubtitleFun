@@ -494,6 +494,7 @@ cues=_cues;
         if (start) {
             xmlFree(start);
         }
+        xmlXPathFreeObject(xPathResultSync);
     }
     
     if (!err) {
@@ -528,8 +529,9 @@ cues=_cues;
                 }
                 
                 if(nodeText) xmlFree(nodeText);
-                if(classId) xmlFree(classId);
+                if(classId) xmlFree(classId);                
             }
+            xmlXPathFreeObject(xPathResult);
         }else{
             err = YES;
         }
