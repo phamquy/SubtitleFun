@@ -235,7 +235,7 @@
 			children = (
 				045ABBF01693D12800AA54CC /* external */,
 				046AAEFA1687D9E4002998D3 /* SubtitleFoundationClasses */,
-				043E45CE169C1A840086F41D /* SubtitleEnablePlayerController */,
+				043E45CE169C1A840086F41D /* SubtitleEnabledPlayerController */,
 				0437FD9B16842E3E00A407F5 /* SubPlayerTest */,
 				0437FDBF16842E3F00A407F5 /* SubPlayerTestTests */,
 				0437FD9416842E3E00A407F5 /* Frameworks */,
@@ -315,23 +315,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		043E45CE169C1A840086F41D /* SubtitleEnablePlayerController */ = {
+		043E45CE169C1A840086F41D /* SubtitleEnabledPlayerController */ = {
 			isa = PBXGroup;
 			children = (
-				043E45E816A3D9510086F41D /* PlaybackControls */,
-				043E45CF169C1ABD0086F41D /* MPSubMoviePlayerController.h */,
 				043E45D0169C1ABD0086F41D /* MPSubMoviePlayerController.m */,
-			);
-			name = SubtitleEnablePlayerController;
-			sourceTree = "<group>";
-		};
-		043E45E816A3D9510086F41D /* PlaybackControls */ = {
-			isa = PBXGroup;
-			children = (
+				043E45CF169C1ABD0086F41D /* MPSubMoviePlayerController.h */,
 				043E45E916A3D9B90086F41D /* MPPlaybackControlsViewController.h */,
 				043E45EA16A3D9B90086F41D /* MPPlaybackControlsViewController.m */,
 			);
-			name = PlaybackControls;
+			name = SubtitleEnabledPlayerController;
 			sourceTree = "<group>";
 		};
 		045ABBF01693D12800AA54CC /* external */ = {
