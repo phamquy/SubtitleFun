@@ -13,5 +13,6 @@
 - (IBAction)parseSRT:(id)sender;
 - (IBAction)playMovie:(id)sender;
 - (IBAction)test:(id)sender;
+- (IBAction)htmlparse:(id)sender;
 
 @end

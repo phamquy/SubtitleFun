@@ -52,7 +52,15 @@
                       startTime:0];
 }
 
+//------------------------------------------------------------------------------
+- (id) init
+{
+    return [self initWithFrames:nil
+                       language:nil
+                      startTime:0];
+}
 
+//------------------------------------------------------------------------------
 - (NSString*) description
 {
     return [NSString stringWithFormat:@"SFSubtitleTrack:{trackInfo: %@}", _trackInfo];
@@ -80,7 +88,7 @@
         }
     }
     
-    NSLog(@"Found frame: %.3f-->%.3f for time: %.2f", foundFrame.startTime, foundFrame.endTime, timeStamp);
+    //NSLog(@"Found frame: %@ for time: %.2f",foundFrame, timeStamp);
     return foundFrame;
 }
 

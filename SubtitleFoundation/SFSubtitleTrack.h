@@ -14,10 +14,10 @@
 @interface SFSubtitleTrack : NSObject
 
 #pragma mark Properties
-@property(nonatomic) NSString* languageCode;
-@property(nonatomic, readonly) NSArray* subtitleFrames;
+@property(nonatomic, strong) NSString* languageCode;
+@property(nonatomic, strong, readonly) NSArray* subtitleFrames;
 @property(nonatomic) NSTimeInterval startOffset;
-@property(nonatomic) NSMutableDictionary* trackInfo;
+@property(nonatomic, strong) NSMutableDictionary* trackInfo;
 
 #pragma mark Instance methods 
 /**
