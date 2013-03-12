@@ -47,6 +47,7 @@
 
 
 #pragma mark Subtitle Control
+- (BOOL) isActive;
 - (void) stop;
 - (void) start;
 - (void) renderSubtitleAtPlayTime: (NSTimeInterval) playTime;

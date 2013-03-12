@@ -39,7 +39,7 @@
             [NSMutableArray arrayWithArray:[SFSubtitleParserService
                                             subtitleTracksFromContentURL:url
                                             languageHint:langCode]];
-        if (!_subtitleTracks) {
+        if (!_subtitleTracks || ([_subtitleTracks count] == 0)) {
             return nil;
         }
     }
@@ -104,7 +104,7 @@
 - (void) addTracksFromContentURL: (NSURL*) url
                           asLang: (NSString*) languageCode
 {
-    
+#warning Need Implementation
 }
 
 //------------------------------------------------------------------------------

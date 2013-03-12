@@ -410,6 +410,9 @@ cues=_cues;
                               headEnd.location-headStart.location+headEnd.length)];
     }
     
+    if (!strHEAD) {
+        return nil;
+    }
     
     // Search for css string describe language classes
     NSError* error=nil;
@@ -418,8 +421,7 @@ cues=_cues;
                                      options:NSRegularExpressionCaseInsensitive
                                      error:&error];
     if (error) {
-        smiHeader = nil;
-        return smiHeader;
+        return nil;
     }
     
     NSArray* clsMatches = [classReg
@@ -428,8 +430,7 @@ cues=_cues;
                            range:NSMakeRange(0, [strHEAD length])];
     
     if (!clsMatches || ([clsMatches count]==0)) {
-        smiHeader = nil;
-        return smiHeader;
+        return nil;
     }
     
     for (NSTextCheckingResult* clsMatch in clsMatches)
@@ -513,7 +514,8 @@ cues=_cues;
                 //fprintf(stdout, "ClassID: %s", classId);
                 if (classId)
                 {
-                    NSString* classIdKey = [NSString stringWithUTF8String:(const char*)classId];
+                    NSString* classIdKey =
+                        [NSString stringWithUTF8String:(const char*)classId];
                     
                     // Get text from <p> node
                     nodeText = getTextOfNode(pNode); //TODO: check return pointer
@@ -522,8 +524,11 @@ cues=_cues;
                     // Add obtained text to
                     if (nodeText) {
                         // Get current text of the same class
-                        SFSamiClass* samiClass = [samiHeader objectForKey:[classIdKey lowercaseString]];
-                        [samiClass addText:[NSString stringWithUTF8String:(const char*)nodeText]
+                        SFSamiClass* samiClass =
+                        [samiHeader objectForKey:[classIdKey lowercaseString]];
+                        
+                        [samiClass addText:[NSString
+                                            stringWithUTF8String:(const char*)nodeText]
                                     atTime:timePos];
                     }
                 }

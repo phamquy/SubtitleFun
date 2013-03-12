@@ -7,13 +7,12 @@
 //
 
 #import "SFSubtitleController.h"
-#import "MPSubMoviePlayerController.h"
 #import "SFSubtitleView.h"
 #import "SFMovieSubtitle.h"
 #import "SFFrameData.h"
 
 #define kSFSubtitleDefaultLanguage @"en"
-#define kSFSubtitleDefaultRefreshRate 0.5f
+#define kSFSubtitleDefaultRefreshRate 0.1f
 //==============================================================================
 @interface SFSubtitleController ()
 {
@@ -26,7 +25,7 @@
     NSTimer* _refreshTimer;
     NSTimeInterval _outputRefreshInterval;
     
-    BOOL _isActivated;
+//    BOOL _isActivated;
 }
 @end
 
@@ -75,16 +74,7 @@
         [self initOutputView];
         _outputRefreshInterval = kSFSubtitleDefaultRefreshRate;
         
-        _refreshTimer =[NSTimer
-                        timerWithTimeInterval:_outputRefreshInterval
-                        target:self
-                        selector:@selector(refreshOutputByTimer:)
-                        userInfo:nil
-                        repeats:YES];
-        
-        NSRunLoop* runloop = [NSRunLoop currentRunLoop];
-        [runloop addTimer:_refreshTimer
-                  forMode:NSDefaultRunLoopMode];
+
 
     }
     return self;
@@ -93,31 +83,48 @@
 //------------------------------------------------------------------------------
 - (void) dealloc
 {
+    NSLog(@"Dealloc SFSubtitleController");
     // remove subtitle layer from container
     [_outputView removeFromSuperview];
-    [_refreshTimer invalidate];
+    if ([_refreshTimer isValid]) {
+        [_refreshTimer invalidate];
+        _refreshTimer = nil;
+    }
 }
 
 //==============================================================================
 #pragma mark - Refresh subtitle output
 - (void) activateRefreshTimer
 {
-    _isActivated = YES;
+    if (![_refreshTimer isValid]) {
+        _refreshTimer = [NSTimer
+                         timerWithTimeInterval:_outputRefreshInterval
+                         target:self
+                         selector:@selector(refreshOutputByTimer:)
+                         userInfo:nil
+                         repeats:YES];
+        
+        NSRunLoop* runloop = [NSRunLoop currentRunLoop];
+        [runloop addTimer:_refreshTimer
+                  forMode:NSDefaultRunLoopMode];        
+    }
 }
 
 //------------------------------------------------------------------------------
 - (void) deactivateRefreshTimer
 {
-    
-    _isActivated = NO;
+    [_refreshTimer invalidate];
+    _refreshTimer = nil;
 }
 
 //------------------------------------------------------------------------------
 - (void) refreshOutputByTimer: (NSTimer* ) timer
 {
-    if ((timer == _refreshTimer) && _isActivated) {
+//    if ((timer == _refreshTimer) && _isActivated) {
+    if (timer == _refreshTimer) {
         
-        NSTimeInterval playTimeStamp = [_clock currentPlayTime];        
+        NSTimeInterval playTimeStamp = [_clock currentPlayTime];
+        //NSLog(@"Current Playtime: %d:%d",((int) playTimeStamp)  /60, ((int) playTimeStamp) % 60);
         [self renderSubtitleAtPlayTime:playTimeStamp];
 
     }
@@ -155,7 +162,7 @@
 - (void) setOutputViewContainer:(UIView *)outputViewContainer
 {
     _outputViewContainer = outputViewContainer;
-    if (_outputView) {
+    if (_outputView && ![_outputView isDescendantOfView:outputViewContainer]) {
         [_outputView setFrame:[_outputViewContainer bounds]];
         [_outputViewContainer addSubview:_outputView];
     }
@@ -202,7 +209,10 @@
     return _showSubtitle;
 }
 
-
+- (BOOL) isActive;
+{
+    return [_refreshTimer isValid];
+}
 //------------------------------------------------------------------------------
 - (void) setShowSubtitle:(BOOL)showSubtitle
 {

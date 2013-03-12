@@ -23,6 +23,11 @@
         // Initialization code
         CGRect labelFrame = CGRectMake(0, 0, 1, 1);
         _subLabel = [[UILabel alloc] initWithFrame:labelFrame];
+        [_subLabel setBackgroundColor:[UIColor clearColor]];
+        [_subLabel setTextColor:[UIColor whiteColor]];
+        [_subLabel setTextAlignment:(NSTextAlignmentCenter)];
+        [_subLabel setNumberOfLines:0];
+        [_subLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:17.0f]];
         [self addSubview:_subLabel];
 
     }
@@ -42,20 +47,16 @@
 //------------------------------------------------------------------------------
 - (void) renderSubtitle:(SFFrameData*) renderData
 {
-    
+    //NSLog(@"Subtitle Frame: %@", NSStringFromCGRect([self frame]));
     if (!renderData) {
         [_subLabel setText:@""];
         return;
     }
     
     NSString* string = [renderData.attText string];
-    [_subLabel setBackgroundColor:[UIColor clearColor]];
-    [_subLabel setTextColor:[UIColor whiteColor]];
-    [_subLabel setFrame:[self  bounds]];
+    //NSLog(@"Found subtitle: %@", string);
+    [_subLabel setFrame:[self bounds]];
     [_subLabel setText:string];
-    [_subLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:17.0f]];
-    [_subLabel setTextAlignment:(NSTextAlignmentCenter)];
-    [_subLabel setNumberOfLines:0];
     [_subLabel sizeToFit];
     
     CGRect lblFrame = [_subLabel frame];
@@ -67,7 +68,6 @@
                          lblFrame.size.height);
     
     [_subLabel setFrame:lblFrame];
-
 }
 
 @end

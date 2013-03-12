@@ -41,38 +41,41 @@ static SFSubtitleParserService* _shareInstance = nil;
 {
     NSString* dataString = nil;
     NSData* subData  = [NSData dataWithContentsOfURL:url];
-    
-    // Some special case that autodetector can not handle: Arabic and Czech
-    if ([langCode isEqualToString:@"ar"]) {
-        dataString = [[NSString alloc] initWithData:subData
-                                           encoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingISOLatinArabic)];
-    }else if([langCode isEqualToString:@"cs"]){
-        dataString = [[NSString alloc] initWithData:subData
-                                           encoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingISOLatin2)];
-    }
-    
-    if (dataString == nil) {
-        UniversalDetector* detector = [UniversalDetector detector];
-        [detector analyzeData:subData];
-        NSString* encodingType = [detector MIMECharset];
-        NSLog(@"Will encode subtitle with: %@", encodingType);
-        
-        dataString = [[NSString alloc] initWithData:subData
-                                           encoding:[detector encoding]];
+    if (subData) {
+        // Some special case that autodetector can not handle: Arabic and Czech
+        if ([langCode isEqualToString:@"ar"]) {
+            dataString = [[NSString alloc] initWithData:subData
+                                               encoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingISOLatinArabic)];
+        }else if([langCode isEqualToString:@"cs"]){
+            dataString = [[NSString alloc] initWithData:subData
+                                               encoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingISOLatin2)];
+        }
         
         if (dataString == nil) {
-            if ([@"Big5" isEqualToString:encodingType]) {
-                subData = [self cleanBig5:subData];
-            }
+            UniversalDetector* detector = [UniversalDetector detector];
+            [detector analyzeData:subData];
+            NSString* encodingType = [detector MIMECharset];
+            NSLog(@"Will encode subtitle with: %@", encodingType);
+            
             dataString = [[NSString alloc] initWithData:subData
                                                encoding:[detector encoding]];
+            
+            if (dataString == nil) {
+                if ([@"Big5" isEqualToString:encodingType]) {
+                    subData = [self cleanBig5:subData];
+                }
+                dataString = [[NSString alloc] initWithData:subData
+                                                   encoding:[detector encoding]];
+            }
         }
+        
+        if (dataString == nil) {
+            NSLog(@"Failed to encode subtitle");
+        }
+        return dataString;
     }
-    
-    if (dataString == nil) {
-        NSLog(@"Failed to encode subtitle");
-    }
-    return dataString;
+    return nil;
+
 }
 
 //------------------------------------------------------------------------------
@@ -83,13 +86,15 @@ static SFSubtitleParserService* _shareInstance = nil;
     NSString* subString = [SFSubtitleParserService
                            subtitleContentFromURL:url
                            languageHint:langCode];
+    if (subString == nil)
+        return  nil;
     
     id<SFSubtitleParser> parser = [SFSubtitleParserService
                                    createParserForURL:url];
     // trim off empty character
     subString = [subString stringByTrimmingCharactersInSet:
                  [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-   
+    //NSLog(@"%@",subString);
     if (subString == nil)
         return  nil;
     

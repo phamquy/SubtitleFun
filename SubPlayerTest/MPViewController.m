@@ -15,9 +15,12 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "SFSubtitleParseService.h"
 #import "MPSubMoviePlayerController.h"
+#import "SFPlayerViewController.h"
+
 @interface MPViewController ()
 {
     MPSubMoviePlayerController* subPlayer;
+    SFPlayerViewController* playerViewController;
 }
 
 @end
@@ -42,30 +45,39 @@
 - (IBAction)playHLS:(id)sender {
 
     NSURL *url = [[NSURL alloc]
-                  initWithString:[NSString
-                                  stringWithUTF8String:"https://devimages.apple.\
-                                  com.edgekey.net/resources/http-streaming/examples\
-                                  /bipbop_16x9/bipbop_16x9_variant.m3u8"]];
+                  initWithString:@"http://192.168.0.69/~jack/Streaming/dexter/dexter.m3u8"];
     
-    MPMoviePlayerViewController *theMovie = [[MPMoviePlayerViewController alloc]
-                                             initWithContentURL: url];
-   
-    [self presentMoviePlayerViewControllerAnimated:theMovie];
+//    MPMoviePlayerViewController *theMovie = [[MPMoviePlayerViewController alloc]
+//                                             initWithContentURL: url];
+//   
+//    [self presentMoviePlayerViewControllerAnimated:theMovie];
+//    
+//    [[NSNotificationCenter defaultCenter]
+//     addObserver:self
+//     selector:@selector(myMovieFinishedCallback:)
+//     name:MPMoviePlayerPlaybackDidFinishNotification
+//     object:theMovie];
+//    
+    
+    playerViewController = [[SFPlayerViewController alloc] initWithContentURL:url];
+    
+    [self presentViewController:playerViewController animated: YES completion: nil];
     
     [[NSNotificationCenter defaultCenter]
      addObserver:self
-     selector:@selector(myMovieFinishedCallback:)
+     selector:@selector(moviePlaybackDidFinish:)
      name:MPMoviePlayerPlaybackDidFinishNotification
-     object:theMovie];
+     object:playerViewController.player];
+//    [playerViewController.player loadSubtitleFromFile: subPath forLanguage:@"en"];
+//    [playerViewController.player setShowSubtitle:YES];
+    [playerViewController.player play];
 }
 
 //------------------------------------------------------------------------------
 - (IBAction)parseSRT:(id)sender {
     NSArray* subTracks =
     [SFSubtitleParserService
-     subtitleTracksFromContentURL:[NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                                          pathForResource:@"dexter"
-                                                          ofType:@"smi"]]
+     subtitleTracksFromContentURL:[NSURL fileURLWithPath:@"/Users/jack/clunet/vicloud/0.tmp/dexter.smi"]
      languageHint:@"en"];
     
     NSLog(@"%@", [subTracks objectAtIndex:0]);
@@ -73,42 +85,41 @@
 
 //------------------------------------------------------------------------------
 - (IBAction)playMovie:(id)sender {
-    NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"dexter"
-                                                          ofType:@"mp4"];
-    
-    NSString* subPath = [[NSBundle mainBundle] pathForResource:@"dexter"
-                                                        ofType:@"smi"];
-    
+//    NSString* moviePath = @"/Users/jack/clunet/vicloud/0.tmp/dexter.mp4";
+//    NSString* subPath = @"/Users/jack/clunet/vicloud/0.tmp/dexter.smi";
+
+    NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"dexter" ofType:@"mp4"];
+    NSString* subPath = [[NSBundle mainBundle] pathForResource:@"dexter" ofType:@"smi"];
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
+//    
+//    subPlayer = [[MPSubMoviePlayerController alloc] initWithContentURL:movieURL];
+//    
+//    subPlayer.shouldAutoplay = NO;
+//    [subPlayer.view setFrame:[[self view] bounds]];
+//    
+//    [subPlayer.view setAutoresizingMask:(UIViewAutoresizingFlexibleWidth |
+//                                         UIViewAutoresizingFlexibleHeight)];
+//    
+//    [self.view addSubview:subPlayer.view];
+//        [subPlayer play];
+//
+//    [subPlayer loadSubtitleFromFile: subPath forLanguage:@"en"];
+//    [subPlayer setShowSubtitle:YES];
+//    
+//    [self performSelector:@selector(inspectPlayerView) withObject:nil afterDelay:10];
+
+    playerViewController = [[SFPlayerViewController alloc] initWithContentURL:movieURL];
     
-    subPlayer = [[MPSubMoviePlayerController alloc] initWithContentURL:movieURL];
-    [subPlayer loadSubtitleFromFile: subPath forLanguage:@"en"];
-    [subPlayer setShowSubtitle:YES];
+    [self presentViewController:playerViewController animated: YES completion: nil];
     
     [[NSNotificationCenter defaultCenter]
      addObserver:self
      selector:@selector(moviePlaybackDidFinish:)
      name:MPMoviePlayerPlaybackDidFinishNotification
-     object:subPlayer];
-
-    
-    [[NSNotificationCenter defaultCenter]
-     addObserver:self
-     selector:@selector(moviePlaybackStateDidChange:)
-     name:MPMoviePlayerPlaybackStateDidChangeNotification
-     object:subPlayer];
-
-    subPlayer.shouldAutoplay = NO;
-    [subPlayer.view setFrame:[[self view] bounds]];
-    
-    [subPlayer.view setAutoresizingMask:(UIViewAutoresizingFlexibleWidth |
-                                         UIViewAutoresizingFlexibleHeight)];
-    
-    [self.view addSubview:subPlayer.view];
-    [subPlayer play];
-    
-    [self performSelector:@selector(inspectPlayerView) withObject:nil afterDelay:0.1];
-
+     object:playerViewController.player];
+    [playerViewController.player loadSubtitleFromFile: subPath forLanguage:@"en"];
+    [playerViewController.player setShowSubtitle:YES];
+    [playerViewController.player play];
 }
 
 
@@ -116,7 +127,11 @@
 // TEST
 -(void)inspectPlayerView
 {
-    [self recursiveViewTraversal:subPlayer.view counter:0];
+    [subPlayer setFullscreen:YES];
+//
+//    [subPlayer loadSubtitleFromFile: @"/Users/jack/clunet/vicloud/0.tmp/howimet.srt" forLanguage:@"en"];
+//    [subPlayer setShowSubtitle:YES];
+    //[self recursiveViewTraversal:subPlayer.view counter:0];
 }
 
 //------------------------------------------------------------------------------
@@ -131,19 +146,29 @@
 //------------------------------------------------------------------------------
 - (void) moviePlaybackDidFinish:(NSNotification*)notification {
     
+//    [[NSNotificationCenter defaultCenter] removeObserver:self
+//                                                    name:MPMoviePlayerPlaybackDidFinishNotification
+//                                                  object:subPlayer];
+//    [subPlayer.view removeFromSuperview];
+//    subPlayer = nil;
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    MPMoviePlayerController* player = [notification object];
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:MPMoviePlayerPlaybackDidFinishNotification
-                                                  object:subPlayer];
-    [subPlayer.view removeFromSuperview];
-    subPlayer = nil;
+                                                  object:player];
+    playerViewController = nil;
 }
-
+//------------------------------------------------------------------------------
 - (void) moviePlaybackStateDidChange: (NSNotification*) notification {
     NSLog(@"moviePlaybackStateDidChange to: %d", [subPlayer playbackState] );
     NSLog(@"Movie current playback tim: %.3f", [subPlayer currentPlaybackTime]);
 }
+//------------------------------------------------------------------------------
+- (void )changeFullScreenMode: (NSNotification*) notification
+{
 
-
+}
 //------------------------------------------------------------------------------
 - (IBAction)test:(id)sender {
         

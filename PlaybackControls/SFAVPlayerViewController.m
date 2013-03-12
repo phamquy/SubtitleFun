@@ -1,18 +1,23 @@
 //
-//  MPPlaybackControlsViewController.m
+//  SFAFPlayerViewController.m
 //  SubPlayerTest
 //
-//  Created by Jack on 1/14/13.
+//  Created by Jack on 2/26/13.
 //  Copyright (c) 2013 Clunet. All rights reserved.
 //
 
-#import "MPPlaybackControlsViewController.h"
-
-@interface MPPlaybackControlsViewController ()
-
+#import "SFAVPlayerViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import "SFAVPlayerView.h"
+@interface SFAVPlayerViewController ()
+{
+    AVPlayer* _avPlayer;
+    SFAVPlayerView* _sfPlayerView;
+    
+}
 @end
 
-@implementation MPPlaybackControlsViewController
+@implementation SFAVPlayerViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
