@@ -8,7 +8,7 @@ Update:
 - Support sami file with multi subtitle tracks
 - Auto detect subtitle language + character set
 - Support switching subtitle track while playing
--
+
 Quick guide
 
     NSString* moviePath = <your movie path>;
